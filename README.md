@@ -6,9 +6,6 @@
 
 ### Research Intern @ DRDO · Former NLP Research Intern @ IIIT Hyderabad
 
-
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&
 <p align="center">
   <a href="https://vishnu-ai-portfolio-864n.vercel.app">
     <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
