@@ -7,7 +7,7 @@
 *Research Intern @ DRDO &nbsp;·&nbsp; Former NLP Research Intern @ IIIT Hyderabad*
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://vishnu-ai-portfolio-864n.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-linkedin)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)]([https://linkedin.com/in/your-linkedin](https://www.linkedin.com/in/vishnu-nimmakayala-8a41021b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app))
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:nvishnu1014@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/vishnu10141)
 
