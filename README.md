@@ -67,10 +67,10 @@ Streamlit • Git • Linux
 ## 📫 Connect With Me
 
 Portfolio:
-YOUR_PORTFOLIO_LINK
+https://vishnu-ai-portfolio-864n.vercel.app/
 
 LinkedIn:
-YOUR_LINKEDIN_LINK
+https://www.linkedin.com/in/vishnu-nimmakayala-8a41021b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 
 Email:
 nvishnu1014@gmail.com
