@@ -165,9 +165,6 @@ Fully responsive personal portfolio showcasing research work, projects, and tech
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-0A1020?style=flat-square&logo=python&logoColor=3B82F6&labelColor=020817)
-![C++](https://img.shields.io/badge/C++-0A1020?style=flat-square&logo=cplusplus&logoColor=3B82F6&labelColor=020817)
-![SQL](https://img.shields.io/badge/SQL-0A1020?style=flat-square&logo=postgresql&logoColor=3B82F6&labelColor=020817)
-![Bash](https://img.shields.io/badge/Bash-0A1020?style=flat-square&logo=gnubash&logoColor=3B82F6&labelColor=020817)
 
 </div>
 
