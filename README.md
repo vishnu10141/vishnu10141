@@ -203,7 +203,6 @@ Fully responsive personal portfolio showcasing research work, projects, and tech
 <div align="center">
 
 ![OpenCV](https://img.shields.io/badge/OpenCV-0A1020?style=flat-square&logo=opencv&logoColor=3B82F6&labelColor=020817)
-![Albumentations](https://img.shields.io/badge/Albumentations-0A1020?style=flat-square&logoColor=3B82F6&labelColor=020817)
 ![Grad-CAM](https://img.shields.io/badge/Grad--CAM-0A1020?style=flat-square&logoColor=3B82F6&labelColor=020817)
 
 </div>
@@ -223,44 +222,14 @@ Fully responsive personal portfolio showcasing research work, projects, and tech
 </td>
 <td width="33%" valign="top">
 
-<div align="center"><b>MLOps & Deployment</b></div>
-<div align="center">
-
-![Streamlit](https://img.shields.io/badge/Streamlit-0A1020?style=flat-square&logo=streamlit&logoColor=8B5CF6&labelColor=020817)
-![FastAPI](https://img.shields.io/badge/FastAPI-0A1020?style=flat-square&logo=fastapi&logoColor=8B5CF6&labelColor=020817)
-![Docker](https://img.shields.io/badge/Docker-0A1020?style=flat-square&logo=docker&logoColor=8B5CF6&labelColor=020817)
-
-</div>
-
-</td>
-</tr>
-<tr><td colspan="3"><br/></td></tr>
-<tr>
-<td width="33%" valign="top">
-
 <div align="center"><b>Data & Tools</b></div>
 <div align="center">
 
 ![Pandas](https://img.shields.io/badge/Pandas-0A1020?style=flat-square&logo=pandas&logoColor=3B82F6&labelColor=020817)
 ![NumPy](https://img.shields.io/badge/NumPy-0A1020?style=flat-square&logo=numpy&logoColor=3B82F6&labelColor=020817)
 ![Git](https://img.shields.io/badge/Git-0A1020?style=flat-square&logo=git&logoColor=3B82F6&labelColor=020817)
-![Linux](https://img.shields.io/badge/Linux-0A1020?style=flat-square&logo=linux&logoColor=3B82F6&labelColor=020817)
 
 </div>
-
-</td>
-<td width="33%" valign="top">
-
-<div align="center"><b>Deployment & Cloud</b></div>
-<div align="center">
-
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-0A1020?style=flat-square&logo=githubactions&logoColor=06B6D4&labelColor=020817)
-![Vercel](https://img.shields.io/badge/Vercel-0A1020?style=flat-square&logo=vercel&logoColor=06B6D4&labelColor=020817)
-
-</div>
-
-</td>
-<td width="33%" valign="top">
 
 </td>
 </tr>
