@@ -210,7 +210,7 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 <div align="center">
 
-<img src="./assets/project-tumor.svg" width="100%" alt="Brain Tumor Detection — Architecture"/>
+<a href="https://github.com/vishnu10141/Brain-Tumor-Detection-and-Segmentation"><img src="./assets/project-tumor.svg" width="100%" alt="Brain Tumor Detection — Architecture"/></a>
 
 </div>
 
@@ -245,14 +245,6 @@ A 3D Residual Attention U-Net trained on the BraTS 2020 benchmark dataset for mu
 <div align="center">
 
 `PyTorch` &nbsp; `3D U-Net` &nbsp; `Residual Attention` &nbsp; `Grad-CAM++` &nbsp; `BraTS 2020` &nbsp; `MONAI` &nbsp; `Streamlit`
-
-</div>
-
-<br/>
-
-<div align="center">
-
-[![View Repository](https://img.shields.io/badge/View_Repository-020617?style=for-the-badge&logo=github&logoColor=FFFFFF&labelColor=0F172A)](https://github.com/vishnu10141/Brain-Tumor-Detection-and-Segmentation)
 
 </div>
 
@@ -326,7 +318,7 @@ An ML classification pipeline that ingests raw radar return data, applies target
 
 <div align="center">
 
-<img src="./assets/project-portfolio.svg" width="100%" alt="Portfolio Website — Architecture"/>
+<a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="./assets/project-portfolio.svg" width="100%" alt="Portfolio Website — Architecture"/></a>
 
 </div>
 
@@ -352,14 +344,6 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 <div align="center">
 
 `Next.js` &nbsp; `JavaScript` &nbsp; `CSS` &nbsp; `Vercel` &nbsp; `React`
-
-</div>
-
-<br/>
-
-<div align="center">
-
-[![View Live](https://img.shields.io/badge/View_Live_Demo-020617?style=for-the-badge&logo=vercel&logoColor=FFFFFF&labelColor=0F172A)](https://vishnu-ai-portfolio-864n.vercel.app)
 
 </div>
 
@@ -530,7 +514,10 @@ Next.js · Linux · Git · Vercel
 
 <div align="center">
 
-<img src="./assets/contact-card.svg" width="100%" alt="Contact — Portfolio · GitHub · LinkedIn · Email"/>
+<a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="./assets/contact-portfolio.svg" width="24%" alt="Portfolio"></a>
+<a href="https://github.com/vishnu10141"><img src="./assets/contact-github.svg" width="24%" alt="GitHub"></a>
+<a href="https://www.linkedin.com/in/vishnu-nimmakayala-8a41021b4/"><img src="./assets/contact-linkedin.svg" width="24%" alt="LinkedIn"></a>
+<a href="mailto:nvishnu1014@gmail.com"><img src="./assets/contact-email.svg" width="24%" alt="Email"></a>
 
 </div>
 

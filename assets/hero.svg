@@ -116,16 +116,16 @@
 
   <!-- CTA Buttons -->
   <!-- Portfolio button -->
-  <a href="https://vishnu-ai-portfolio-864n.vercel.app" target="_blank">
+  <g>
     <rect x="48" y="270" width="120" height="34" rx="6" fill="url(#btn-primary)"/>
     <text x="108" y="292" fill="#FFFFFF" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0.3">Portfolio</text>
-  </a>
+  </g>
 
   <!-- GitHub button -->
-  <a href="https://github.com/vishnu10141" target="_blank">
+  <g>
     <rect x="180" y="270" width="120" height="34" rx="6" fill="none" stroke="#334155" stroke-width="1"/>
     <text x="240" y="292" fill="#94A3B8" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12" font-weight="500" text-anchor="middle" letter-spacing="0.3">GitHub</text>
-  </a>
+  </g>
 
   <!-- ===================== RIGHT AI CORE ILLUSTRATION ===================== -->
 

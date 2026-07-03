@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08111F"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <pattern id="cc-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.6" fill="#1E293B" opacity="0.4"/>
+    </pattern>
+    <linearGradient id="cc-card-github" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1B69"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="shimmer-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;2 0;-1 0" dur="4s" begin="1s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="180" fill="url(#cc-bg)"/>
+  <rect width="220" height="180" fill="url(#cc-dots)" opacity="0.5"/>
+  <g transform="translate(12, 20)">
+    <rect x="0" y="0" width="195" height="140" rx="8" fill="url(#cc-card-github)" stroke="#8B5CF6" stroke-width="1"/>
+    <rect x="0" y="0" width="195" height="140" rx="8" fill="url(#shimmer-2)"/>
+    <rect x="0" y="0" width="195" height="140" rx="8" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="0.5;2;0.5" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="97.5" cy="40" r="18" fill="none" stroke="#8B5CF6" stroke-width="1.2" opacity="0.7"/>
+    <circle cx="97.5" cy="37" r="10" fill="none" stroke="#8B5CF6" stroke-width="0.9" opacity="0.6"/>
+    <circle cx="88.5" cy="29" r="4" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.5"/>
+    <circle cx="106.5" cy="29" r="4" fill="none" stroke="#8B5CF6" stroke-width="0.7" opacity="0.5"/>
+    <circle cx="97.5" cy="37" r="3" fill="#8B5CF6" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="97.5" y="80" fill="#A78BFA" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0.5">GitHub</text>
+    <text x="97.5" y="96" fill="#4C1D95" font-family="monospace" font-size="8" text-anchor="middle">@vishnu10141</text>
+    <text x="97.5" y="128" fill="#8B5CF6" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="1">FOLLOW →</text>
+  </g>
+</svg>
