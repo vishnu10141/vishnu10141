@@ -4,7 +4,10 @@
 
 </div>
 
-<br/>
+<div align="left">
+  <a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="./assets/hero-btn-portfolio.svg" width="18.66%" alt="Portfolio"></a><a href="https://github.com/vishnu10141"><img src="./assets/hero-btn-github.svg" width="14.66%" alt="GitHub"></a>
+</div>
+
 
 <div align="center">
 
@@ -18,7 +21,6 @@
 
 </div>
 
-<br/>
 
 <!--
 ================================================================
@@ -32,11 +34,9 @@
 
 </div>
 
-<br/>
 
 > Computer Science & Engineering graduate building interpretable AI systems at the intersection of deep learning, computer vision, and medical imaging. Research experience spans signal classification at **DRDO** and low-resource NLP corpus development at **IIIT Hyderabad**. Work covers the full deep learning lifecycle — architecture design through production deployment — with emphasis on clinical explainability and real-world operational grounding.
 
-<br/>
 
 <div align="center">
 
@@ -44,7 +44,6 @@
 
 </div>
 
-<br/>
 
 <div align="center">
 
@@ -52,7 +51,6 @@
 
 </div>
 
-<br/>
 
 <!--
 ================================================================
@@ -66,7 +64,6 @@
 
 </div>
 
-<br/>
 
 <div align="center">
 
@@ -74,7 +71,6 @@
 
 </div>
 
-<br/>
 
 <!--
 ================================================================
@@ -88,12 +84,10 @@
 
 </div>
 
-<br/>
 
 <details>
 <summary><img src="./assets/experience-drdo.svg" width="100%" alt="DRDO — Machine Learning Research Intern"/></summary>
 
-<br/>
 
 <div align="center">
 
@@ -101,7 +95,6 @@
 
 </div>
 
-<br/>
 
 **Problem**
 
@@ -120,7 +113,6 @@ Operational radar systems generate false detections due to electronic countermea
 - Delivered a reproducible ML pipeline suitable for integration into signal processing workflows
 - Produced interpretable feature importance rankings enabling domain expert validation
 
-<br/>
 
 <div align="center">
 
@@ -130,12 +122,10 @@ Operational radar systems generate false detections due to electronic countermea
 
 </details>
 
-<br/>
 
 <details>
 <summary><img src="./assets/experience-iiit.svg" width="100%" alt="IIIT Hyderabad — NLP Research Intern"/></summary>
 
-<br/>
 
 <div align="center">
 
@@ -143,7 +133,6 @@ Operational radar systems generate false detections due to electronic countermea
 
 </div>
 
-<br/>
 
 **Problem**
 
@@ -161,7 +150,6 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 - Produced annotated linguistic data contributing to Telugu language model research infrastructure
 - Corpus resources directly support downstream NLP tasks: POS tagging, NER, parsing, and text classification
 
-<br/>
 
 <div align="center">
 
@@ -171,7 +159,6 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 </details>
 
-<br/>
 
 <div align="center">
 
@@ -179,7 +166,6 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 </div>
 
-<br/>
 
 <!--
 ================================================================
@@ -193,7 +179,6 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 </div>
 
-<br/>
 
 <details>
 <summary>
@@ -206,7 +191,6 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 </summary>
 
-<br/>
 
 <div align="center">
 
@@ -214,7 +198,6 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 </div>
 
-<br/>
 
 **Problem**
 
@@ -240,7 +223,6 @@ A 3D Residual Attention U-Net trained on the BraTS 2020 benchmark dataset for mu
 - Clinically-oriented explainability layer enabling radiologist trust and verification
 - End-to-end deployable system from raw MRI DICOM to annotated segmentation output
 
-<br/>
 
 <div align="center">
 
@@ -250,7 +232,6 @@ A 3D Residual Attention U-Net trained on the BraTS 2020 benchmark dataset for mu
 
 </details>
 
-<br/>
 
 <details>
 <summary>
@@ -263,7 +244,6 @@ A 3D Residual Attention U-Net trained on the BraTS 2020 benchmark dataset for mu
 
 </summary>
 
-<br/>
 
 <div align="center">
 
@@ -271,7 +251,6 @@ A 3D Residual Attention U-Net trained on the BraTS 2020 benchmark dataset for mu
 
 </div>
 
-<br/>
 
 **Problem**
 
@@ -295,13 +274,11 @@ An ML classification pipeline that ingests raw radar return data, applies target
 - Interpretable feature importances enabling validation by domain experts
 - Modular pipeline architecture suitable for real-time integration
 
-<br/>
 
 <sub><i>Repository not publicly available — developed during DRDO internship on classified datasets.</i></sub>
 
 </details>
 
-<br/>
 
 <details>
 <summary>
@@ -314,7 +291,6 @@ An ML classification pipeline that ingests raw radar return data, applies target
 
 </summary>
 
-<br/>
 
 <div align="center">
 
@@ -322,7 +298,6 @@ An ML classification pipeline that ingests raw radar return data, applies target
 
 </div>
 
-<br/>
 
 **Overview**
 
@@ -339,7 +314,6 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 - Optimized Core Web Vitals — LCP, FID, CLS targets achieved
 - Project showcase with dynamic routing and rich media support
 
-<br/>
 
 <div align="center">
 
@@ -349,7 +323,6 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 
 </details>
 
-<br/>
 
 <div align="center">
 
@@ -357,7 +330,6 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 
 </div>
 
-<br/>
 
 <!--
 ================================================================
@@ -371,7 +343,6 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 
 </div>
 
-<br/>
 
 <div align="center">
 
@@ -379,7 +350,6 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 
 </div>
 
-<br/>
 
 <div align="center">
 <table>
@@ -446,7 +416,6 @@ Next.js · Linux · Git · Vercel
 </table>
 </div>
 
-<br/>
 
 <div align="center">
 
@@ -454,7 +423,6 @@ Next.js · Linux · Git · Vercel
 
 </div>
 
-<br/>
 
 <!--
 ================================================================
@@ -468,19 +436,16 @@ Next.js · Linux · Git · Vercel
 
 </div>
 
-<br/>
 
 <div align="center">
 
 <code>vishnu@research:~$</code>
 
-<br/><br/>
 
 <img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=14&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=580&height=30&lines=%3E+Explainable+AI+for+clinical+medical+imaging;%3E+3D+multi-modal+segmentation+pipelines;%3E+Instruction-tuned+LLM+domain+adaptation;%3E+Reproducible+MLOps+%2B+experiment+tracking;%3E+Foundation+models+for+medical+vision" alt="currently-exploring"/>
 
 </div>
 
-<br/>
 
 <div align="center">
 
@@ -488,7 +453,6 @@ Next.js · Linux · Git · Vercel
 
 </div>
 
-<br/>
 
 <div align="center">
 
@@ -496,7 +460,6 @@ Next.js · Linux · Git · Vercel
 
 </div>
 
-<br/>
 
 <!--
 ================================================================
@@ -510,7 +473,6 @@ Next.js · Linux · Git · Vercel
 
 </div>
 
-<br/>
 
 <div align="center">
 
@@ -521,7 +483,6 @@ Next.js · Linux · Git · Vercel
 
 </div>
 
-<br/>
 
 <div align="center">
 
