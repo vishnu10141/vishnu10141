@@ -1,0 +1,331 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <radialGradient id="sd-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#08111F"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <radialGradient id="sd-core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#7C3AED" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sd-core-sphere" cx="38%" cy="35%" r="62%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="35%" stop-color="#3B82F6"/>
+      <stop offset="70%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </radialGradient>
+    <linearGradient id="sd-ring1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sd-ring2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Node fill gradients -->
+    <linearGradient id="node-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="node-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1B69"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="node-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C2A3F"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <!-- Glow filters -->
+    <filter id="sd-glow-sm" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sd-glow-md" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sd-glow-lg" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Dot grid -->
+    <pattern id="sd-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="0.7" fill="#1E293B" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#sd-bg)"/>
+  <rect width="900" height="500" fill="url(#sd-dots)" opacity="0.8"/>
+
+  <!-- Center ambient glow -->
+  <ellipse cx="450" cy="250" rx="160" ry="130" fill="url(#sd-core-glow)" opacity="0.8">
+    <animate attributeName="rx" values="160;180;160" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="130;148;130" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ============ ORBITAL RINGS ============ -->
+  <!-- Outer ring -->
+  <ellipse cx="450" cy="250" rx="200" ry="72" fill="none" stroke="url(#sd-ring1)" stroke-width="1" opacity="0.4" transform="rotate(-10 450 250)">
+    <animateTransform attributeName="transform" type="rotate" from="-10 450 250" to="350 450 250" dur="20s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Middle ring -->
+  <ellipse cx="450" cy="250" rx="155" ry="56" fill="none" stroke="url(#sd-ring2)" stroke-width="1.5" opacity="0.6" transform="rotate(20 450 250)">
+    <animateTransform attributeName="transform" type="rotate" from="20 450 250" to="-340 450 250" dur="13s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Inner ring -->
+  <ellipse cx="450" cy="250" rx="108" ry="40" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.5" transform="rotate(0 450 250)">
+    <animateTransform attributeName="transform" type="rotate" from="0 450 250" to="360 450 250" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ============ CENTER AI CORE ============ -->
+  <circle cx="450" cy="250" r="52" fill="url(#sd-core-sphere)" filter="url(#sd-glow-md)"/>
+  <circle cx="450" cy="250" r="52" fill="none" stroke="#60A5FA" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="438" cy="238" rx="15" ry="11" fill="#FFFFFF" opacity="0.07" transform="rotate(-20 438 238)"/>
+  <!-- Center pulse -->
+  <circle cx="450" cy="250" r="18" fill="#3B82F6" opacity="0.1">
+    <animate attributeName="r" values="18;26;18" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="250" r="10" fill="#3B82F6" filter="url(#sd-glow-lg)" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="250" r="6" fill="#60A5FA"/>
+  <circle cx="450" cy="250" r="2.5" fill="#FFFFFF"/>
+
+  <!-- Center label -->
+  <text x="450" y="312" fill="#60A5FA" font-family="'SF Pro Display', -apple-system, monospace" font-size="9" letter-spacing="3" text-anchor="middle" opacity="0.7">AI CORE</text>
+
+  <!-- ============ TECHNOLOGY NODES ============ -->
+  <!-- Helper: each node is a circle with label -->
+  <!-- Positioned around the core in a radial pattern -->
+
+  <!-- === RING 1 (close, r≈120) === -->
+
+  <!-- Python - Top -->
+  <g>
+    <!-- Connection line -->
+    <line x1="450" y1="198" x2="450" y2="250" stroke="#3B82F6" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Node -->
+    <circle cx="450" cy="185" r="26" fill="url(#node-blue)" stroke="#3B82F6" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Pulse ring -->
+    <circle cx="450" cy="185" r="32" fill="none" stroke="#3B82F6" stroke-width="0.5" opacity="0.2">
+      <animate attributeName="r" values="26;36;26" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="450" y="181" fill="#60A5FA" font-family="monospace" font-size="9" font-weight="600" text-anchor="middle" letter-spacing="0.5">Python</text>
+    <text x="450" y="193" fill="#1E40AF" font-family="monospace" font-size="7" text-anchor="middle">3.11+</text>
+  </g>
+
+  <!-- PyTorch - Top Right -->
+  <g>
+    <line x1="516" y1="213" x2="469" y2="239" stroke="#8B5CF6" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="1.8s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="530" cy="204" r="26" fill="url(#node-purple)" stroke="#8B5CF6" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="530" cy="204" r="32" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.15">
+      <animate attributeName="r" values="26;36;26" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0;0.15" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="530" y="200" fill="#A78BFA" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">PyTorch</text>
+    <text x="530" y="212" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">2.x</text>
+  </g>
+
+  <!-- TensorFlow - Right -->
+  <g>
+    <line x1="554" y1="250" x2="502" y2="250" stroke="#3B82F6" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="568" cy="250" r="26" fill="url(#node-blue)" stroke="#3B82F6" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="568" cy="250" r="32" fill="none" stroke="#3B82F6" stroke-width="0.5" opacity="0.15">
+      <animate attributeName="r" values="26;36;26" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0;0.15" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="568" y="246" fill="#60A5FA" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle">TensorFlow</text>
+    <text x="568" y="258" fill="#1E3A5F" font-family="monospace" font-size="7" text-anchor="middle">2.x</text>
+  </g>
+
+  <!-- OpenCV - Bottom Right -->
+  <g>
+    <line x1="516" y1="287" x2="469" y2="261" stroke="#38BDF8" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;-7" dur="2.2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="530" cy="296" r="26" fill="url(#node-cyan)" stroke="#38BDF8" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="530" cy="296" r="32" fill="none" stroke="#38BDF8" stroke-width="0.5" opacity="0.15">
+      <animate attributeName="r" values="26;36;26" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0;0.15" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="530" y="292" fill="#7DD3FC" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">OpenCV</text>
+    <text x="530" y="304" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">CV2</text>
+  </g>
+
+  <!-- MONAI - Bottom -->
+  <g>
+    <line x1="450" y1="302" x2="450" y2="250" stroke="#8B5CF6" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="1.7s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="450" cy="315" r="26" fill="url(#node-purple)" stroke="#8B5CF6" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="315" r="32" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.15">
+      <animate attributeName="r" values="26;36;26" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0;0.15" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="450" y="311" fill="#A78BFA" font-family="monospace" font-size="9" font-weight="600" text-anchor="middle">MONAI</text>
+    <text x="450" y="323" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Med-AI</text>
+  </g>
+
+  <!-- Scikit-learn - Bottom Left -->
+  <g>
+    <line x1="384" y1="287" x2="431" y2="261" stroke="#3B82F6" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="370" cy="296" r="26" fill="url(#node-blue)" stroke="#3B82F6" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="370" y="292" fill="#60A5FA" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle">Sklearn</text>
+    <text x="370" y="304" fill="#1E3A5F" font-family="monospace" font-size="7" text-anchor="middle">ML</text>
+  </g>
+
+  <!-- Left - FastAPI -->
+  <g>
+    <line x1="346" y1="250" x2="398" y2="250" stroke="#38BDF8" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="332" cy="250" r="26" fill="url(#node-cyan)" stroke="#38BDF8" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="332" y="246" fill="#7DD3FC" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">FastAPI</text>
+    <text x="332" y="258" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">API</text>
+  </g>
+
+  <!-- Top Left - HuggingFace -->
+  <g>
+    <line x1="384" y1="213" x2="431" y2="239" stroke="#8B5CF6" stroke-width="0.8" opacity="0.3" stroke-dasharray="3 4">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="2.1s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="370" cy="204" r="26" fill="url(#node-purple)" stroke="#8B5CF6" stroke-width="1.2" filter="url(#sd-glow-sm)">
+      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="370" y="200" fill="#A78BFA" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle">HuggingFace</text>
+    <text x="370" y="212" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">NLP</text>
+  </g>
+
+  <!-- === RING 2 (farther, r≈220) === -->
+
+  <!-- Docker - Top -->
+  <g>
+    <line x1="450" y1="85" x2="450" y2="159" stroke="#3B82F6" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;-10" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="450" cy="72" r="22" fill="url(#node-blue)" stroke="#3B82F6" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="450" y="68" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Docker</text>
+    <text x="450" y="79" fill="#1E3A5F" font-family="monospace" font-size="7" text-anchor="middle">Container</text>
+  </g>
+
+  <!-- Git - Upper Right -->
+  <g>
+    <line x1="625" y1="143" x2="554" y2="203" stroke="#8B5CF6" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;-10" dur="2.5s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="640" cy="130" r="22" fill="url(#node-purple)" stroke="#8B5CF6" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="640" y="126" fill="#A78BFA" font-family="monospace" font-size="9" font-weight="600" text-anchor="middle">Git</text>
+    <text x="640" y="137" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">VCS</text>
+  </g>
+
+  <!-- Next.js - Right -->
+  <g>
+    <line x1="720" y1="250" x2="594" y2="250" stroke="#38BDF8" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;-10" dur="2.2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="732" cy="250" r="22" fill="url(#node-cyan)" stroke="#38BDF8" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="732" y="246" fill="#7DD3FC" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">Next.js</text>
+    <text x="732" y="257" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">14+</text>
+  </g>
+
+  <!-- Linux - Lower Right -->
+  <g>
+    <line x1="625" y1="357" x2="554" y2="297" stroke="#3B82F6" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;-10" dur="1.9s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="640" cy="370" r="22" fill="url(#node-blue)" stroke="#3B82F6" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="640" y="366" fill="#60A5FA" font-family="monospace" font-size="9" font-weight="600" text-anchor="middle">Linux</text>
+    <text x="640" y="377" fill="#1E3A5F" font-family="monospace" font-size="7" text-anchor="middle">CLI</text>
+  </g>
+
+  <!-- NumPy - Bottom -->
+  <g>
+    <line x1="450" y1="415" x2="450" y2="341" stroke="#8B5CF6" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="450" cy="428" r="22" fill="url(#node-purple)" stroke="#8B5CF6" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="450" y="424" fill="#A78BFA" font-family="monospace" font-size="9" font-weight="600" text-anchor="middle">NumPy</text>
+    <text x="450" y="435" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Array</text>
+  </g>
+
+  <!-- Pandas - Lower Left -->
+  <g>
+    <line x1="275" y1="357" x2="346" y2="297" stroke="#38BDF8" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2.3s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="260" cy="370" r="22" fill="url(#node-cyan)" stroke="#38BDF8" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="260" y="366" fill="#7DD3FC" font-family="monospace" font-size="9" font-weight="600" text-anchor="middle">Pandas</text>
+    <text x="260" y="377" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">Data</text>
+  </g>
+
+  <!-- Streamlit - Left -->
+  <g>
+    <line x1="180" y1="250" x2="306" y2="250" stroke="#3B82F6" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="168" cy="250" r="22" fill="url(#node-blue)" stroke="#3B82F6" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="168" y="246" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Streamlit</text>
+    <text x="168" y="257" fill="#1E3A5F" font-family="monospace" font-size="7" text-anchor="middle">Deploy</text>
+  </g>
+
+  <!-- XGBoost - Upper Left -->
+  <g>
+    <line x1="275" y1="143" x2="346" y2="203" stroke="#8B5CF6" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 6">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="2.6s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="260" cy="130" r="22" fill="url(#node-purple)" stroke="#8B5CF6" stroke-width="1" filter="url(#sd-glow-sm)" opacity="0.9"/>
+    <text x="260" y="126" fill="#A78BFA" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">XGBoost</text>
+    <text x="260" y="137" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Ensemble</text>
+  </g>
+
+  <!-- Traveling signals along connections -->
+  <!-- Signal from core to Python -->
+  <circle r="2" fill="#3B82F6" opacity="0.8">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M 450 250 L 450 185"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Signal from core to TensorFlow -->
+  <circle r="2" fill="#3B82F6" opacity="0.8">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 450 250 L 568 250"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Signal from core to MONAI -->
+  <circle r="2" fill="#8B5CF6" opacity="0.8">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M 450 250 L 450 315"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Signal from core to FastAPI -->
+  <circle r="2" fill="#38BDF8" opacity="0.8">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 450 250 L 332 250"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

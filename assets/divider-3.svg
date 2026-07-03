@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="900" height="60">
+  <defs>
+    <linearGradient id="d3-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="30%" stop-color="#3B82F6" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="glow-d3" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="60" fill="#020617"/>
+
+  <!-- Energy pulse divider: radiating waves from center -->
+  <!-- Wave rings from center -->
+  <ellipse cx="450" cy="30" rx="30" ry="8" fill="none" stroke="#3B82F6" stroke-width="0.8" opacity="0.6">
+    <animate attributeName="rx" values="30;80;30" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="450" cy="30" rx="60" ry="12" fill="none" stroke="#3B82F6" stroke-width="0.6" opacity="0.4">
+    <animate attributeName="rx" values="60;150;60" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="450" cy="30" rx="100" ry="16" fill="none" stroke="#38BDF8" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="rx" values="100;220;100" dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="450" cy="30" rx="150" ry="20" fill="none" stroke="#38BDF8" stroke-width="0.4" opacity="0.2">
+    <animate attributeName="rx" values="150;300;150" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0;0.2" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Horizontal line through center -->
+  <line x1="0" y1="30" x2="900" y2="30" stroke="url(#d3-grad)" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Center energy source -->
+  <circle cx="450" cy="30" r="5" fill="#38BDF8" filter="url(#glow-d3)" opacity="0.9">
+    <animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0.5;0.9" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="30" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Left scan line fade -->
+  <rect x="0" y="28" width="440" height="4" fill="url(#d3-grad)" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Right scan line fade -->
+  <rect x="460" y="28" width="440" height="4" fill="url(#d3-grad)" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Section label -->
+  <text x="450" y="13" fill="#374151" font-family="monospace" font-size="8" letter-spacing="4" text-anchor="middle" opacity="0.5">ENERGY</text>
+</svg>

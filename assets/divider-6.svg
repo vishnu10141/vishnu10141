@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="900" height="60">
+  <defs>
+    <linearGradient id="d6-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="35%" stop-color="#3B82F6" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.6"/>
+      <stop offset="65%" stop-color="#3B82F6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="glow-d6" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="60" fill="#020617"/>
+
+  <!-- Premium elegant line divider for contact -->
+  <!-- Left fade line -->
+  <line x1="0" y1="30" x2="350" y2="30" stroke="url(#d6-grad)" stroke-width="0.8"/>
+  <!-- Right fade line -->
+  <line x1="550" y1="30" x2="900" y2="30" stroke="url(#d6-grad)" stroke-width="0.8"/>
+
+  <!-- Center ornament -->
+  <g filter="url(#glow-d6)">
+    <!-- Center diamond cluster -->
+    <polygon points="450,22 458,30 450,38 442,30" fill="none" stroke="#3B82F6" stroke-width="1.2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+    </polygon>
+    <!-- Outer ring -->
+    <circle cx="450" cy="30" r="16" fill="none" stroke="#3B82F6" stroke-width="0.5" opacity="0.3" stroke-dasharray="3 4">
+      <animateTransform attributeName="transform" type="rotate" from="0 450 30" to="360 450 30" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Inner glow -->
+    <circle cx="450" cy="30" r="4" fill="#3B82F6" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="30" r="2" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Corner markers -->
+  <circle cx="350" cy="30" r="2" fill="#1E3A5F" opacity="0.6"/>
+  <circle cx="550" cy="30" r="2" fill="#1E3A5F" opacity="0.6"/>
+
+  <!-- Section label above -->
+  <text x="450" y="13" fill="#334155" font-family="monospace" font-size="8" letter-spacing="5" text-anchor="middle" opacity="0.5">◆ ◆ ◆</text>
+</svg>

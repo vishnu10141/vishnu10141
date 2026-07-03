@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 100" width="900" height="100">
+  <defs>
+    <linearGradient id="ft-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08111F"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="ft-topline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="20%" stop-color="#3B82F6" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.7"/>
+      <stop offset="80%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="ft-glow" x="-20%" y="-100%" width="140%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="ft-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="0.6" fill="#1E293B" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="100" fill="url(#ft-bg)"/>
+  <rect width="900" height="100" fill="url(#ft-dots)" opacity="0.5"/>
+
+  <!-- Top border line -->
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#ft-topline)" stroke-width="1"/>
+
+  <!-- Traveling signal on top line -->
+  <circle r="2" fill="#3B82F6" opacity="0.8">
+    <animateMotion dur="5s" repeatCount="indefinite" path="M 0 0 L 900 0"/>
+    <animate attributeName="opacity" values="0;0.8;0;0.8;0" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Center content -->
+  <!-- Monogram -->
+  <text x="450" y="42" fill="#1E3A5F" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="8" opacity="0.5">V · N</text>
+
+  <!-- Tagline -->
+  <text x="450" y="62" fill="#334155" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="2" opacity="0.5">AI ENGINEER · MACHINE LEARNING RESEARCHER</text>
+
+  <!-- Sub text -->
+  <text x="450" y="80" fill="#1E293B" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="1" opacity="0.35">Designed with precision. Built with purpose.</text>
+
+  <!-- Left decorative dots -->
+  <circle cx="180" cy="50" r="1.5" fill="#1E3A5F" opacity="0.4"/>
+  <circle cx="200" cy="50" r="1.5" fill="#1E3A5F" opacity="0.3"/>
+  <circle cx="220" cy="50" r="1.5" fill="#1E3A5F" opacity="0.2"/>
+
+  <!-- Right decorative dots -->
+  <circle cx="720" cy="50" r="1.5" fill="#1E3A5F" opacity="0.2"/>
+  <circle cx="700" cy="50" r="1.5" fill="#1E3A5F" opacity="0.3"/>
+  <circle cx="680" cy="50" r="1.5" fill="#1E3A5F" opacity="0.4"/>
+
+  <!-- Breathing glow at center -->
+  <ellipse cx="450" cy="50" rx="80" ry="30" fill="#3B82F6" opacity="0.015">
+    <animate attributeName="rx" values="80;120;80" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.015;0.03;0.015" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>

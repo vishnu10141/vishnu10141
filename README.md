@@ -1,306 +1,543 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0:020817,50:1E3A6E,100:3B82F6&height=230&section=header&text=Vishnu%20Nimmakayala&fontSize=44&fontColor=FFFFFF&fontAlignY=36&animation=twinkling&desc=AI%20Engineer%20%C2%B7%20Machine%20Learning%20Researcher&descAlignY=58&descSize=16&descColor=94A3B8" width="100%"/>
+<img src="./assets/hero.svg" width="100%" alt="Vishnu Nimmakayala — AI Engineer"/>
+
+</div>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=500&size=19&duration=2600&pause=800&color=3B82F6&center=true&vCenter=true&width=640&height=35&lines=AI+Engineer;Machine+Learning+Engineer;Computer+Vision+Engineer;Medical+Imaging+Research;Natural+Language+Processing;Production+AI+Systems;Deep+Learning;Research+Engineering" alt="typing-animation" />
+<div align="center">
+
+<img src="./assets/particles.svg" width="100%" alt=""/>
+
+</div>
+
+<div align="center">
+
+<img src="./assets/divider-1.svg" width="100%" alt=""/>
+
+</div>
 
 <br/>
 
+<!--
+================================================================
+  ABOUT
+================================================================
+-->
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=11&duration=3000&pause=800&color=3B82F6&center=true&vCenter=true&width=500&height=22&lines=AI+Engineer+%C2%B7+Machine+Learning+Researcher;Computer+Vision+%C2%B7+Medical+Imaging;Natural+Language+Processing+%C2%B7+Defense+ML" alt="role-typing"/>
+
+</div>
+
+<br/>
+
+> Computer Science & Engineering graduate building interpretable AI systems at the intersection of deep learning, computer vision, and medical imaging. Research experience spans signal classification at **DRDO** and low-resource NLP corpus development at **IIIT Hyderabad**. Work covers the full deep learning lifecycle — architecture design through production deployment — with emphasis on clinical explainability and real-world operational grounding.
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/neural-grid.svg" width="100%" alt=""/>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/divider-2.svg" width="100%" alt=""/>
+
+</div>
+
+<br/>
+
+<!--
+================================================================
+  TIMELINE
+================================================================
+-->
+
+<div align="center">
+
+<img src="./assets/timeline.svg" width="100%" alt="Research Timeline"/>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/divider-3.svg" width="100%" alt=""/>
+
+</div>
+
+<br/>
+
+<!--
+================================================================
+  EXPERIENCE
+================================================================
+-->
+
+<div align="center">
+
+<sub><b>RESEARCH EXPERIENCE</b></sub>
+
+</div>
+
+<br/>
+
+<details>
+<summary><img src="./assets/experience-drdo.svg" width="100%" alt="DRDO — Machine Learning Research Intern"/></summary>
+
+<br/>
+
+<div align="center">
+
+**Machine Learning Research Intern — DRDO, Hyderabad** &nbsp;`2023`
+
+</div>
+
+<br/>
+
+**Problem**
+
+Operational radar systems generate false detections due to electronic countermeasure (ECM) jamming. These false targets degrade situational awareness and can lead to critical decision errors in defense scenarios. A reliable automated system was needed to distinguish genuine radar returns from manufactured interference.
+
+**Responsibilities**
+
+- Analyzed raw radar return data and designed feature extraction pipelines for time-domain signal characteristics
+- Engineered discriminative features including signal energy, pulse width distribution, Doppler spread, and spectral signatures
+- Trained and evaluated ensemble classifiers — XGBoost, Random Forest, SVM — on labeled defense-grade datasets
+- Iteratively improved model generalization through cross-validation and threshold tuning
+
+**Impact**
+
+- Achieved high-precision binary classification of radar targets vs. false ECM-induced detections
+- Delivered a reproducible ML pipeline suitable for integration into signal processing workflows
+- Produced interpretable feature importance rankings enabling domain expert validation
+
+<br/>
+
+<div align="center">
+
+`Signal Processing` &nbsp; `XGBoost` &nbsp; `Random Forest` &nbsp; `SVM` &nbsp; `Feature Engineering` &nbsp; `Scikit-learn` &nbsp; `NumPy`
+
+</div>
+
+</details>
+
+<br/>
+
+<details>
+<summary><img src="./assets/experience-iiit.svg" width="100%" alt="IIIT Hyderabad — NLP Research Intern"/></summary>
+
+<br/>
+
+<div align="center">
+
+**NLP Research Intern — IIIT Hyderabad** &nbsp;`2023`
+
+</div>
+
+<br/>
+
+**Problem**
+
+South Indian languages like Telugu are critically under-resourced in NLP. The absence of large, high-quality annotated corpora prevents training of robust language models for over 82 million native speakers.
+
+**Responsibilities**
+
+- Contributed to structured Telugu NLP dataset design and curation for low-resource language modelling
+- Performed manual linguistic annotation across morphological, syntactic, and semantic dimensions
+- Worked under research supervision to ensure annotation consistency and inter-annotator agreement
+- Helped build corpus pipelines for text normalization, tokenization, and structured data storage
+
+**Impact**
+
+- Produced annotated linguistic data contributing to Telugu language model research infrastructure
+- Corpus resources directly support downstream NLP tasks: POS tagging, NER, parsing, and text classification
+
+<br/>
+
+<div align="center">
+
+`Low-Resource NLP` &nbsp; `Dataset Annotation` &nbsp; `Corpus Construction` &nbsp; `Telugu Language` &nbsp; `Linguistic Annotation`
+
+</div>
+
+</details>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/divider-4.svg" width="100%" alt=""/>
+
+</div>
+
+<br/>
+
+<!--
+================================================================
+  PROJECTS
+================================================================
+-->
+
+<div align="center">
+
+<sub><b>FEATURED PROJECTS</b></sub>
+
+</div>
+
+<br/>
+
+<details>
+<summary>
+
+<div align="center">
+
+**Brain Tumor Detection & Segmentation** &nbsp;·&nbsp; <sub>Medical Imaging · 3D Deep Learning · Explainable AI</sub>
+
+</div>
+
+</summary>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/project-tumor.svg" width="100%" alt="Brain Tumor Detection — Architecture"/>
+
+</div>
+
+<br/>
+
+**Problem**
+
+Brain tumor segmentation from multi-modal MRI is inherently complex: tumors exhibit high variability in shape, size, and appearance across T1, T2, FLAIR, and T1ce modalities. Clinical deployment further requires model predictions to be interpretable by radiologists — not just accurate.
+
+**Solution**
+
+A 3D Residual Attention U-Net trained on the BraTS 2020 benchmark dataset for multi-class segmentation of enhancing tumor, tumor core, and whole tumor regions across four MRI modalities. Grad-CAM++ saliency maps provide region-level visual explanations, and a Streamlit dashboard surfaces model output in a clinical interface.
+
+**Pipeline**
+
+`MRI Input` → `MONAI Preprocessing` → `3D Res-Attn U-Net` → `Multi-class Segmentation` → `Grad-CAM++ Explainability` → `Streamlit Dashboard`
+
+**Challenges**
+
+- Class imbalance between tumor sub-regions and healthy tissue across 3D volumes
+- Maintaining spatial context across all three dimensions with efficient GPU memory usage
+- Making model predictions legible to clinical users without deep ML expertise
+
+**Outcome**
+
+- Strong Dice scores across tumor sub-regions on BraTS 2020 validation split
+- Clinically-oriented explainability layer enabling radiologist trust and verification
+- End-to-end deployable system from raw MRI DICOM to annotated segmentation output
+
+<br/>
+
+<div align="center">
+
+`PyTorch` &nbsp; `3D U-Net` &nbsp; `Residual Attention` &nbsp; `Grad-CAM++` &nbsp; `BraTS 2020` &nbsp; `MONAI` &nbsp; `Streamlit`
+
+</div>
+
+<br/>
+
+<div align="center">
+
+[![View Repository](https://img.shields.io/badge/View_Repository-020617?style=for-the-badge&logo=github&logoColor=FFFFFF&labelColor=0F172A)](https://github.com/vishnu10141/Brain-Tumor-Detection-and-Segmentation)
+
+</div>
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+
+<div align="center">
+
+**Radar False Target Detection** &nbsp;·&nbsp; <sub>Defense ML · Signal Intelligence · Ensemble Classifiers</sub>
+
+</div>
+
+</summary>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/project-radar.svg" width="100%" alt="Radar Detection — Signal Classification"/>
+
+</div>
+
+<br/>
+
+**Problem**
+
+Modern radar systems face sophisticated electronic countermeasures that inject synthetic false targets — ghost echoes — into the return signal. Without automated discrimination, operators face an overwhelming volume of alerts, compromising response time and mission effectiveness.
+
+**Solution**
+
+An ML classification pipeline that ingests raw radar return data, applies targeted feature engineering at the signal processing level, and deploys an ensemble of classifiers (XGBoost, Random Forest, SVM) to distinguish genuine targets from ECM-induced false detections with high precision and interpretable confidence scores.
+
+**Pipeline**
+
+`Radar Signal Data` → `Signal Processing` → `Feature Engineering` → `Ensemble Classifiers` → `Binary Classification Output`
+
+**Technologies**
+
+`XGBoost` &nbsp; `Random Forest` &nbsp; `SVM` &nbsp; `Scikit-learn` &nbsp; `NumPy` &nbsp; `Signal Processing`
+
+**Outcome**
+
+- High-accuracy binary classification of radar targets vs. false ECM returns
+- Interpretable feature importances enabling validation by domain experts
+- Modular pipeline architecture suitable for real-time integration
+
+<br/>
+
+<sub><i>Repository not publicly available — developed during DRDO internship on classified datasets.</i></sub>
+
+</details>
+
+<br/>
+
+<details>
+<summary>
+
+<div align="center">
+
+**AI Portfolio Website** &nbsp;·&nbsp; <sub>Next.js · Vercel · Full-Stack</sub>
+
+</div>
+
+</summary>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/project-portfolio.svg" width="100%" alt="Portfolio Website — Architecture"/>
+
+</div>
+
+<br/>
+
+**Overview**
+
+A fully responsive personal portfolio designed for clarity, speed, and professional presentation. Built with Next.js App Router, deployed on Vercel's global edge network. Showcases research work, featured projects, and technical background with smooth animations and dark-mode-first design.
+
+**Architecture**
+
+`Next.js 14 (App Router)` → `Vercel Edge Deploy` → `Global CDN` → `User`
+
+**Features**
+
+- Responsive layout across mobile, tablet, and desktop viewports
+- Dark mode native design with animated transitions
+- Optimized Core Web Vitals — LCP, FID, CLS targets achieved
+- Project showcase with dynamic routing and rich media support
+
+<br/>
+
+<div align="center">
+
+`Next.js` &nbsp; `JavaScript` &nbsp; `CSS` &nbsp; `Vercel` &nbsp; `React`
+
+</div>
+
+<br/>
+
+<div align="center">
+
+[![View Live](https://img.shields.io/badge/View_Live_Demo-020617?style=for-the-badge&logo=vercel&logoColor=FFFFFF&labelColor=0F172A)](https://vishnu-ai-portfolio-864n.vercel.app)
+
+</div>
+
+</details>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/divider-5.svg" width="100%" alt=""/>
+
+</div>
+
+<br/>
+
+<!--
+================================================================
+  TECH STACK
+================================================================
+-->
+
+<div align="center">
+
+<sub><b>TECHNICAL ECOSYSTEM</b></sub>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/stack-diagram.svg" width="100%" alt="Tech Stack — AI Ecosystem"/>
+
+</div>
+
+<br/>
+
+<div align="center">
 <table>
 <tr>
-<td align="center" style="padding:0 6px;"><a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0A1020?style=for-the-badge&logo=vercel&logoColor=06B6D4&labelColor=020817" /></a></td>
-<td align="center" style="padding:0 6px;"><a href="#featured-projects"><img src="https://img.shields.io/badge/Projects-0A1020?style=for-the-badge&logo=rocket&logoColor=3B82F6&labelColor=020817" /></a></td>
-<td align="center" style="padding:0 6px;"><a href="#research-experience"><img src="https://img.shields.io/badge/Research-0A1020?style=for-the-badge&logo=googlescholar&logoColor=8B5CF6&labelColor=020817" /></a></td>
-<td align="center" style="padding:0 6px;"><a href="#technical-skills"><img src="https://img.shields.io/badge/Tech_Stack-0A1020?style=for-the-badge&logo=codeium&logoColor=06B6D4&labelColor=020817" /></a></td>
-<td align="center" style="padding:0 6px;"><a href="#get-in-touch"><img src="https://img.shields.io/badge/Contact-0A1020?style=for-the-badge&logo=minutemailer&logoColor=3B82F6&labelColor=020817" /></a></td>
-</tr>
-</table>
+<td align="center" width="25%">
 
-<br/>
+**Core Language**
 
-<img src="https://img.shields.io/badge/RESEARCH_ROLES-2-3B82F6?style=flat-square&labelColor=020817" />
-&nbsp;
-<img src="https://img.shields.io/badge/FEATURED_PROJECTS-3-06B6D4?style=flat-square&labelColor=020817" />
-&nbsp;
-<img src="https://img.shields.io/badge/CORE_TECHNOLOGIES-25%2B-8B5CF6?style=flat-square&labelColor=020817" />
-
-</div>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=gradient&customColorList=12" width="100%"/>
-
-<br/>
-
-<div align="center"><sub><b>ABOUT</b></sub></div>
-
-## Overview
-
-Computer Science & Engineering graduate focused on interpretable AI, computer vision, and medical imaging. Research background spans signal classification at **DRDO** and low-resource NLP corpus development at **IIIT Hyderabad**. Work spans the full deep learning stack — model design through deployment — with an emphasis on explainability and clinically or operationally grounded systems.
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=gradient&customColorList=12" width="100%"/>
-
-<br/>
-
-<div align="center"><sub><b>EXPERIENCE</b></sub></div>
-
-## Research Experience
-
-<sub><i>Click a role to expand details</i></sub>
-
-<br/>
-
-<details>
-<summary><b>Machine Learning Research Intern</b> &nbsp;·&nbsp; DRDO, Hyderabad &nbsp; <img src="https://img.shields.io/badge/DEFENSE_ML-0A1020?style=flat-square&labelColor=020817&color=0A1020" /></summary>
-
-<br/>
-
-Developed an ML-based radar false-target detection system on real-world defense datasets. Built feature engineering and signal-processing pipelines, then applied XGBoost, Random Forest, and SVM classifiers to separate genuine radar returns from electronic-countermeasure noise.
-
-<br/>
-
-`Signal Processing` `XGBoost` `Random Forest` `SVM` `Feature Engineering`
-
-</details>
-
-<br/>
-
-<details>
-<summary><b>NLP Research Intern</b> &nbsp;·&nbsp; IIIT Hyderabad &nbsp; <img src="https://img.shields.io/badge/LOW--RESOURCE_NLP-0A1020?style=flat-square&labelColor=020817&color=0A1020" /></summary>
-
-<br/>
-
-Contributed to Telugu NLP dataset creation and linguistic annotation for low-resource language modelling, building structured corpora to support underrepresented South Indian languages.
-
-<br/>
-
-`Low-Resource NLP` `Dataset Annotation` `Corpus Construction` `Telugu Language`
-
-</details>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=gradient&customColorList=12" width="100%"/>
-
-<br/>
-
-<div align="center"><sub><b>WORK</b></sub></div>
-
-## Featured Projects
-
-<sub><i>Click a project to expand details · repository links inside</i></sub>
-
-<br/>
-
-<details>
-<summary><b>🧠 Brain Tumor Detection & Segmentation</b> &nbsp;·&nbsp; <sub>Medical Imaging · 3D Deep Learning</sub> &nbsp; <img src="https://img.shields.io/badge/COMPLETED-0A1020?style=flat-square&labelColor=020817&color=3B82F6" /></summary>
-
-<br/>
-
-A 3D medical image segmentation system trained on **BraTS 2020**, built around a custom **3D Residual Attention U-Net** for multi-class tumor segmentation across MRI modalities. Integrated **Grad-CAM++** for interpretable, radiologist-facing predictions, and deployed as a **Streamlit** clinical dashboard for inference.
-
-<br/>
-
-`PyTorch` `3D U-Net` `Residual Attention` `Grad-CAM++` `BraTS 2020` `MONAI` `Streamlit`
-
-<br/><br/>
-
-<a href="https://github.com/vishnu10141/Brain-Tumor-Detection-and-Segmentation"><img src="https://img.shields.io/badge/View_Repository-0A1020?style=for-the-badge&logo=github&logoColor=FFFFFF&labelColor=020817" /></a>
-
-</details>
-
-<br/>
-
-<details>
-<summary><b>📡 Radar False Target Detection</b> &nbsp;·&nbsp; <sub>Defense ML · Signal Classification</sub> &nbsp; <img src="https://img.shields.io/badge/RESEARCH-0A1020?style=flat-square&labelColor=020817&color=06B6D4" /></summary>
-
-<br/>
-
-ML pipeline for classifying radar returns and identifying false targets generated by electronic-countermeasure systems, using feature-level signal processing and ensemble classifiers.
-
-<br/>
-
-`XGBoost` `Random Forest` `SVM` `Scikit-learn` `NumPy` `Signal Processing`
-
-</details>
-
-<br/>
-
-<details>
-<summary><b>🌐 AI Portfolio Website</b> &nbsp;·&nbsp; <sub>Next.js · Vercel</sub> &nbsp; <img src="https://img.shields.io/badge/LIVE-0A1020?style=flat-square&labelColor=020817&color=8B5CF6" /></summary>
-
-<br/>
-
-Fully responsive personal portfolio showcasing research work, projects, and technical background — designed for clarity and performance.
-
-<br/>
-
-`Next.js` `Vercel` `JavaScript` `CSS`
-
-<br/><br/>
-
-<a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="https://img.shields.io/badge/View_Live-0A1020?style=for-the-badge&logo=vercel&logoColor=FFFFFF&labelColor=020817" /></a>
-
-</details>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=gradient&customColorList=12" width="100%"/>
-
-<br/>
-
-<div align="center"><sub><b>STACK</b></sub></div>
-
-## Technical Skills
-
-<table width="100%">
-<tr>
-<td width="33%" valign="top">
-
-<div align="center"><b>Languages</b></div>
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-0A1020?style=flat-square&logo=python&logoColor=3B82F6&labelColor=020817)
-
-</div>
+Python 3.11+
 
 </td>
-<td width="33%" valign="top">
+<td align="center" width="25%">
 
-<div align="center"><b>Machine Learning</b></div>
-<div align="center">
+**Deep Learning**
 
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-0A1020?style=flat-square&logo=scikitlearn&logoColor=06B6D4&labelColor=020817)
-![XGBoost](https://img.shields.io/badge/XGBoost-0A1020?style=flat-square&logoColor=06B6D4&labelColor=020817)
-![Random Forest](https://img.shields.io/badge/Random_Forest-0A1020?style=flat-square&logoColor=06B6D4&labelColor=020817)
-![SVM](https://img.shields.io/badge/SVM-0A1020?style=flat-square&logoColor=06B6D4&labelColor=020817)
-
-</div>
+PyTorch · TensorFlow · MONAI
 
 </td>
-<td width="33%" valign="top">
+<td align="center" width="25%">
 
-<div align="center"><b>Deep Learning</b></div>
-<div align="center">
+**Computer Vision**
 
-![PyTorch](https://img.shields.io/badge/PyTorch-0A1020?style=flat-square&logo=pytorch&logoColor=8B5CF6&labelColor=020817)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-0A1020?style=flat-square&logo=tensorflow&logoColor=8B5CF6&labelColor=020817)
-![MONAI](https://img.shields.io/badge/MONAI-0A1020?style=flat-square&logoColor=8B5CF6&labelColor=020817)
+OpenCV · Grad-CAM++ · PIL
 
-</div>
+</td>
+<td align="center" width="25%">
+
+**NLP**
+
+HuggingFace · spaCy · NLTK
 
 </td>
 </tr>
-<tr><td colspan="3"><br/></td></tr>
 <tr>
-<td width="33%" valign="top">
+<td align="center">
 
-<div align="center"><b>Computer Vision</b></div>
-<div align="center">
+**ML**
 
-![OpenCV](https://img.shields.io/badge/OpenCV-0A1020?style=flat-square&logo=opencv&logoColor=3B82F6&labelColor=020817)
-![Grad-CAM](https://img.shields.io/badge/Grad--CAM-0A1020?style=flat-square&logoColor=3B82F6&labelColor=020817)
-
-</div>
+Scikit-learn · XGBoost · SVM
 
 </td>
-<td width="33%" valign="top">
+<td align="center">
 
-<div align="center"><b>NLP</b></div>
-<div align="center">
+**Data**
 
-![HuggingFace](https://img.shields.io/badge/HuggingFace-0A1020?style=flat-square&logo=huggingface&logoColor=06B6D4&labelColor=020817)
-![spaCy](https://img.shields.io/badge/spaCy-0A1020?style=flat-square&logo=spacy&logoColor=06B6D4&labelColor=020817)
-![NLTK](https://img.shields.io/badge/NLTK-0A1020?style=flat-square&logoColor=06B6D4&labelColor=020817)
-
-</div>
+NumPy · Pandas · Matplotlib
 
 </td>
-<td width="33%" valign="top">
+<td align="center">
 
-<div align="center"><b>Data & Tools</b></div>
-<div align="center">
+**Deployment**
 
-![Pandas](https://img.shields.io/badge/Pandas-0A1020?style=flat-square&logo=pandas&logoColor=3B82F6&labelColor=020817)
-![NumPy](https://img.shields.io/badge/NumPy-0A1020?style=flat-square&logo=numpy&logoColor=3B82F6&labelColor=020817)
-![Git](https://img.shields.io/badge/Git-0A1020?style=flat-square&logo=git&logoColor=3B82F6&labelColor=020817)
+FastAPI · Streamlit · Docker
 
-</div>
+</td>
+<td align="center">
+
+**Stack**
+
+Next.js · Linux · Git · Vercel
 
 </td>
 </tr>
 </table>
+</div>
 
 <br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=gradient&customColorList=12" width="100%"/>
-
-<br/>
-
-<div align="center"><sub><b>FOCUS</b></sub></div>
-
-## Currently Exploring
 
 <div align="center">
 
-<sub><code>vishnu@research:~$</code></sub>
-
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=15&duration=2600&pause=1000&color=06B6D4&center=true&vCenter=true&width=560&height=32&lines=%3E+Explainable+medical+imaging+systems;%3E+3D+multi-modal+segmentation+pipelines;%3E+Instruction-tuned+LLM+domain+adaptation;%3E+Reproducible+MLOps+workflows" alt="currently-exploring-terminal" />
+<img src="./assets/divider-6.svg" width="100%" alt=""/>
 
 </div>
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=gradient&customColorList=12" width="100%"/>
-
-<br/>
-
-<div align="center"><sub><b>ACTIVITY</b></sub></div>
-
-## GitHub Stats
+<!--
+================================================================
+  CURRENTLY EXPLORING
+================================================================
+-->
 
 <div align="center">
 
-<img width="48%" src="https://github-readme-stats.vercel.app/api?username=vishnu10141&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0A1020&title_color=3B82F6&icon_color=06B6D4&text_color=94A3B8&border_radius=8" />
-<img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vishnu10141&layout=compact&hide_border=true&bg_color=0A1020&title_color=3B82F6&text_color=94A3B8&langs_count=8&border_radius=8" />
+<sub><b>CURRENTLY EXPLORING</b></sub>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<code>vishnu@research:~$</code>
 
 <br/><br/>
 
-<img width="65%" src="https://streak-stats.demolab.com/?user=vishnu10141&hide_border=true&background=0A1020&ring=3B82F6&fire=8B5CF6&currStreakLabel=06B6D4&sideLabels=94A3B8&dates=94A3B8&currStreakNum=FFFFFF&sideNums=FFFFFF&border_radius=8" />
-
-<br/><br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vishnu10141/vishnu10141/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vishnu10141/vishnu10141/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake" width="80%" src="https://raw.githubusercontent.com/vishnu10141/vishnu10141/output/github-contribution-grid-snake.svg" />
-</picture>
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=14&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=580&height=30&lines=%3E+Explainable+AI+for+clinical+medical+imaging;%3E+3D+multi-modal+segmentation+pipelines;%3E+Instruction-tuned+LLM+domain+adaptation;%3E+Reproducible+MLOps+%2B+experiment+tracking;%3E+Foundation+models+for+medical+vision" alt="currently-exploring"/>
 
 </div>
 
 <br/>
-
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=gradient&customColorList=12" width="100%"/>
-
-<br/>
-
-<div align="center"><sub><b>CONTACT</b></sub></div>
-
-## Get in Touch
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-0A1020?style=for-the-badge&logo=vercel&logoColor=06B6D4&labelColor=020817)](https://vishnu-ai-portfolio-864n.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A1020?style=for-the-badge&logo=linkedin&logoColor=3B82F6&labelColor=020817)](https://linkedin.com/in/your-linkedin)
-[![Email](https://img.shields.io/badge/Email-0A1020?style=for-the-badge&logo=gmail&logoColor=8B5CF6&labelColor=020817)](mailto:nvishnu1014@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-0A1020?style=for-the-badge&logo=github&logoColor=FFFFFF&labelColor=020817)](https://github.com/vishnu10141)
+<img src="./assets/background.svg" width="100%" alt=""/>
 
 </div>
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0:3B82F6,100:020817&height=110&section=footer" width="100%"/>
+<div align="center">
+
+<img src="./assets/divider-7.svg" width="100%" alt=""/>
+
+</div>
+
+<br/>
+
+<!--
+================================================================
+  CONTACT
+================================================================
+-->
+
+<div align="center">
+
+<sub><b>GET IN TOUCH</b></sub>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/contact-card.svg" width="100%" alt="Contact — Portfolio · GitHub · LinkedIn · Email"/>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="./assets/footer.svg" width="100%" alt=""/>
+
+</div>

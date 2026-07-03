@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="900" height="60">
+  <defs>
+    <linearGradient id="d4-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="25%" stop-color="#7C3AED" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="75%" stop-color="#7C3AED" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="glow-d4" x="-10%" y="-200%" width="120%" height="500%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Blueprint grid pattern -->
+    <pattern id="bp-grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1E293B" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="60" fill="#020617"/>
+
+  <!-- Blueprint-style divider -->
+  <!-- Background blueprint strips -->
+  <rect x="0" y="22" width="900" height="16" fill="url(#bp-grid)" opacity="0.4"/>
+
+  <!-- Blueprint measurement lines -->
+  <line x1="150" y1="16" x2="150" y2="22" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="300" y1="16" x2="300" y2="22" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="600" y1="16" x2="600" y2="22" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="750" y1="16" x2="750" y2="22" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="150" y1="38" x2="150" y2="44" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="300" y1="38" x2="300" y2="44" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="600" y1="38" x2="600" y2="44" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="750" y1="38" x2="750" y2="44" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Top and bottom blueprint lines -->
+  <line x1="0" y1="22" x2="900" y2="22" stroke="url(#d4-grad)" stroke-width="0.8"/>
+  <line x1="0" y1="38" x2="900" y2="38" stroke="url(#d4-grad)" stroke-width="0.8"/>
+
+  <!-- Animated scan beam moving across -->
+  <rect x="0" y="22" width="60" height="16" fill="#3B82F6" opacity="0.05">
+    <animate attributeName="x" values="-60;900" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Center blueprint cross marker -->
+  <line x1="440" y1="18" x2="460" y2="18" stroke="#3B82F6" stroke-width="0.8" opacity="0.6"/>
+  <line x1="440" y1="42" x2="460" y2="42" stroke="#3B82F6" stroke-width="0.8" opacity="0.6"/>
+  <line x1="450" y1="20" x2="450" y2="40" stroke="#3B82F6" stroke-width="0.8" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Center label -->
+  <text x="450" y="33" fill="#3B82F6" font-family="monospace" font-size="7" letter-spacing="5" text-anchor="middle" opacity="0.6">BLUEPRINT</text>
+
+  <!-- Small measurement annotations -->
+  <text x="150" y="14" fill="#334155" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.4">150</text>
+  <text x="300" y="14" fill="#334155" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.4">300</text>
+  <text x="600" y="14" fill="#334155" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.4">600</text>
+  <text x="750" y="14" fill="#334155" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.4">750</text>
+</svg>

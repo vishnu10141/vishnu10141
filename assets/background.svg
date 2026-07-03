@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="900" height="120">
+  <defs>
+    <linearGradient id="bk-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#08111F"/>
+    </linearGradient>
+    <!-- Circuit pattern -->
+    <pattern id="bk-circuit" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 40 L25 40 M55 40 L80 40 M40 0 L40 25 M40 55 L40 80" stroke="#0F2040" stroke-width="0.5" fill="none" opacity="0.6"/>
+      <circle cx="40" cy="40" r="3" fill="none" stroke="#1E293B" stroke-width="0.5" opacity="0.4"/>
+      <circle cx="25" cy="40" r="1.2" fill="#1E293B" opacity="0.35"/>
+      <circle cx="55" cy="40" r="1.2" fill="#1E293B" opacity="0.35"/>
+    </pattern>
+    <!-- Dot grid -->
+    <pattern id="bk-dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.65" fill="#1E293B" opacity="0.45"/>
+    </pattern>
+    <!-- Center ambient glow -->
+    <radialGradient id="bk-glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.08"/>
+      <stop offset="60%" stop-color="#7C3AED" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Scan line gradient -->
+    <linearGradient id="bk-scan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="bk-node-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="120" fill="url(#bk-bg)"/>
+  <rect width="900" height="120" fill="url(#bk-dots)" opacity="0.7"/>
+  <rect width="900" height="120" fill="url(#bk-circuit)" opacity="0.35"/>
+  <rect width="900" height="120" fill="url(#bk-glow)"/>
+
+  <!-- Top border accent -->
+  <line x1="0" y1="0" x2="900" y2="0" stroke="#1E3A5F" stroke-width="1" opacity="0.5"/>
+
+  <!-- Horizontal scan line animation -->
+  <rect x="0" y="0" width="900" height="2" fill="url(#bk-scan)" opacity="0.8">
+    <animate attributeName="y" values="0;120;0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Left cluster: neural activity nodes -->
+  <circle cx="60" cy="40" r="3" fill="#1E3A5F" stroke="#3B82F6" stroke-width="0.8" opacity="0.8" filter="url(#bk-node-glow)">
+    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="40" r="1.5" fill="#3B82F6" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="70" r="3" fill="#1E3A5F" stroke="#3B82F6" stroke-width="0.8" opacity="0.7" filter="url(#bk-node-glow)">
+    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="70" r="1.5" fill="#3B82F6" opacity="0.8"/>
+  <circle cx="85" cy="90" r="2.5" fill="#1E3A5F" stroke="#8B5CF6" stroke-width="0.7" opacity="0.6" filter="url(#bk-node-glow)"/>
+  <circle cx="85" cy="90" r="1" fill="#8B5CF6" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="60" y1="40" x2="110" y2="70" stroke="#3B82F6" stroke-width="0.5" opacity="0.2" stroke-dasharray="3 4">
+    <animate attributeName="stroke-dashoffset" values="0;-7" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="110" y1="70" x2="85" y2="90" stroke="#8B5CF6" stroke-width="0.5" opacity="0.15" stroke-dasharray="3 4">
+    <animate attributeName="stroke-dashoffset" values="0;-7" dur="2.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Center: Terminal text block -->
+  <rect x="280" y="20" width="340" height="80" rx="4" fill="#0A1628" stroke="#1E3A5F" stroke-width="0.8" opacity="0.8"/>
+  <!-- Terminal header bar -->
+  <rect x="280" y="20" width="340" height="18" rx="4" fill="#0F172A" opacity="0.9"/>
+  <rect x="280" y="30" width="340" height="8" fill="#0F172A"/>
+  <!-- Terminal dots -->
+  <circle cx="294" cy="29" r="3" fill="#EF4444" opacity="0.6"/>
+  <circle cx="305" cy="29" r="3" fill="#EAB308" opacity="0.5"/>
+  <circle cx="316" cy="29" r="3" fill="#22C55E" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Terminal label -->
+  <text x="450" y="32" fill="#334155" font-family="monospace" font-size="7" text-anchor="middle" letter-spacing="2">vishnu@research</text>
+  <!-- Code lines -->
+  <text x="295" y="55" fill="#3B82F6" font-family="monospace" font-size="8.5" opacity="0.9">$</text>
+  <text x="308" y="55" fill="#94A3B8" font-family="monospace" font-size="8.5" opacity="0.8">exploring --topic</text>
+  <text x="450" y="55" fill="#38BDF8" font-family="monospace" font-size="8.5" opacity="0.9">"XAI + Med Imaging"</text>
+
+  <text x="295" y="70" fill="#3B82F6" font-family="monospace" font-size="8.5" opacity="0.9">$</text>
+  <text x="308" y="70" fill="#94A3B8" font-family="monospace" font-size="8.5" opacity="0.8">focus --area</text>
+  <text x="407" y="70" fill="#A78BFA" font-family="monospace" font-size="8.5" opacity="0.9">"Foundation Models"</text>
+
+  <text x="295" y="85" fill="#3B82F6" font-family="monospace" font-size="8.5" opacity="0.9">$</text>
+  <text x="308" y="85" fill="#94A3B8" font-family="monospace" font-size="8.5" opacity="0.8">status</text>
+  <text x="350" y="85" fill="#22C55E" font-family="monospace" font-size="8.5" opacity="0.9">ACTIVE ▌</text>
+  <!-- Cursor blink -->
+  <rect x="396" y="77" width="5" height="10" fill="#22C55E" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Right cluster: research nodes -->
+  <circle cx="820" cy="35" r="3" fill="#1E3A5F" stroke="#38BDF8" stroke-width="0.8" opacity="0.8" filter="url(#bk-node-glow)">
+    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820" cy="35" r="1.5" fill="#38BDF8" opacity="0.9"/>
+  <circle cx="858" cy="75" r="3" fill="#1E3A5F" stroke="#8B5CF6" stroke-width="0.8" opacity="0.7" filter="url(#bk-node-glow)">
+    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="858" cy="75" r="1.5" fill="#8B5CF6" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="840" cy="95" r="2.5" fill="#1E3A5F" stroke="#3B82F6" stroke-width="0.7" opacity="0.6" filter="url(#bk-node-glow)"/>
+  <circle cx="840" cy="95" r="1" fill="#3B82F6" opacity="0.7"/>
+  <line x1="820" y1="35" x2="858" y2="75" stroke="#38BDF8" stroke-width="0.5" opacity="0.2" stroke-dasharray="3 4">
+    <animate attributeName="stroke-dashoffset" values="0;-7" dur="2.2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="858" y1="75" x2="840" y2="95" stroke="#3B82F6" stroke-width="0.5" opacity="0.15" stroke-dasharray="3 4">
+    <animate attributeName="stroke-dashoffset" values="0;-7" dur="2.8s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Floating micro-particles -->
+  <circle cx="200" cy="25" r="1" fill="#3B82F6" opacity="0.3">
+    <animate attributeName="cy" values="25;18;25" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.07;0.3" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="100" r="1.2" fill="#8B5CF6" opacity="0.25">
+    <animate attributeName="cy" values="100;90;100" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.05;0.25" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="170" cy="95" r="1" fill="#38BDF8" opacity="0.2">
+    <animate attributeName="cx" values="170;180;170" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="740" cy="20" r="1" fill="#60A5FA" opacity="0.25">
+    <animate attributeName="cx" values="740;730;740" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.05;0.25" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom border accent -->
+  <line x1="0" y1="120" x2="900" y2="120" stroke="#0F172A" stroke-width="1" opacity="0.8"/>
+</svg>

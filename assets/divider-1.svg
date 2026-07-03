@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="900" height="60">
+  <defs>
+    <linearGradient id="d1-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="20%" stop-color="#3B82F6" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="60%" stop-color="#3B82F6"/>
+      <stop offset="80%" stop-color="#3B82F6" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="glow-d1" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="60" fill="#020617"/>
+  <!-- Neural transition: flowing wave with nodes -->
+  <!-- Main flowing line -->
+  <path d="M 0 30 C 100 30, 150 20, 200 30 C 250 40, 300 30, 350 30 C 400 30, 430 22, 450 30 C 470 38, 500 30, 550 30 C 600 30, 650 40, 700 30 C 750 20, 800 30, 900 30"
+    fill="none" stroke="url(#d1-grad)" stroke-width="1.5" filter="url(#glow-d1)">
+    <animate attributeName="d"
+      values="M 0 30 C 100 30, 150 20, 200 30 C 250 40, 300 30, 350 30 C 400 30, 430 22, 450 30 C 470 38, 500 30, 550 30 C 600 30, 650 40, 700 30 C 750 20, 800 30, 900 30;
+              M 0 30 C 100 30, 150 38, 200 30 C 250 22, 300 30, 350 30 C 400 30, 430 38, 450 30 C 470 22, 500 30, 550 30 C 600 30, 650 22, 700 30 C 750 38, 800 30, 900 30;
+              M 0 30 C 100 30, 150 20, 200 30 C 250 40, 300 30, 350 30 C 400 30, 430 22, 450 30 C 470 38, 500 30, 550 30 C 600 30, 650 40, 700 30 C 750 20, 800 30, 900 30"
+      dur="4s" repeatCount="indefinite"/>
+  </path>
+  <!-- Node points along the line -->
+  <circle cx="200" cy="30" r="3" fill="#3B82F6" opacity="0.8">
+    <animate attributeName="cy" values="30;40;30" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="30" r="2.5" fill="#60A5FA" opacity="0.7">
+    <animate attributeName="cy" values="30;30;30" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="30" r="4" fill="#3B82F6" filter="url(#glow-d1)" opacity="0.9">
+    <animate attributeName="cy" values="30;22;30" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;5.5;4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="550" cy="30" r="2.5" fill="#8B5CF6" opacity="0.7">
+    <animate attributeName="cy" values="30;30;30" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="30" r="3" fill="#3B82F6" opacity="0.8">
+    <animate attributeName="cy" values="30;22;30" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Signal traveling along the line -->
+  <circle r="2.5" fill="#FFFFFF" opacity="0.9">
+    <animateMotion dur="3s" repeatCount="indefinite"
+      path="M 0 30 C 100 30, 150 20, 200 30 C 250 40, 300 30, 350 30 C 400 30, 430 22, 450 30 C 470 38, 500 30, 550 30 C 600 30, 650 40, 700 30 C 750 20, 800 30, 900 30"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Section label -->
+  <text x="450" y="16" fill="#334155" font-family="monospace" font-size="8" letter-spacing="4" text-anchor="middle" opacity="0.5">● ● ●</text>
+</svg>
