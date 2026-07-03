@@ -91,7 +91,7 @@
 
 <div align="center">
 
-**Machine Learning Research Intern — DRDO, Hyderabad** &nbsp;``
+**Machine Learning Research Intern — DRDO, Hyderabad** &nbsp;`2023`
 
 </div>
 
@@ -129,7 +129,9 @@ Operational radar systems generate false detections due to electronic countermea
 
 <div align="center">
 
-**NLP Research Intern — IIIT Hyderabad** &nbsp;``
+
+**NLP Research Intern — IIIT Hyderabad** &nbsp;`2022`
+
 
 </div>
 
