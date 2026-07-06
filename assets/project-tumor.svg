@@ -17,142 +17,130 @@
       <stop offset="100%" stop-color="#8B5CF6"/>
     </linearGradient>
     <filter id="pt-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <pattern id="pt-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
       <circle cx="10" cy="10" r="0.6" fill="#1E293B" opacity="0.5"/>
     </pattern>
-    <radialGradient id="pt-mri-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
   <!-- Background -->
   <rect width="900" height="260" fill="url(#pt-bg)" rx="8"/>
   <rect width="900" height="260" fill="url(#pt-dots)" opacity="0.6" rx="8"/>
-  <!-- Border -->
   <rect width="900" height="260" fill="none" stroke="#1E3A5F" stroke-width="1" rx="8" opacity="0.6"/>
 
-  <!-- ============ LEFT SECTION: Architecture Pipeline ============ -->
-  <text x="40" y="36" fill="#60A5FA" font-family="monospace" font-size="10" letter-spacing="3" opacity="0.8">ARCHITECTURE</text>
+  <!-- ============ PIPELINE: 6 boxes, total width=820, each box=106, arrow=30, 5 arrows=150, 6 boxes=620, gaps=10 ============ -->
+  <!-- Math: 820 / (6*106 + 5*30) = 820/786 → adjust: box=108, arrow=28 → 6*108+5*28=648+140=788 → close enough. Let box=107, arrow=27 → 642+135=777. Use box=110, arrow=14 → 660+70=730, gap start=(820-730)/2... -->
+  <!-- Simplest: 6 boxes of 110px, 5 arrows of 14px: 660+70=730, left offset=40, right=770, 90px short. Use box=118, arrow=10 → 708+50=758, still short. Use box=120, arrow=16 → 720+80=800 = perfect! start at x=40. -->
+  <text x="40" y="36" fill="#60A5FA" font-family="monospace" font-size="10" letter-spacing="3" opacity="0.8">ARCHITECTURE PIPELINE</text>
 
-  <!-- Pipeline flow: MRI → Preprocess → 3D U-Net → Segment → Grad-CAM → Dashboard -->
-  <!-- Step boxes -->
-
-  <!-- Step 1: MRI Input -->
-  <rect x="40" y="52" width="110" height="40" rx="4" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.9"/>
-  <text x="95" y="72" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">MRI Input</text>
-  <text x="95" y="83" fill="#1E40AF" font-family="monospace" font-size="7" text-anchor="middle">BraTS 2020</text>
-
-  <!-- Arrow -->
-
-  <line x1="150" y1="72" x2="182" y2="72" stroke="#3B82F6" stroke-width="1" opacity="0.6">
-    <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.2s" repeatCount="indefinite"/>
-  </line>
-  <polygon points="182,69 188,72 182,75" fill="#3B82F6" opacity="0.8"/>
-
-  <!-- Step 2: Preprocess -->
-  <rect x="182" y="52" width="110" height="40" rx="4" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.9"/>
-  <text x="237" y="72" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Preprocess</text>
-  <text x="237" y="83" fill="#1E40AF" font-family="monospace" font-size="7" text-anchor="middle">Normalize</text>
+  <!-- Step 1: MRI Input — x=40, w=120 -->
+  <rect x="40" y="52" width="120" height="44" rx="5" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.9"/>
+  <text x="100" y="72" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">MRI Input</text>
+  <text x="100" y="84" fill="#1E40AF" font-family="monospace" font-size="7" text-anchor="middle">BraTS 2020</text>
 
   <!-- Arrow -->
-  <line x1="292" y1="72" x2="324" y2="72" stroke="#3B82F6" stroke-width="1" opacity="0.6">
-    <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.4s" repeatCount="indefinite"/>
+  <line x1="160" y1="74" x2="175" y2="74" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3 2" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1.2s" repeatCount="indefinite"/>
   </line>
-  <polygon points="324,69 330,72 324,75" fill="#3B82F6" opacity="0.8"/>
+  <polygon points="175,71 181,74 175,77" fill="#3B82F6" opacity="0.8"/>
 
-  <!-- Step 3: 3D U-Net (highlighted) -->
-  <rect x="324" y="44" width="110" height="56" rx="4" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1.5" filter="url(#pt-glow)" opacity="0.95"/>
-  <text x="379" y="68" fill="#A78BFA" font-family="monospace" font-size="8" font-weight="700" text-anchor="middle">3D Res-Attn</text>
-  <text x="379" y="79" fill="#A78BFA" font-family="monospace" font-size="8" font-weight="700" text-anchor="middle">U-Net</text>
-  <text x="379" y="90" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Core Model</text>
-  <!-- Pulsing border -->
-  <rect x="324" y="44" width="110" height="56" rx="4" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.4">
+  <!-- Step 2: Preprocess — x=181 -->
+  <rect x="181" y="52" width="120" height="44" rx="5" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.9"/>
+  <text x="241" y="72" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Preprocess</text>
+  <text x="241" y="84" fill="#1E40AF" font-family="monospace" font-size="7" text-anchor="middle">MONAI · Norm</text>
+
+  <!-- Arrow -->
+  <line x1="301" y1="74" x2="316" y2="74" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3 2" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1.4s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="316,71 322,74 316,77" fill="#3B82F6" opacity="0.8"/>
+
+  <!-- Step 3: 3D U-Net (highlighted) — x=322 -->
+  <rect x="322" y="44" width="120" height="60" rx="5" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1.5" filter="url(#pt-glow)" opacity="0.95"/>
+  <text x="382" y="70" fill="#A78BFA" font-family="monospace" font-size="8" font-weight="700" text-anchor="middle">3D Res-Attn</text>
+  <text x="382" y="82" fill="#A78BFA" font-family="monospace" font-size="8" font-weight="700" text-anchor="middle">U-Net</text>
+  <text x="382" y="94" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Core Model</text>
+  <rect x="322" y="44" width="120" height="60" rx="5" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.4">
     <animate attributeName="stroke-width" values="0.5;2;0.5" dur="2s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" repeatCount="indefinite"/>
   </rect>
 
   <!-- Arrow -->
-  <line x1="434" y1="72" x2="466" y2="72" stroke="#8B5CF6" stroke-width="1" opacity="0.6">
-    <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.6s" repeatCount="indefinite"/>
+  <line x1="442" y1="74" x2="457" y2="74" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="3 2" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1.6s" repeatCount="indefinite"/>
   </line>
-  <polygon points="466,69 472,72 466,75" fill="#8B5CF6" opacity="0.8"/>
+  <polygon points="457,71 463,74 457,77" fill="#8B5CF6" opacity="0.8"/>
 
-  <!-- Step 4: Segmentation -->
-  <rect x="466" y="52" width="110" height="40" rx="4" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.9"/>
-  <text x="521" y="72" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Segment</text>
-  <text x="521" y="83" fill="#1E40AF" font-family="monospace" font-size="7" text-anchor="middle">Multi-Class</text>
+  <!-- Step 4: Segment — x=463 -->
+  <rect x="463" y="52" width="120" height="44" rx="5" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.9"/>
+  <text x="523" y="72" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Segment</text>
+  <text x="523" y="84" fill="#1E40AF" font-family="monospace" font-size="7" text-anchor="middle">Multi-Class</text>
 
   <!-- Arrow -->
-  <line x1="576" y1="72" x2="608" y2="72" stroke="#3B82F6" stroke-width="1" opacity="0.6">
-    <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.3s" repeatCount="indefinite"/>
+  <line x1="583" y1="74" x2="598" y2="74" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3 2" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1.3s" repeatCount="indefinite"/>
   </line>
-  <polygon points="608,69 614,72 608,75" fill="#3B82F6" opacity="0.8"/>
+  <polygon points="598,71 604,74 598,77" fill="#3B82F6" opacity="0.8"/>
 
-  <!-- Step 5: Grad-CAM -->
-  <rect x="608" y="52" width="110" height="40" rx="4" fill="url(#pt-blue)" stroke="#38BDF8" stroke-width="1" opacity="0.9"/>
-  <text x="663" y="72" fill="#7DD3FC" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Grad-CAM++</text>
-  <text x="663" y="83" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">Explainable</text>
+  <!-- Step 5: Grad-CAM++ — x=604 -->
+  <rect x="604" y="52" width="120" height="44" rx="5" fill="url(#pt-blue)" stroke="#38BDF8" stroke-width="1" opacity="0.9"/>
+  <text x="664" y="72" fill="#7DD3FC" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Grad-CAM++</text>
+  <text x="664" y="84" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">Explainability</text>
 
   <!-- Arrow -->
-  <line x1="718" y1="72" x2="750" y2="72" stroke="#38BDF8" stroke-width="1" opacity="0.6">
-    <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.5s" repeatCount="indefinite"/>
+  <line x1="724" y1="74" x2="739" y2="74" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3 2" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1.5s" repeatCount="indefinite"/>
   </line>
-  <polygon points="750,69 756,72 750,75" fill="#38BDF8" opacity="0.8"/>
+  <polygon points="739,71 745,74 739,77" fill="#38BDF8" opacity="0.8"/>
 
-  <!-- Step 6: Dashboard -->
-  <rect x="750" y="52" width="110" height="40" rx="4" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1" opacity="0.9"/>
-  <text x="805" y="72" fill="#A78BFA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Streamlit</text>
-  <text x="805" y="83" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Dashboard</text>
+  <!-- Step 6: Dashboard — x=745 -->
+  <rect x="745" y="52" width="115" height="44" rx="5" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1" opacity="0.9"/>
+  <text x="802" y="72" fill="#A78BFA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Streamlit</text>
+  <text x="802" y="84" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Dashboard</text>
 
-  <!-- ============ METRICS ROW ============ -->
-  <text x="40" y="140" fill="#60A5FA" font-family="monospace" font-size="10" letter-spacing="3" opacity="0.8">PERFORMANCE</text>
+  <!-- ============ METRICS ROW: 5 cards, x=40→860, each=148, gap=20 ============ -->
+  <!-- 5*148 + 4*20 = 740+80 = 820 = perfect -->
+  <text x="40" y="130" fill="#60A5FA" font-family="monospace" font-size="9" letter-spacing="3" opacity="0.7">PERFORMANCE METRICS</text>
 
-  <!-- Metric cards -->
-  <!-- Dice Score -->
-  <rect x="40" y="152" width="148" height="60" rx="4" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.8"/>
-  <text x="114" y="178" fill="#60A5FA" font-family="monospace" font-size="18" font-weight="700" text-anchor="middle">0.87</text>
-  <text x="114" y="196" fill="#1E40AF" font-family="monospace" font-size="8" text-anchor="middle">Dice Score</text>
-  <text x="114" y="206" fill="#0F172A" font-family="monospace" font-size="7" text-anchor="middle">Multi-class</text>
+  <!-- Card 1: Dice Score — x=40 -->
+  <rect x="40" y="142" width="148" height="64" rx="5" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.85"/>
+  <text x="114" y="168" fill="#60A5FA" font-family="monospace" font-size="20" font-weight="700" text-anchor="middle">0.87</text>
+  <text x="114" y="184" fill="#3B82F6" font-family="monospace" font-size="8" text-anchor="middle">Dice Score</text>
+  <text x="114" y="196" fill="#1E3A5F" font-family="monospace" font-size="7" text-anchor="middle">Multi-class</text>
 
-  <!-- BraTS -->
-  <rect x="208" y="152" width="148" height="60" rx="4" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.8"/>
-  <text x="282" y="178" fill="#60A5FA" font-family="monospace" font-size="18" font-weight="700" text-anchor="middle">BraTS</text>
-  <text x="282" y="196" fill="#1E40AF" font-family="monospace" font-size="8" text-anchor="middle">2020 Dataset</text>
-  <text x="282" y="206" fill="#0F172A" font-family="monospace" font-size="7" text-anchor="middle">Benchmark</text>
+  <!-- Card 2: BraTS — x=208 -->
+  <rect x="208" y="142" width="148" height="64" rx="5" fill="url(#pt-blue)" stroke="#3B82F6" stroke-width="1" opacity="0.85"/>
+  <text x="282" y="168" fill="#60A5FA" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">BraTS 2020</text>
+  <text x="282" y="184" fill="#3B82F6" font-family="monospace" font-size="8" text-anchor="middle">Dataset</text>
+  <text x="282" y="196" fill="#1E3A5F" font-family="monospace" font-size="7" text-anchor="middle">Benchmark</text>
 
-  <!-- Architecture -->
-  <rect x="376" y="152" width="148" height="60" rx="4" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1" opacity="0.8"/>
-  <text x="450" y="175" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">3D Res-Attn</text>
-  <text x="450" y="188" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">U-Net</text>
-  <text x="450" y="204" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Custom Architecture</text>
+  <!-- Card 3: Architecture — x=376, highlighted -->
+  <rect x="376" y="138" width="148" height="72" rx="5" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1.5" filter="url(#pt-glow)" opacity="0.95"/>
+  <text x="450" y="164" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">3D Res-Attn</text>
+  <text x="450" y="178" fill="#A78BFA" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">U-Net</text>
+  <text x="450" y="196" fill="#4C1D95" font-family="monospace" font-size="7" text-anchor="middle">Custom Architecture</text>
 
-  <!-- XAI -->
-  <rect x="544" y="152" width="148" height="60" rx="4" fill="url(#pt-blue)" stroke="#38BDF8" stroke-width="1" opacity="0.8"/>
-  <text x="618" y="178" fill="#7DD3FC" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">XAI</text>
-  <text x="618" y="196" fill="#0C4A6E" font-family="monospace" font-size="8" text-anchor="middle">Grad-CAM++</text>
-  <text x="618" y="206" fill="#0F172A" font-family="monospace" font-size="7" text-anchor="middle">Explainability</text>
+  <!-- Card 4: XAI — x=544 -->
+  <rect x="544" y="142" width="148" height="64" rx="5" fill="url(#pt-blue)" stroke="#38BDF8" stroke-width="1" opacity="0.85"/>
+  <text x="618" y="170" fill="#7DD3FC" font-family="monospace" font-size="18" font-weight="700" text-anchor="middle">XAI</text>
+  <text x="618" y="185" fill="#0C4A6E" font-family="monospace" font-size="8" text-anchor="middle">Grad-CAM++</text>
+  <text x="618" y="197" fill="#0F172A" font-family="monospace" font-size="7" text-anchor="middle">Explainability</text>
 
-  <!-- MONAI -->
-  <rect x="712" y="152" width="148" height="60" rx="4" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1" opacity="0.8"/>
-  <text x="786" y="178" fill="#A78BFA" font-family="monospace" font-size="15" font-weight="700" text-anchor="middle">MONAI</text>
-  <text x="786" y="196" fill="#4C1D95" font-family="monospace" font-size="8" text-anchor="middle">Medical AI</text>
-  <text x="786" y="206" fill="#0F172A" font-family="monospace" font-size="7" text-anchor="middle">Framework</text>
+  <!-- Card 5: MONAI — x=712 -->
+  <rect x="712" y="142" width="148" height="64" rx="5" fill="url(#pt-purple)" stroke="#8B5CF6" stroke-width="1" opacity="0.85"/>
+  <text x="786" y="170" fill="#A78BFA" font-family="monospace" font-size="18" font-weight="700" text-anchor="middle">MONAI</text>
+  <text x="786" y="185" fill="#4C1D95" font-family="monospace" font-size="8" text-anchor="middle">Medical AI</text>
+  <text x="786" y="197" fill="#0F172A" font-family="monospace" font-size="7" text-anchor="middle">Framework</text>
 
-  <!-- ============ BOTTOM: Tags + Button ============ -->
-  <!-- ============ BOTTOM: Tags + Button ============ -->
-  <text x="40" y="238" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">PyTorch</text>
-  <text x="92" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="102" y="238" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">3D U-Net</text>
-  <text x="166" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="176" y="238" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">MONAI</text>
-  <text x="226" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="236" y="238" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">Grad-CAM++</text>
-  <text x="320" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="330" y="238" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">BraTS 2020</text>
-  <text x="406" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="416" y="238" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">Streamlit</text>
+  <!-- ============ TAGS: evenly spaced across full width ============ -->
+  <line x1="40" y1="224" x2="860" y2="224" stroke="#1E3A5F" stroke-width="0.6" opacity="0.4"/>
+  <text x="40"  y="239" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">PyTorch</text>
+  <text x="152" y="239" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">3D U-Net</text>
+  <text x="274" y="239" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">MONAI</text>
+  <text x="386" y="239" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">Grad-CAM++</text>
+  <text x="534" y="239" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">BraTS 2020</text>
+  <text x="676" y="239" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">Streamlit</text>
+  <text x="766" y="239" fill="#3B82F6" font-family="monospace" font-size="9" opacity="0.7">PyTorch</text>
 </svg>
