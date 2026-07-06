@@ -8,7 +8,7 @@
       <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
     <filter id="glow-d7" x="-20%" y="-200%" width="140%" height="500%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>

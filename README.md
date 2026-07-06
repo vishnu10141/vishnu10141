@@ -5,17 +5,13 @@
 </div>
 
 <div align="left">
-  <a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="./assets/hero-btn-portfolio.svg" width="18.66%" alt="Portfolio"></a><a href="https://github.com/vishnu10141"><img src="./assets/hero-btn-github.svg" width="14.66%" alt="GitHub"></a>
+  <a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="./assets/hero-btn-portfolio.svg" width="17.77%" alt="Portfolio"></a><a href="https://github.com/vishnu10141"><img src="./assets/hero-btn-github.svg" width="14.66%" alt="GitHub"></a>
 </div>
 
 
 <div align="center">
 
 <img src="./assets/particles.svg" width="100%" alt=""/>
-
-</div>
-
-<div align="center">
 
 <img src="./assets/divider-1.svg" width="100%" alt=""/>
 

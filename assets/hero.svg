@@ -97,26 +97,27 @@
   <!-- ===================== LEFT CONTENT PANEL ===================== -->
 
   <!-- Status dot + label -->
-  <circle cx="52" cy="50" r="4" fill="#22C55E">
+  <circle cx="44" cy="50" r="4" fill="#22C55E">
     <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
   </circle>
-  <text x="63" y="54" fill="#64748B" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="11" letter-spacing="2">AVAILABLE FOR OPPORTUNITIES</text>
+  <text x="56" y="54" fill="#64748B" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="11" letter-spacing="2">AVAILABLE FOR OPPORTUNITIES</text>
 
   <!-- Name -->
-  <text x="48" y="118" fill="url(#name-grad)" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">Vishnu</text>
-  <text x="48" y="164" fill="url(#name-grad)" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">Nimmakayala</text>
+  <text x="40" y="118" fill="url(#name-grad)" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">Vishnu</text>
+  <text x="40" y="164" fill="url(#name-grad)" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">Nimmakayala</text>
 
   <!-- Title bar -->
-  <rect x="48" y="178" width="3" height="22" fill="url(#blue-grad)" rx="1.5"/>
-  <text x="60" y="194" fill="#60A5FA" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="14" font-weight="500" letter-spacing="0.5">AI Engineer · ML Researcher</text>
+  <rect x="40" y="178" width="3" height="22" fill="url(#blue-grad)" rx="1.5"/>
+  <text x="52" y="194" fill="#60A5FA" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="14" font-weight="500" letter-spacing="0.5">AI Engineer · ML Researcher</text>
 
   <!-- Description -->
-  <text x="48" y="226" fill="#64748B" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12.5" letter-spacing="0.2">Deep learning systems from research to</text>
-  <text x="48" y="244" fill="#64748B" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12.5" letter-spacing="0.2">deployment. Medical imaging. Signal intelligence.</text>
+  <text x="40" y="226" fill="#64748B" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12.5" letter-spacing="0.2">Deep learning systems from research to</text>
+  <text x="40" y="244" fill="#64748B" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12.5" letter-spacing="0.2">deployment. Medical imaging. Signal intelligence.</text>
 
 
 
   <!-- ===================== RIGHT AI CORE ILLUSTRATION ===================== -->
+  <g transform="translate(30, 0)">
 
   <!-- Background glow cloud behind core -->
   <ellipse cx="695" cy="160" rx="130" ry="110" fill="url(#core-glow)" opacity="0.7">
@@ -255,7 +256,7 @@
   </circle>
 
   <path id="signal-path-1" d="M 695 72 C 780 105 780 215 695 248 C 610 215 610 105 695 72" fill="none"/>
-
+  </g>
   <!-- ===================== BACKGROUND DECORATIVE ELEMENTS ===================== -->
   <!-- Right panel subtle dots grid -->
   <circle cx="540" cy="30" r="1" fill="#334155" opacity="0.4"/>

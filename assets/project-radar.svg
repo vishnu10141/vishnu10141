@@ -28,7 +28,7 @@
 
   <!-- ============ LEFT: Radar Signal Classification Visual ============ -->
   <!-- Radar sweep illustration -->
-  <text x="32" y="36" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="3" opacity="0.8">SIGNAL CLASSIFICATION</text>
+  <text x="40" y="36" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="3" opacity="0.8">SIGNAL CLASSIFICATION</text>
 
   <!-- Radar display -->
   <g transform="translate(130, 140)">
@@ -120,38 +120,38 @@
   <text x="360" y="235" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">Ensemble Classifiers</text>
 
   <!-- ============ RIGHT: Metrics ============ -->
-  <text x="480" y="100" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="3" opacity="0.8">RESULTS</text>
+  <text x="500" y="100" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="3" opacity="0.8">RESULTS</text>
 
   <!-- Metric: Accuracy bar -->
-  <text x="480" y="120" fill="#64748B" font-family="monospace" font-size="8" opacity="0.7">Accuracy</text>
-  <rect x="480" y="126" width="360" height="8" rx="4" fill="#0F172A"/>
-  <rect x="480" y="126" width="324" height="8" rx="4" fill="#3B82F6" opacity="0.7">
+  <text x="500" y="120" fill="#64748B" font-family="monospace" font-size="8" opacity="0.7">Accuracy</text>
+  <rect x="500" y="126" width="360" height="8" rx="4" fill="#0F172A"/>
+  <rect x="500" y="126" width="324" height="8" rx="4" fill="#3B82F6" opacity="0.7">
     <animate attributeName="width" values="0;324" dur="2s" repeatCount="indefinite"/>
   </rect>
-  <text x="846" y="134" fill="#60A5FA" font-family="monospace" font-size="8" text-anchor="end">90%</text>
+  <text x="860" y="134" fill="#60A5FA" font-family="monospace" font-size="8" text-anchor="end">90%</text>
 
   <!-- Metric: Precision -->
-  <text x="480" y="155" fill="#64748B" font-family="monospace" font-size="8" opacity="0.7">Precision</text>
-  <rect x="480" y="161" width="360" height="8" rx="4" fill="#0F172A"/>
-  <rect x="480" y="161" width="306" height="8" rx="4" fill="#8B5CF6" opacity="0.7">
+  <text x="500" y="155" fill="#64748B" font-family="monospace" font-size="8" opacity="0.7">Precision</text>
+  <rect x="500" y="161" width="360" height="8" rx="4" fill="#0F172A"/>
+  <rect x="500" y="161" width="306" height="8" rx="4" fill="#8B5CF6" opacity="0.7">
     <animate attributeName="width" values="0;306" dur="2s" begin="0.3s" repeatCount="indefinite"/>
   </rect>
-  <text x="846" y="169" fill="#A78BFA" font-family="monospace" font-size="8" text-anchor="end">85%</text>
+  <text x="860" y="169" fill="#A78BFA" font-family="monospace" font-size="8" text-anchor="end">85%</text>
 
   <!-- Metric: F1 -->
-  <text x="480" y="190" fill="#64748B" font-family="monospace" font-size="8" opacity="0.7">F1-Score</text>
-  <rect x="480" y="196" width="360" height="8" rx="4" fill="#0F172A"/>
-  <rect x="480" y="196" width="295" height="8" rx="4" fill="#38BDF8" opacity="0.7">
+  <text x="500" y="190" fill="#64748B" font-family="monospace" font-size="8" opacity="0.7">F1-Score</text>
+  <rect x="500" y="196" width="360" height="8" rx="4" fill="#0F172A"/>
+  <rect x="500" y="196" width="295" height="8" rx="4" fill="#38BDF8" opacity="0.7">
     <animate attributeName="width" values="0;295" dur="2s" begin="0.6s" repeatCount="indefinite"/>
   </rect>
-  <text x="846" y="204" fill="#7DD3FC" font-family="monospace" font-size="8" text-anchor="end">82%</text>
+  <text x="860" y="204" fill="#7DD3FC" font-family="monospace" font-size="8" text-anchor="end">82%</text>
 
   <!-- Tags -->
-  <text x="480" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">XGBoost</text>
-  <text x="540" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="550" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">Random Forest</text>
-  <text x="644" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="654" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">SVM</text>
-  <text x="684" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
-  <text x="694" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">Signal Processing</text>
+  <text x="500" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">XGBoost</text>
+  <text x="560" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
+  <text x="570" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">Random Forest</text>
+  <text x="664" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
+  <text x="674" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">SVM</text>
+  <text x="704" y="238" fill="#1E3A5F" font-family="monospace" font-size="9" opacity="0.5">·</text>
+  <text x="714" y="238" fill="#38BDF8" font-family="monospace" font-size="9" opacity="0.7">Signal Processing</text>
 </svg>
