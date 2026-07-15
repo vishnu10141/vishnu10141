@@ -1,143 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260">
   <defs>
-    <linearGradient id="tl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08111F"/>
-      <stop offset="100%" stop-color="#020617"/>
-    </linearGradient>
-    <linearGradient id="tl-line" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#020617"/>
-      <stop offset="12%" stop-color="#3B82F6" stop-opacity="0.2"/>
-      <stop offset="30%" stop-color="#3B82F6" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#60A5FA"/>
-      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.8"/>
-      <stop offset="88%" stop-color="#8B5CF6" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#020617"/>
-    </linearGradient>
-    <linearGradient id="tl-title" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#94A3B8"/>
-    </linearGradient>
-    <filter id="tl-glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="tl-glow-v" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
-    <filter id="tl-glow-sm" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <pattern id="tl-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.5" fill="#1E293B" opacity="0.4"/>
-    </pattern>
-    <radialGradient id="tl-ambient" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="200" fill="url(#tl-bg)"/>
-  <rect width="900" height="200" fill="url(#tl-dots)" opacity="0.7"/>
-  <rect width="900" height="200" fill="url(#tl-ambient)"/>
+  <rect width="900" height="260" fill="#050A12"/>
 
-  <!-- Section heading -->
-  <text x="450" y="24" fill="url(#tl-title)" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="6" text-anchor="middle" opacity="0.6">RESEARCH TIMELINE</text>
-  <line x1="200" y1="30" x2="330" y2="30" stroke="#1E3A5F" stroke-width="0.5" opacity="0.5"/>
-  <line x1="570" y1="30" x2="700" y2="30" stroke="#1E3A5F" stroke-width="0.5" opacity="0.5"/>
+  <!-- Section label -->
+  <text x="40" y="24" fill="#3D4F70" font-size="9" font-family="monospace" letter-spacing="4" opacity="0.7">RESEARCH TIMELINE</text>
 
-  <!-- Timeline main axis -->
-  <line x1="40" y1="110" x2="860" y2="110" stroke="url(#tl-line)" stroke-width="1.5"/>
+  <!-- Vertical connector line -->
+  <line x1="200" y1="34" x2="200" y2="240" stroke="#1A2540" stroke-width="1" opacity="0.7"/>
 
-  <!-- Animated signal traveling along timeline -->
-  <circle r="3" fill="#FFFFFF" opacity="0.9" filter="url(#tl-glow)">
-    <animateMotion dur="6s" repeatCount="indefinite" path="M 40 110 L 860 110"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="6s" repeatCount="indefinite"/>
+  <!-- ===== EVENT 1 — 2022, IIIT Hyderabad ===== -->
+  <!-- Year label -->
+  <text x="180" y="52" fill="#3D4F70" font-size="10" font-family="monospace" text-anchor="end" letter-spacing="1">2022</text>
+  <!-- Outer node -->
+  <circle cx="200" cy="48" r="4" fill="#050A12" stroke="#8A5DFF" stroke-width="1.5"/>
+  <!-- Inner node -->
+  <circle cx="200" cy="48" r="2" fill="#8A5DFF" opacity="0.8"/>
+  <!-- Horizontal connector -->
+  <line x1="200" y1="48" x2="220" y2="48" stroke="#1A2540" stroke-width="0.8"/>
+  <!-- Institution name -->
+  <text x="228" y="44" fill="#F0F4FF" font-size="13" font-weight="600" font-family="'SF Pro Display', -apple-system, Inter, sans-serif">IIIT Hyderabad</text>
+  <!-- Role badge background -->
+  <rect x="228" y="50" width="130" height="16" rx="3" fill="#0A1120" stroke="#1A2540" stroke-width="0.7"/>
+  <!-- Role text -->
+  <text x="234" y="62" fill="#8A5DFF" font-size="8" font-family="monospace">NLP Research Intern</text>
+  <!-- Description -->
+  <text x="228" y="76" fill="#7B8DB0" font-size="9" font-family="monospace">Low-resource Telugu NLP · Corpus Construction</text>
+
+  <!-- ===== EVENT 2 — 2023, DRDO ===== -->
+  <!-- Year label -->
+  <text x="180" y="118" fill="#3D4F70" font-size="10" font-family="monospace" text-anchor="end" letter-spacing="1">2023</text>
+  <!-- Outer node -->
+  <circle cx="200" cy="114" r="4" fill="#050A12" stroke="#4F8FFF" stroke-width="1.5"/>
+  <!-- Inner node -->
+  <circle cx="200" cy="114" r="2" fill="#4F8FFF" opacity="0.8"/>
+  <!-- Horizontal connector -->
+  <line x1="200" y1="114" x2="220" y2="114" stroke="#1A2540" stroke-width="0.8"/>
+  <!-- Institution name -->
+  <text x="228" y="110" fill="#F0F4FF" font-size="13" font-weight="600" font-family="'SF Pro Display', -apple-system, Inter, sans-serif">DRDO</text>
+  <!-- Role badge background -->
+  <rect x="228" y="116" width="186" height="16" rx="3" fill="#0A1120" stroke="#1A2540" stroke-width="0.7"/>
+  <!-- Role text -->
+  <text x="234" y="128" fill="#4F8FFF" font-size="8" font-family="monospace">Machine Learning Research Intern</text>
+  <!-- Description -->
+  <text x="228" y="142" fill="#7B8DB0" font-size="9" font-family="monospace">Radar Signal Classification · Ensemble Methods</text>
+
+  <!-- ===== EVENT 3 — 2024, CS&E Graduate ===== -->
+  <!-- Year label -->
+  <text x="180" y="184" fill="#3D4F70" font-size="10" font-family="monospace" text-anchor="end" letter-spacing="1">2024</text>
+  <!-- Outer node -->
+  <circle cx="200" cy="180" r="4" fill="#050A12" stroke="#1A2540" stroke-width="1.5"/>
+  <!-- Inner node -->
+  <circle cx="200" cy="180" r="2" fill="#1A2540" opacity="0.8"/>
+  <!-- Horizontal connector -->
+  <line x1="200" y1="180" x2="220" y2="180" stroke="#1A2540" stroke-width="0.8"/>
+  <!-- Institution name -->
+  <text x="228" y="176" fill="#F0F4FF" font-size="13" font-weight="600" font-family="'SF Pro Display', -apple-system, Inter, sans-serif">CS&amp;E Graduate</text>
+  <!-- Sub text -->
+  <text x="228" y="192" fill="#7B8DB0" font-size="9" font-family="monospace">B.Tech · Computer Science &amp; Engineering</text>
+
+  <!-- ===== EVENT 4 — NOW, Available ===== -->
+  <!-- Year label -->
+  <text x="180" y="236" fill="#00FFAE" font-size="10" font-family="monospace" text-anchor="end" letter-spacing="1" opacity="0.8">NOW</text>
+  <!-- Outer node -->
+  <circle cx="200" cy="232" r="5" fill="#050A12" stroke="#00FFAE" stroke-width="1.5"/>
+  <!-- Inner node with pulse -->
+  <circle cx="200" cy="232" r="2.5" fill="#00FFAE" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Horizontal connector -->
+  <line x1="200" y1="232" x2="220" y2="232" stroke="#00FFAE" stroke-width="0.8" opacity="0.4"/>
+  <!-- Open text -->
+  <text x="228" y="228" fill="#00FFAE" font-size="13" font-weight="600" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" opacity="0.9">Open to Opportunities</text>
+  <!-- Badge background -->
+  <rect x="228" y="234" width="154" height="16" rx="3" fill="#050A12" stroke="#00FFAE" stroke-width="0.7" opacity="0.5"/>
+  <!-- Badge text -->
+  <text x="234" y="246" fill="#00FFAE" font-size="8" font-family="monospace" opacity="0.7">Available · ML / AI Engineering</text>
+
+  <!-- ===== TRAVEL PULSE on vertical connector ===== -->
+  <circle r="1.5" fill="#4F8FFF" opacity="0.4">
+    <animateMotion dur="6s" repeatCount="indefinite">
+      <mpath xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M 200 34 L 200 240"/>
+      </mpath>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;0.5;0.5;0" dur="6s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- === EVENT 1: B.Tech CSE - 2020 === -->
-  <!-- Connector: above -->
-  <line x1="90" y1="110" x2="90" y2="70" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
-  <!-- Node -->
-  <circle cx="90" cy="110" r="10" fill="#0A1628" stroke="#3B82F6" stroke-width="1.5" filter="url(#tl-glow-sm)">
-    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="90" cy="110" r="4" fill="#3B82F6" opacity="0.9">
-    <animate attributeName="r" values="4;5.5;4" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <!-- Label above -->
-  <text x="90" y="58" fill="#60A5FA" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.5">B.Tech CSE</text>
-  <text x="90" y="70" fill="#94A3B8" font-family="monospace" font-size="7.5" text-anchor="middle">JNTU Hyderabad</text>
-  <text x="90" y="82" fill="#475569" font-family="monospace" font-size="7" text-anchor="middle">2020 — 2024</text>
-  <!-- Badge chip -->
-  <rect x="50" y="88" width="80" height="14" rx="3" fill="#1E3A5F" stroke="#3B82F6" stroke-width="0.6" opacity="0.8"/>
-  <text x="90" y="98" fill="#60A5FA" font-family="monospace" font-size="6.5" text-anchor="middle" letter-spacing="0.5">GPA · Dean's List</text>
-
-  <!-- === EVENT 2: DRDO Intern - 2023 === -->
-  <!-- Connector: below -->
-  <line x1="330" y1="110" x2="330" y2="155" stroke="#3B82F6" stroke-width="0.8" opacity="0.4"/>
-  <!-- Node -->
-  <circle cx="330" cy="110" r="10" fill="#0A1628" stroke="#3B82F6" stroke-width="1.5" filter="url(#tl-glow-sm)">
-    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="330" cy="110" r="4" fill="#3B82F6" opacity="0.9">
-    <animate attributeName="r" values="4;5.5;4" dur="3.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
-  <!-- Label below -->
-  <text x="330" y="168" fill="#60A5FA" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.5">DRDO Intern</text>
-  <text x="330" y="180" fill="#94A3B8" font-family="monospace" font-size="7.5" text-anchor="middle">ML Research</text>
-  <text x="330" y="192" fill="#475569" font-family="monospace" font-size="7" text-anchor="middle">Hyderabad · 2023</text>
-  <!-- Badge chip -->
-  <rect x="288" y="115" width="84" height="14" rx="3" fill="#1E3A5F" stroke="#3B82F6" stroke-width="0.6" opacity="0.8"/>
-  <text x="330" y="125" fill="#60A5FA" font-family="monospace" font-size="6.5" text-anchor="middle" letter-spacing="0.5">Defense ML · Signals</text>
-
-  <!-- === EVENT 3: IIIT Hyderabad - 2023 === -->
-  <!-- Connector: above -->
-  <line x1="570" y1="110" x2="570" y2="70" stroke="#8B5CF6" stroke-width="0.8" opacity="0.4"/>
-  <!-- Node -->
-  <circle cx="570" cy="110" r="10" fill="#12082A" stroke="#8B5CF6" stroke-width="1.5" filter="url(#tl-glow-sm)">
-    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="570" cy="110" r="4" fill="#8B5CF6" opacity="0.9">
-    <animate attributeName="r" values="4;5.5;4" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="4s" repeatCount="indefinite"/>
-  </circle>
-  <!-- Label above -->
-  <text x="570" y="58" fill="#A78BFA" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.5">IIIT Hyderabad</text>
-  <text x="570" y="70" fill="#94A3B8" font-family="monospace" font-size="7.5" text-anchor="middle">NLP Research</text>
-  <text x="570" y="82" fill="#475569" font-family="monospace" font-size="7" text-anchor="middle">2023</text>
-  <!-- Badge chip -->
-  <rect x="530" y="88" width="80" height="14" rx="3" fill="#2D1B69" stroke="#8B5CF6" stroke-width="0.6" opacity="0.8"/>
-  <text x="570" y="98" fill="#A78BFA" font-family="monospace" font-size="6.5" text-anchor="middle" letter-spacing="0.5">Telugu NLP · LRL</text>
-
-  <!-- === EVENT 4: Graduation - 2024 === -->
-  <!-- Connector: below -->
-  <line x1="810" y1="110" x2="810" y2="155" stroke="#38BDF8" stroke-width="0.8" opacity="0.4"/>
-  <!-- Node (larger = milestone) -->
-  <circle cx="810" cy="110" r="12" fill="#051520" stroke="#38BDF8" stroke-width="2" filter="url(#tl-glow)">
-    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="810" cy="110" r="12" fill="none" stroke="#38BDF8" stroke-width="0.5" opacity="0.2">
-    <animate attributeName="r" values="12;20;12" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.2;0;0.2" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="810" cy="110" r="5" fill="#38BDF8" opacity="0.95">
-    <animate attributeName="r" values="5;6.5;5" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.95;0.5;0.95" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <!-- Label below -->
-  <text x="810" y="168" fill="#7DD3FC" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.5">Graduated</text>
-  <text x="810" y="180" fill="#94A3B8" font-family="monospace" font-size="7.5" text-anchor="middle">B.Tech CSE</text>
-  <text x="810" y="192" fill="#475569" font-family="monospace" font-size="7" text-anchor="middle">2024 · Seeking Opportunities</text>
-  <!-- Badge chip -->
-  <rect x="770" y="115" width="80" height="14" rx="3" fill="#0C2A3F" stroke="#38BDF8" stroke-width="0.6" opacity="0.8"/>
-  <text x="810" y="125" fill="#38BDF8" font-family="monospace" font-size="6.5" text-anchor="middle" letter-spacing="0.5">AI Engineer · Open</text>
-
-  <!-- Floating micro particles -->
-  <circle cx="230" cy="55" r="1" fill="#3B82F6" opacity="0.2">
-    <animate attributeName="opacity" values="0.2;0.05;0.2" dur="5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="800" cy="55" r="1" fill="#8B5CF6" opacity="0.2">
-    <animate attributeName="opacity" values="0.2;0.05;0.2" dur="4s" repeatCount="indefinite"/>
-  </circle>
 </svg>

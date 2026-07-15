@@ -1,140 +1,146 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
   <defs>
-    <linearGradient id="ed-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07101E"/>
-      <stop offset="100%" stop-color="#020617"/>
+    <!-- Card background gradient -->
+    <linearGradient id="drdo-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1120"/>
+      <stop offset="100%" stop-color="#050A12"/>
     </linearGradient>
-    <linearGradient id="ed-header" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0D2137"/>
-      <stop offset="100%" stop-color="#020617"/>
+    <!-- Top accent gradient -->
+    <linearGradient id="drdo-accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F8FFF"/>
+      <stop offset="100%" stop-color="#8A5DFF"/>
     </linearGradient>
-    <linearGradient id="ed-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <!-- Role badge left accent gradient -->
+    <linearGradient id="drdo-role-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4F8FFF"/>
+      <stop offset="100%" stop-color="#8A5DFF"/>
     </linearGradient>
-    <!-- Shimmer sweep -->
-    <linearGradient id="ed-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.03"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;2 0;-1 0" dur="4s" repeatCount="indefinite"/>
+    <!-- Pipeline accent gradient -->
+    <linearGradient id="drdo-pipe-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4F8FFF"/>
+      <stop offset="100%" stop-color="#8A5DFF"/>
     </linearGradient>
-    <filter id="ed-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="ed-glow-sm" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <pattern id="ed-dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="9" cy="9" r="0.55" fill="#1E293B" opacity="0.45"/>
-    </pattern>
-    <radialGradient id="ed-shield-glow" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
-    </radialGradient>
+    <!-- Shimmer gradient -->
+    <linearGradient id="drdo-shimmer-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="200" fill="url(#ed-bg)" rx="8"/>
-  <rect width="900" height="200" fill="url(#ed-dots)" opacity="0.65" rx="8"/>
+  <!-- Card background -->
+  <rect width="900" height="200" rx="8" fill="url(#drdo-bg-grad)"/>
+
   <!-- Shimmer overlay -->
-  <rect width="900" height="200" fill="url(#ed-shimmer)" rx="8"/>
-  <!-- Border -->
-  <rect width="900" height="200" fill="none" stroke="#1E3A5F" stroke-width="1" rx="8" opacity="0.7"/>
-  <!-- Top left blue accent corner -->
-  <path d="M 0 8 Q 0 0 8 0 L 80 0 L 80 1 L 8 1 Q 1 1 1 8 Z" fill="#3B82F6" opacity="0.5"/>
+  <rect width="900" height="200" rx="8" fill="url(#drdo-shimmer-grad)">
+    <animateTransform attributeName="transform" type="translate" values="-900,0;900,0;-900,0" dur="6s" repeatCount="indefinite"/>
+  </rect>
 
-  <!-- ============ LEFT: LOGO + IDENTITY ============ -->
-  <!-- Logo background glow -->
-  <ellipse cx="78" cy="68" rx="36" ry="36" fill="url(#ed-shield-glow)" opacity="0.8">
-    <animate attributeName="rx" values="36;42;36" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="36;42;36" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
-  </ellipse>
-  <!-- Logo container -->
-  <rect x="40" y="30" width="76" height="76" rx="8" fill="#091828" stroke="#3B82F6" stroke-width="1.2" filter="url(#ed-glow-sm)"/>
-  <!-- Shield shape (DRDO emblem) -->
-  <path d="M 78 42 L 98 50 L 98 72 Q 78 86 78 86 Q 58 72 58 72 L 58 50 Z" fill="none" stroke="#3B82F6" stroke-width="1.5" opacity="0.8"/>
-  <!-- Inner shield detail -->
-  <path d="M 78 50 L 92 56 L 92 70 Q 78 80 78 80 Q 64 70 64 70 L 64 56 Z" fill="none" stroke="#60A5FA" stroke-width="0.8" opacity="0.5"/>
-  <!-- Crosshair center -->
-  <line x1="78" y1="56" x2="78" y2="74" stroke="#3B82F6" stroke-width="0.7" opacity="0.5"/>
-  <line x1="70" y1="65" x2="86" y2="65" stroke="#3B82F6" stroke-width="0.7" opacity="0.5"/>
-  <!-- Core dot -->
-  <circle cx="78" cy="65" r="4" fill="#3B82F6" filter="url(#ed-glow-sm)" opacity="0.9">
-    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="4;5.5;4" dur="2s" repeatCount="indefinite"/>
+  <!-- Card border -->
+  <rect width="900" height="200" rx="8" fill="none" stroke="#1A2540" stroke-width="1"/>
+
+  <!-- Top left accent bar -->
+  <rect x="1" y="1" width="120" height="1.5" rx="1" fill="url(#drdo-accent-grad)" opacity="0.8"/>
+
+  <!-- ===== LOGO CONTAINER ===== -->
+  <rect x="40" y="28" width="72" height="72" rx="6" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+
+  <!-- Corner ticks — Top-left -->
+  <line x1="40" y1="38" x2="40" y2="28" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="40" y1="28" x2="50" y2="28" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+  <!-- Corner ticks — Top-right -->
+  <line x1="112" y1="38" x2="112" y2="28" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="112" y1="28" x2="102" y2="28" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+  <!-- Corner ticks — Bottom-left -->
+  <line x1="40" y1="90" x2="40" y2="100" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="40" y1="100" x2="50" y2="100" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+  <!-- Corner ticks — Bottom-right -->
+  <line x1="112" y1="90" x2="112" y2="100" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="112" y1="100" x2="102" y2="100" stroke="#4F8FFF" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- Shield outer path (DRDO shield silhouette, centered at cx=76 cy=64) -->
+  <path d="M76,36 L96,44 L96,62 Q96,76 76,84 Q56,76 56,62 L56,44 Z"
+        fill="none" stroke="#4F8FFF" stroke-width="1.2" opacity="0.7" stroke-linejoin="round"/>
+  <!-- Shield inner path (smaller) -->
+  <path d="M76,42 L90,49 L90,62 Q90,72 76,78 Q62,72 62,62 L62,49 Z"
+        fill="none" stroke="#8A5DFF" stroke-width="0.6" opacity="0.4" stroke-linejoin="round"/>
+  <!-- Core dot with pulse -->
+  <circle cx="76" cy="63" r="3" fill="#4F8FFF">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="78" cy="65" r="2" fill="#FFFFFF" opacity="0.9"/>
-  <!-- Corner tick marks on logo box -->
-  <path d="M 40 42 L 40 30 L 52 30" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.7"/>
-  <path d="M 104 30 L 116 30 L 116 42" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.7"/>
-  <path d="M 40 94 L 40 106 L 52 106" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.7"/>
-  <path d="M 116 94 L 116 106 L 104 106" fill="none" stroke="#3B82F6" stroke-width="1" opacity="0.7"/>
+  <!-- Inner core -->
+  <circle cx="76" cy="63" r="1.2" fill="#FFFFFF" opacity="0.9"/>
 
-  <!-- ============ CENTER: TEXT CONTENT ============ -->
-  <!-- Title -->
-  <text x="132" y="50" fill="#FFFFFF" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.5">DRDO</text>
-  <text x="132" y="67" fill="#475569" font-family="monospace" font-size="9.5" letter-spacing="0.5">Defence Research &amp; Development Organisation</text>
-  <text x="132" y="82" fill="#3B82F6" font-family="monospace" font-size="8.5" letter-spacing="0.5">Hyderabad, India</text>
+  <!-- ===== TEXT BLOCK ===== -->
+  <!-- Institution name -->
+  <text x="126" y="50" fill="#F0F4FF" font-size="20" font-weight="700" letter-spacing="-0.5" font-family="'SF Pro Display', -apple-system, Inter, sans-serif">DRDO</text>
+  <!-- Full name -->
+  <text x="126" y="66" fill="#7B8DB0" font-size="9.5" font-family="monospace" letter-spacing="0.2">Defence Research &amp; Development Organisation</text>
+  <!-- Location -->
+  <text x="126" y="80" fill="#4F8FFF" font-size="8.5" font-family="monospace">Hyderabad, India</text>
 
-  <!-- Role badge -->
-  <rect x="132" y="90" width="196" height="22" rx="4" fill="#0D2137" stroke="#3B82F6" stroke-width="0.8"/>
-  <!-- Left accent bar -->
-  <rect x="132" y="90" width="3" height="22" rx="1.5" fill="url(#ed-accent)"/>
-  <text x="144" y="105" fill="#60A5FA" font-family="monospace" font-size="8.5" letter-spacing="0.5">Machine Learning Research Intern</text>
+  <!-- Role badge background -->
+  <rect x="126" y="87" width="196" height="20" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+  <!-- Role badge left accent bar -->
+  <rect x="126" y="87" width="2.5" height="20" rx="1.2" fill="url(#drdo-role-grad)"/>
+  <!-- Role text -->
+  <text x="136" y="101" fill="#4F8FFF" font-size="8.5" font-family="monospace">Machine Learning Research Intern</text>
 
   <!-- Year badge -->
-  <rect x="812" y="30" width="48" height="22" rx="4" fill="#091828" stroke="#1E3A5F" stroke-width="0.8"/>
-  <text x="836" y="45" fill="#475569" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="1">2023</text>
+  <rect x="814" y="28" width="48" height="20" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+  <text x="838" y="42" fill="#7B8DB0" font-size="9" text-anchor="middle" letter-spacing="1" font-family="monospace">2023</text>
 
-  <!-- ============ DIVIDER ============ -->
-  <line x1="40" y1="128" x2="860" y2="128" stroke="#1E3A5F" stroke-width="0.8" opacity="0.7"/>
+  <!-- ===== DIVIDER ===== -->
+  <line x1="40" y1="120" x2="860" y2="120" stroke="#1A2540" stroke-width="0.8" opacity="0.7"/>
 
-  <!-- ============ BOTTOM: METRICS + TAGS ============ -->
+  <!-- ===== BOTTOM SECTION ===== -->
 
-  <!-- Metric 1: Signal pipeline -->
-  <g>
-    <rect x="40" y="140" width="3" height="40" rx="1.5" fill="url(#ed-accent)" opacity="0.8"/>
-    <text x="52" y="155" fill="#64748B" font-family="monospace" font-size="8" letter-spacing="0.3">PIPELINE</text>
-    <text x="52" y="168" fill="#94A3B8" font-family="monospace" font-size="8.5">Radar Signal Data → Feature Extraction</text>
-    <text x="52" y="180" fill="#475569" font-family="monospace" font-size="8">→ Ensemble Classifiers → Binary Output</text>
-  </g>
+  <!-- Pipeline section (left) -->
+  <rect x="40" y="132" width="2.5" height="44" rx="1.2" fill="url(#drdo-pipe-grad)" opacity="0.7"/>
+  <text x="50" y="147" fill="#3D4F70" font-size="7.5" font-family="monospace" letter-spacing="0.5">PIPELINE</text>
+  <text x="50" y="160" fill="#F0F4FF" font-size="8.5" font-family="monospace">Radar Signal Data → Feature Extraction</text>
+  <text x="50" y="173" fill="#7B8DB0" font-size="8" font-family="monospace">→ Ensemble Classifiers → Binary Output</text>
 
-  <!-- Mini performance bars on right -->
-  <text x="860" y="148" fill="#475569" font-family="monospace" font-size="7.5" text-anchor="end" letter-spacing="0.5">CLASSIFICATION ACCURACY</text>
-  <!-- Bar: XGBoost -->
-  <text x="600" y="163" fill="#64748B" font-family="monospace" font-size="7.5">XGBoost</text>
-  <rect x="660" y="156" width="160" height="6" rx="3" fill="#0F172A"/>
-  <rect x="660" y="156" width="144" height="6" rx="3" fill="#3B82F6" opacity="0.7">
-    <animate attributeName="width" values="0;144" dur="1.5s" fill="freeze"/>
+  <!-- Accuracy bars (right) -->
+  <text x="860" y="134" fill="#3D4F70" font-size="7.5" font-family="monospace" text-anchor="end" letter-spacing="0.5">ACCURACY</text>
+
+  <!-- XGBoost bar -->
+  <text x="480" y="150" fill="#7B8DB0" font-size="7.5" font-family="monospace">XGBoost</text>
+  <rect x="534" y="143" width="200" height="6" rx="3" fill="#050A12"/>
+  <rect x="534" y="143" width="180" height="6" rx="3" fill="#4F8FFF" opacity="0.65">
+    <animate attributeName="width" from="0" to="180" dur="2s" fill="freeze"/>
   </rect>
-  <text x="860" y="163" fill="#60A5FA" font-family="monospace" font-size="7.5" text-anchor="end">90%</text>
-  <!-- Bar: RF -->
-  <text x="600" y="177" fill="#64748B" font-family="monospace" font-size="7.5">RandomForest</text>
-  <rect x="660" y="170" width="160" height="6" rx="3" fill="#0F172A"/>
-  <rect x="660" y="170" width="136" height="6" rx="3" fill="#60A5FA" opacity="0.6">
-    <animate attributeName="width" values="0;136" dur="1.7s" begin="0.2s" fill="freeze"/>
+  <text x="740" y="150" fill="#4F8FFF" font-size="7.5" font-family="monospace">90%</text>
+
+  <!-- Random Forest bar -->
+  <text x="480" y="168" fill="#7B8DB0" font-size="7.5" font-family="monospace">Random Forest</text>
+  <rect x="534" y="161" width="200" height="6" rx="3" fill="#050A12"/>
+  <rect x="534" y="161" width="170" height="6" rx="3" fill="#8A5DFF" opacity="0.6">
+    <animate attributeName="width" from="0" to="170" dur="2s" begin="0.3s" fill="freeze"/>
   </rect>
-  <text x="860" y="177" fill="#60A5FA" font-family="monospace" font-size="7.5" text-anchor="end">85%</text>
+  <text x="740" y="168" fill="#8A5DFF" font-size="7.5" font-family="monospace">85%</text>
 
-  <!-- Technology tags (Right aligned group) -->
-  <rect x="614" y="185" width="54" height="14" rx="3" fill="#0D2137" stroke="#3B82F6" stroke-width="0.6"/>
-  <text x="641" y="195" fill="#3B82F6" font-family="monospace" font-size="7" text-anchor="middle">Defense ML</text>
-  <rect x="674" y="185" width="46" height="14" rx="3" fill="#0D2137" stroke="#3B82F6" stroke-width="0.6"/>
-  <text x="697" y="195" fill="#3B82F6" font-family="monospace" font-size="7" text-anchor="middle">XGBoost</text>
-  <rect x="726" y="185" width="32" height="14" rx="3" fill="#0D2137" stroke="#3B82F6" stroke-width="0.6"/>
-  <text x="742" y="195" fill="#3B82F6" font-family="monospace" font-size="7" text-anchor="middle">SVM</text>
-  <rect x="764" y="185" width="52" height="14" rx="3" fill="#0D2137" stroke="#3B82F6" stroke-width="0.6"/>
-  <text x="790" y="195" fill="#3B82F6" font-family="monospace" font-size="7" text-anchor="middle">Scikit-learn</text>
-  <rect x="822" y="185" width="38" height="14" rx="3" fill="#0D2137" stroke="#3B82F6" stroke-width="0.6"/>
-  <text x="841" y="195" fill="#3B82F6" font-family="monospace" font-size="7" text-anchor="middle">NumPy</text>
+  <!-- Tech tags — 5 pills at y=182 starting x=480 with 6px gaps -->
+  <!-- 'Defense ML' w=58 -->
+  <rect x="480" y="178" width="58" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="509" y="188" fill="#4F8FFF" font-size="7" font-family="monospace" text-anchor="middle">Defense ML</text>
+  <!-- 'XGBoost' w=46 -->
+  <rect x="544" y="178" width="46" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="567" y="188" fill="#4F8FFF" font-size="7" font-family="monospace" text-anchor="middle">XGBoost</text>
+  <!-- 'SVM' w=32 -->
+  <rect x="596" y="178" width="32" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="612" y="188" fill="#4F8FFF" font-size="7" font-family="monospace" text-anchor="middle">SVM</text>
+  <!-- 'Scikit-learn' w=60 -->
+  <rect x="634" y="178" width="60" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="664" y="188" fill="#4F8FFF" font-size="7" font-family="monospace" text-anchor="middle">Scikit-learn</text>
+  <!-- 'NumPy' w=40 -->
+  <rect x="700" y="178" width="40" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="720" y="188" fill="#4F8FFF" font-size="7" font-family="monospace" text-anchor="middle">NumPy</text>
 
-  <!-- Signal traveling at bottom -->
-  <circle r="1.5" fill="#3B82F6" opacity="0.6">
-    <animateMotion dur="4s" repeatCount="indefinite" path="M 40 128 L 860 128"/>
-    <animate attributeName="opacity" values="0;0.7;0" dur="4s" repeatCount="indefinite"/>
+  <!-- ===== SIGNAL TRAVEL on divider ===== -->
+  <circle r="1.5" fill="#4F8FFF">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M 40 120 L 860 120"/>
+    <animate attributeName="opacity" values="0;0.5;0" dur="6s" repeatCount="indefinite"/>
   </circle>
+
 </svg>

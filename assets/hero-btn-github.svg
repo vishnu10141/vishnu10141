@@ -1,8 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 36" width="132" height="36">
-  <!-- 12px left spacer (gap between buttons) -->
-  <rect x="12" y="1" width="112" height="34" rx="6" fill="none" stroke="#3B82F6" stroke-width="1" stroke-opacity="0.4"/>
-  <!-- GitHub octocat mark (simplified circle) -->
-  <circle cx="33" cy="18" r="5" fill="none" stroke="#60A5FA" stroke-width="1.2" opacity="0.8"/>
-  <circle cx="33" cy="16" r="2" fill="#60A5FA" opacity="0.7"/>
-  <text x="80" y="23" fill="#94A3B8" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12" font-weight="500" text-anchor="middle" letter-spacing="0.5">GitHub</text>
+  <!-- Background -->
+  <rect width="132" height="36" rx="6" fill="#0A1120"/>
+
+  <!-- Border -->
+  <rect width="132" height="36" rx="6" fill="none" stroke="#1A2540" stroke-width="1"/>
+
+  <!-- Subtle inner glow suggestion -->
+  <rect x="1" y="1" width="130" height="34" rx="6" fill="none" stroke="#4F8FFF" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- GitHub icon — outer body circle -->
+  <circle cx="18" cy="18" r="7" fill="none" stroke="#7B8DB0" stroke-width="1"/>
+
+  <!-- GitHub icon — head circle -->
+  <circle cx="18" cy="15" r="4" fill="none" stroke="#7B8DB0" stroke-width="0.8"/>
+
+  <!-- GitHub icon — left ear -->
+  <circle cx="13" cy="11" r="1.8" fill="none" stroke="#7B8DB0" stroke-width="0.7"/>
+
+  <!-- GitHub icon — right ear -->
+  <circle cx="23" cy="11" r="1.8" fill="none" stroke="#7B8DB0" stroke-width="0.7"/>
+
+  <!-- Button label -->
+  <text x="72" y="23" fill="#7B8DB0" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="13" font-weight="500" text-anchor="middle" letter-spacing="0.3">GitHub</text>
+
+  <!-- Arrow -->
+  <text x="122" y="23" fill="#3D4F70" font-size="11" text-anchor="middle">↗</text>
 </svg>

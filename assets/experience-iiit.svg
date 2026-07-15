@@ -1,146 +1,133 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
   <defs>
-    <linearGradient id="ei-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A0B1A"/>
-      <stop offset="100%" stop-color="#020617"/>
+    <!-- Card background gradient -->
+    <linearGradient id="iiit-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1120"/>
+      <stop offset="100%" stop-color="#050A12"/>
     </linearGradient>
-    <linearGradient id="ei-header" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1A0D3A"/>
-      <stop offset="100%" stop-color="#020617"/>
+    <!-- Top accent gradient (violet → blue) -->
+    <linearGradient id="iiit-accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8A5DFF"/>
+      <stop offset="100%" stop-color="#4F8FFF"/>
     </linearGradient>
-    <linearGradient id="ei-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
+    <!-- Role badge left accent gradient -->
+    <linearGradient id="iiit-role-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8A5DFF"/>
+      <stop offset="100%" stop-color="#4F8FFF"/>
     </linearGradient>
-    <!-- Shimmer sweep -->
-    <linearGradient id="ei-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.03"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;2 0;-1 0" dur="4.5s" repeatCount="indefinite"/>
+    <!-- Pipeline accent gradient -->
+    <linearGradient id="iiit-pipe-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8A5DFF"/>
+      <stop offset="100%" stop-color="#4F8FFF"/>
     </linearGradient>
-    <filter id="ei-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="ei-glow-sm" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <pattern id="ei-dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="9" cy="9" r="0.55" fill="#1E293B" opacity="0.4"/>
-    </pattern>
-    <radialGradient id="ei-logo-glow" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
-    </radialGradient>
+    <!-- Shimmer gradient -->
+    <linearGradient id="iiit-shimmer-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="200" fill="url(#ei-bg)" rx="8"/>
-  <rect width="900" height="200" fill="url(#ei-dots)" opacity="0.6" rx="8"/>
+  <!-- Card background -->
+  <rect width="900" height="200" rx="8" fill="url(#iiit-bg-grad)"/>
+
   <!-- Shimmer overlay -->
-  <rect width="900" height="200" fill="url(#ei-shimmer)" rx="8"/>
-  <!-- Border — purple tint for IIIT -->
-  <rect width="900" height="200" fill="none" stroke="#2D1B69" stroke-width="1" rx="8" opacity="0.8"/>
-  <!-- Top left purple corner accent -->
-  <path d="M 0 8 Q 0 0 8 0 L 80 0 L 80 1 L 8 1 Q 1 1 1 8 Z" fill="#8B5CF6" opacity="0.5"/>
+  <rect width="900" height="200" rx="8" fill="url(#iiit-shimmer-grad)">
+    <animateTransform attributeName="transform" type="translate" values="-900,0;900,0;-900,0" dur="6s" repeatCount="indefinite"/>
+  </rect>
 
-  <!-- ============ LEFT: LOGO + IDENTITY ============ -->
-  <!-- Logo glow -->
-  <ellipse cx="78" cy="68" rx="36" ry="36" fill="url(#ei-logo-glow)" opacity="0.8">
-    <animate attributeName="rx" values="36;44;36" dur="5s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="36;44;36" dur="5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
-  </ellipse>
-  <!-- Logo container -->
-  <rect x="40" y="30" width="76" height="76" rx="8" fill="#10082A" stroke="#8B5CF6" stroke-width="1.2" filter="url(#ei-glow-sm)"/>
+  <!-- Card border -->
+  <rect width="900" height="200" rx="8" fill="none" stroke="#1A2540" stroke-width="1"/>
 
-  <!-- Academic architecture icon: abstracted building/institute glyph -->
-  <!-- Pillars -->
-  <rect x="57" y="56" width="7" height="26" rx="1" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.7"/>
-  <rect x="71" y="56" width="7" height="26" rx="1" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.7"/>
-  <rect x="85" y="56" width="7" height="26" rx="1" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.7"/>
-  <!-- Pediment top -->
-  <path d="M 54 56 L 78 42 L 102 56 Z" fill="none" stroke="#A78BFA" stroke-width="1.2" opacity="0.8"/>
-  <!-- Cap line -->
-  <line x1="54" y1="82" x2="102" y2="82" stroke="#8B5CF6" stroke-width="0.8" opacity="0.6"/>
-  <!-- Pulsing center orb -->
-  <circle cx="78" cy="64" r="4" fill="#8B5CF6" filter="url(#ei-glow-sm)" opacity="0.9">
-    <animate attributeName="opacity" values="0.9;0.35;0.9" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Top left accent bar (violet → blue) -->
+  <rect x="1" y="1" width="120" height="1.5" rx="1" fill="url(#iiit-accent-grad)" opacity="0.8"/>
+
+  <!-- ===== LOGO CONTAINER ===== -->
+  <rect x="40" y="28" width="72" height="72" rx="6" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+
+  <!-- Corner ticks — Top-left -->
+  <line x1="40" y1="38" x2="40" y2="28" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="40" y1="28" x2="50" y2="28" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+  <!-- Corner ticks — Top-right -->
+  <line x1="112" y1="38" x2="112" y2="28" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="112" y1="28" x2="102" y2="28" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+  <!-- Corner ticks — Bottom-left -->
+  <line x1="40" y1="90" x2="40" y2="100" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="40" y1="100" x2="50" y2="100" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+  <!-- Corner ticks — Bottom-right -->
+  <line x1="112" y1="90" x2="112" y2="100" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+  <line x1="112" y1="100" x2="102" y2="100" stroke="#8A5DFF" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- Wave lines representing text corpus (5 lines, x1=52 x2=100) -->
+  <line x1="52" y1="42" x2="100" y2="42" stroke="#8A5DFF" stroke-width="0.8" opacity="0.7"/>
+  <line x1="52" y1="48" x2="100" y2="48" stroke="#8A5DFF" stroke-width="0.8" opacity="0.7"/>
+  <!-- Middle line (thicker) -->
+  <line x1="52" y1="54" x2="100" y2="54" stroke="#8A5DFF" stroke-width="1.2" opacity="0.7"/>
+  <line x1="52" y1="60" x2="100" y2="60" stroke="#8A5DFF" stroke-width="0.8" opacity="0.7"/>
+  <line x1="52" y1="66" x2="100" y2="66" stroke="#8A5DFF" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- NLP node with pulse -->
+  <circle cx="76" cy="54" r="3" fill="#8A5DFF">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="78" cy="64" r="2" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Inner core -->
+  <circle cx="76" cy="54" r="1.2" fill="#FFFFFF" opacity="0.9"/>
 
-  <!-- Corner tick marks on logo box -->
-  <path d="M 40 42 L 40 30 L 52 30" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.7"/>
-  <path d="M 104 30 L 116 30 L 116 42" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.7"/>
-  <path d="M 40 94 L 40 106 L 52 106" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.7"/>
-  <path d="M 116 94 L 116 106 L 104 106" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.7"/>
+  <!-- ===== TEXT BLOCK ===== -->
+  <!-- Institution name -->
+  <text x="126" y="50" fill="#F0F4FF" font-size="18" font-weight="700" letter-spacing="-0.5" font-family="'SF Pro Display', -apple-system, Inter, sans-serif">IIIT Hyderabad</text>
+  <!-- Full name -->
+  <text x="126" y="66" fill="#7B8DB0" font-size="9" font-family="monospace" letter-spacing="0.2">International Institute of Information Technology</text>
+  <!-- Location -->
+  <text x="126" y="80" fill="#8A5DFF" font-size="8.5" font-family="monospace">Hyderabad, India</text>
 
-  <!-- ============ CENTER: TEXT CONTENT ============ -->
-  <!-- Title -->
-  <text x="132" y="50" fill="#FFFFFF" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.5">IIIT Hyderabad</text>
-  <text x="132" y="67" fill="#475569" font-family="monospace" font-size="9.5" letter-spacing="0.5">International Institute of Information Technology</text>
-  <text x="132" y="82" fill="#8B5CF6" font-family="monospace" font-size="8.5" letter-spacing="0.5">Hyderabad, India</text>
-
-  <!-- Role badge -->
-  <rect x="132" y="90" width="174" height="22" rx="4" fill="#10082A" stroke="#8B5CF6" stroke-width="0.8"/>
-  <!-- Left accent bar — purple -->
-  <rect x="132" y="90" width="3" height="22" rx="1.5" fill="url(#ei-accent)"/>
-  <text x="144" y="105" fill="#A78BFA" font-family="monospace" font-size="8.5" letter-spacing="0.5">NLP Research Intern</text>
+  <!-- Role badge background -->
+  <rect x="126" y="87" width="160" height="20" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+  <!-- Role badge left accent bar (violet) -->
+  <rect x="126" y="87" width="2.5" height="20" rx="1.2" fill="url(#iiit-role-grad)"/>
+  <!-- Role text -->
+  <text x="136" y="101" fill="#8A5DFF" font-size="8.5" font-family="monospace">NLP Research Intern</text>
 
   <!-- Year badge -->
-  <rect x="812" y="30" width="48" height="22" rx="4" fill="#10082A" stroke="#2D1B69" stroke-width="0.8"/>
-  <text x="836" y="45" fill="#475569" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="1">2023</text>
+  <rect x="814" y="28" width="48" height="20" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+  <text x="838" y="42" fill="#7B8DB0" font-size="9" text-anchor="middle" letter-spacing="1" font-family="monospace">2022</text>
 
-  <!-- ============ DIVIDER ============ -->
-  <line x1="40" y1="128" x2="860" y2="128" stroke="#2D1B69" stroke-width="0.8" opacity="0.8"/>
+  <!-- ===== DIVIDER ===== -->
+  <line x1="40" y1="120" x2="860" y2="120" stroke="#1A2540" stroke-width="0.8" opacity="0.7"/>
 
-  <!-- ============ BOTTOM: CORPUS STATS + TAGS ============ -->
+  <!-- ===== BOTTOM SECTION ===== -->
 
-  <!-- Left: pipeline description -->
-  <g>
-    <rect x="40" y="140" width="3" height="40" rx="1.5" fill="url(#ei-accent)" opacity="0.8"/>
-    <text x="52" y="155" fill="#64748B" font-family="monospace" font-size="8" letter-spacing="0.3">CORPUS PIPELINE</text>
-    <text x="52" y="168" fill="#94A3B8" font-family="monospace" font-size="8.5">Raw Telugu Text → Annotation → Normalization</text>
-    <text x="52" y="180" fill="#475569" font-family="monospace" font-size="8">→ Structured Corpus → NLP Downstream Tasks</text>
-  </g>
+  <!-- Pipeline section (left) -->
+  <rect x="40" y="132" width="2.5" height="44" rx="1.2" fill="url(#iiit-pipe-grad)" opacity="0.7"/>
+  <text x="50" y="147" fill="#3D4F70" font-size="7.5" font-family="monospace" letter-spacing="0.5">PIPELINE</text>
+  <text x="50" y="160" fill="#F0F4FF" font-size="8.5" font-family="monospace">Text Collection → Linguistic Annotation</text>
+  <text x="50" y="173" fill="#7B8DB0" font-size="8" font-family="monospace">→ Tokenization → Telugu Corpus</text>
 
-  <!-- Right: corpus stats -->
-  <text x="860" y="148" fill="#475569" font-family="monospace" font-size="7.5" text-anchor="end" letter-spacing="0.5">ANNOTATION COVERAGE</text>
-  <!-- Morphological -->
-  <text x="600" y="163" fill="#64748B" font-family="monospace" font-size="7.5">Morphological</text>
-  <rect x="680" y="156" width="140" height="6" rx="3" fill="#0F172A"/>
-  <rect x="680" y="156" width="120" height="6" rx="3" fill="#8B5CF6" opacity="0.65">
-    <animate attributeName="width" values="0;120" dur="1.5s" fill="freeze"/>
-  </rect>
-  <text x="860" y="163" fill="#A78BFA" font-family="monospace" font-size="7.5" text-anchor="end">86%</text>
-  <!-- Syntactic -->
-  <text x="600" y="177" fill="#64748B" font-family="monospace" font-size="7.5">Syntactic</text>
-  <rect x="680" y="170" width="140" height="6" rx="3" fill="#0F172A"/>
-  <rect x="680" y="170" width="110" height="6" rx="3" fill="#A78BFA" opacity="0.55">
-    <animate attributeName="width" values="0;110" dur="1.7s" begin="0.2s" fill="freeze"/>
-  </rect>
-  <text x="860" y="177" fill="#A78BFA" font-family="monospace" font-size="7.5" text-anchor="end">79%</text>
+  <!-- Research output block (right, instead of accuracy bars) -->
+  <text x="480" y="134" fill="#3D4F70" font-size="7.5" font-family="monospace" letter-spacing="0.5">RESEARCH OUTPUT</text>
+  <rect x="480" y="138" width="2" height="40" rx="1" fill="#8A5DFF" opacity="0.6"/>
+  <text x="490" y="151" fill="#7B8DB0" font-size="8.5" font-family="monospace">Structured Telugu NLP dataset</text>
+  <text x="490" y="165" fill="#7B8DB0" font-size="8.5" font-family="monospace">Manual linguistic annotation pipeline</text>
+  <text x="490" y="179" fill="#7B8DB0" font-size="8.5" font-family="monospace">Low-resource corpus construction</text>
 
-  <!-- Tech tags -->
-  <!-- Widths: 64, 52, 48, 48, 42. Gaps: 6. Total = 64+6+52+6+48+6+48+6+42 = 272 -->
-  <!-- Start x = 860 - 272 = 588 -->
-  <rect x="588" y="185" width="64" height="14" rx="3" fill="#10082A" stroke="#8B5CF6" stroke-width="0.6"/>
-  <text x="620" y="195" fill="#8B5CF6" font-family="monospace" font-size="7" text-anchor="middle">Low-Resource</text>
-  <rect x="658" y="185" width="52" height="14" rx="3" fill="#10082A" stroke="#8B5CF6" stroke-width="0.6"/>
-  <text x="684" y="195" fill="#8B5CF6" font-family="monospace" font-size="7" text-anchor="middle">Annotation</text>
-  <rect x="716" y="185" width="48" height="14" rx="3" fill="#10082A" stroke="#8B5CF6" stroke-width="0.6"/>
-  <text x="740" y="195" fill="#8B5CF6" font-family="monospace" font-size="7" text-anchor="middle">Telugu NLP</text>
-  <rect x="770" y="185" width="48" height="14" rx="3" fill="#10082A" stroke="#8B5CF6" stroke-width="0.6"/>
-  <text x="794" y="195" fill="#8B5CF6" font-family="monospace" font-size="7" text-anchor="middle">Corpus Build</text>
-  <rect x="824" y="185" width="36" height="14" rx="3" fill="#10082A" stroke="#8B5CF6" stroke-width="0.6"/>
-  <text x="842" y="195" fill="#8B5CF6" font-family="monospace" font-size="7" text-anchor="middle">spaCy</text>
+  <!-- Tech tags — violet themed, bottom right, y=182 starting x=480 -->
+  <!-- 'Low-Resource NLP' w=96 -->
+  <rect x="480" y="178" width="96" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="528" y="188" fill="#8A5DFF" font-size="7" font-family="monospace" text-anchor="middle">Low-Resource NLP</text>
+  <!-- 'Telugu' w=46 -->
+  <rect x="582" y="178" width="46" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="605" y="188" fill="#8A5DFF" font-size="7" font-family="monospace" text-anchor="middle">Telugu</text>
+  <!-- 'Corpus' w=48 -->
+  <rect x="634" y="178" width="48" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="658" y="188" fill="#8A5DFF" font-size="7" font-family="monospace" text-anchor="middle">Corpus</text>
+  <!-- 'Annotation' w=60 -->
+  <rect x="688" y="178" width="60" height="14" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.6"/>
+  <text x="718" y="188" fill="#8A5DFF" font-size="7" font-family="monospace" text-anchor="middle">Annotation</text>
 
-  <!-- Signal traveling at bottom — purple -->
-  <circle r="1.5" fill="#8B5CF6" opacity="0.6">
-    <animateMotion dur="4.5s" repeatCount="indefinite" path="M 40 128 L 860 128"/>
-    <animate attributeName="opacity" values="0;0.7;0" dur="4.5s" repeatCount="indefinite"/>
+  <!-- ===== SIGNAL TRAVEL on divider ===== -->
+  <circle r="1.5" fill="#8A5DFF">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M 40 120 L 860 120"/>
+    <animate attributeName="opacity" values="0;0.5;0" dur="6s" repeatCount="indefinite"/>
   </circle>
+
 </svg>

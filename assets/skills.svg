@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260">
+  <defs>
+    <filter id="sk-glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="260" fill="#050A12"/>
+
+  <!-- ===== ROW 1 ===== -->
+
+  <!-- Card 1: CORE LANGUAGE (x=40, y=36, w=190, h=94) accent=#4F8FFF -->
+  <rect x="40" y="36" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="40" y="36" width="24" height="2" rx="1" fill="#4F8FFF"/>
+  <text x="54" y="54" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">CORE LANGUAGE</text>
+  <!-- Pill: Python 3.11+ -->
+  <rect x="52" y="66" width="72" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="88" y="79" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Python 3.11+</text>
+
+  <!-- Card 2: DEEP LEARNING (x=250, y=36, w=190, h=94) accent=#8A5DFF -->
+  <rect x="250" y="36" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="250" y="36" width="24" height="2" rx="1" fill="#8A5DFF"/>
+  <text x="264" y="54" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">DEEP LEARNING</text>
+  <!-- Pills row 1 -->
+  <rect x="262" y="66" width="46" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="285" y="79" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">PyTorch</text>
+  <rect x="312" y="66" width="66" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="345" y="79" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">TensorFlow</text>
+  <!-- Pills row 2 -->
+  <rect x="262" y="88" width="42" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="283" y="101" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">MONAI</text>
+
+  <!-- Card 3: COMPUTER VISION (x=460, y=36, w=190, h=94) accent=#00E6FF -->
+  <rect x="460" y="36" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="460" y="36" width="24" height="2" rx="1" fill="#00E6FF"/>
+  <text x="474" y="54" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">COMPUTER VISION</text>
+  <!-- Pills row 1 -->
+  <rect x="472" y="66" width="48" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="496" y="79" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">OpenCV</text>
+  <rect x="524" y="66" width="66" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="557" y="79" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Grad-CAM++</text>
+  <!-- Pills row 2 -->
+  <rect x="472" y="88" width="28" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="486" y="101" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">PIL</text>
+
+  <!-- Card 4: NLP (x=670, y=36, w=190, h=94) accent=#8A5DFF -->
+  <rect x="670" y="36" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="670" y="36" width="24" height="2" rx="1" fill="#8A5DFF"/>
+  <text x="684" y="54" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">NLP</text>
+  <!-- Pills row 1 -->
+  <rect x="682" y="66" width="72" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="718" y="79" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">HuggingFace</text>
+  <!-- Pills row 2 -->
+  <rect x="682" y="88" width="40" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="702" y="101" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">spaCy</text>
+  <rect x="726" y="88" width="38" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="745" y="101" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">NLTK</text>
+
+  <!-- ===== ROW 2 ===== -->
+
+  <!-- Card 5: MACHINE LEARNING (x=40, y=148, w=190, h=94) accent=#4F8FFF -->
+  <rect x="40" y="148" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="40" y="148" width="24" height="2" rx="1" fill="#4F8FFF"/>
+  <text x="54" y="166" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">MACHINE LEARNING</text>
+  <!-- Pills row 1 -->
+  <rect x="52" y="178" width="66" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="85" y="191" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Scikit-learn</text>
+  <!-- Pills row 2 -->
+  <rect x="52" y="200" width="52" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="78" y="213" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">XGBoost</text>
+  <rect x="108" y="200" width="32" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="124" y="213" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">SVM</text>
+
+  <!-- Card 6: DATA (x=250, y=148, w=190, h=94) accent=#00E6FF -->
+  <rect x="250" y="148" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="250" y="148" width="24" height="2" rx="1" fill="#00E6FF"/>
+  <text x="264" y="166" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">DATA</text>
+  <!-- Pills row 1 -->
+  <rect x="262" y="178" width="44" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="284" y="191" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">NumPy</text>
+  <rect x="310" y="178" width="46" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="333" y="191" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Pandas</text>
+  <!-- Pills row 2 -->
+  <rect x="262" y="200" width="66" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="295" y="213" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Matplotlib</text>
+
+  <!-- Card 7: DEPLOYMENT (x=460, y=148, w=190, h=94) accent=#00FFAE -->
+  <rect x="460" y="148" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="460" y="148" width="24" height="2" rx="1" fill="#00FFAE"/>
+  <text x="474" y="166" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">DEPLOYMENT</text>
+  <!-- Pills row 1 -->
+  <rect x="472" y="178" width="48" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="496" y="191" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">FastAPI</text>
+  <rect x="524" y="178" width="60" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="554" y="191" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Streamlit</text>
+  <!-- Pills row 2 -->
+  <rect x="472" y="200" width="46" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="495" y="213" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Docker</text>
+
+  <!-- Card 8: STACK (x=670, y=148, w=190, h=94) accent=#7B8DB0 -->
+  <rect x="670" y="148" width="190" height="94" rx="6" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="670" y="148" width="24" height="2" rx="1" fill="#7B8DB0"/>
+  <text x="684" y="166" fill="#3D4F70" font-size="8" font-family="monospace" letter-spacing="1.5" text-anchor="start">STACK</text>
+  <!-- Pills row 1 -->
+  <rect x="682" y="178" width="44" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="704" y="191" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Next.js</text>
+  <rect x="730" y="178" width="40" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="750" y="191" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Linux</text>
+  <!-- Pills row 2 -->
+  <rect x="682" y="200" width="28" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="696" y="213" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Git</text>
+  <rect x="714" y="200" width="42" height="18" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.5"/>
+  <text x="735" y="213" fill="#7B8DB0" font-size="8" font-family="monospace" text-anchor="middle">Vercel</text>
+
+</svg>

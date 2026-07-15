@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 40" width="900" height="40">
+  <defs>
+    <linearGradient id="div-lg-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A2540" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1A2540" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="div-lg-right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A2540" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1A2540" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="40" fill="#050A12"/>
+
+  <!-- Left line -->
+  <line x1="40" y1="20" x2="422" y2="20" stroke="url(#div-lg-left)" stroke-width="0.8"/>
+
+  <!-- Right line -->
+  <line x1="478" y1="20" x2="860" y2="20" stroke="url(#div-lg-right)" stroke-width="0.8"/>
+
+  <!-- Center diamond -->
+  <polygon points="450,15 457,20 450,25 443,20" fill="none" stroke="#4F8FFF" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Center dot -->
+  <circle cx="450" cy="20" r="1.8" fill="#4F8FFF" opacity="0.5"/>
+</svg>

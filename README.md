@@ -11,9 +11,7 @@
 
 <div align="center">
 
-<img src="./assets/particles.svg" width="100%" alt=""/>
-
-<img src="./assets/divider-1.svg" width="100%" alt=""/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 </div>
 
@@ -26,24 +24,17 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=11&duration=3000&pause=800&color=3B82F6&center=true&vCenter=true&width=500&height=22&lines=AI+Engineer+%C2%B7+Machine+Learning+Researcher;Computer+Vision+%C2%B7+Medical+Imaging;Natural+Language+Processing+%C2%B7+Defense+ML" alt="role-typing"/>
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=11&duration=3000&pause=800&color=4F8FFF&center=true&vCenter=true&width=500&height=22&lines=AI+Engineer+%C2%B7+Machine+Learning+Researcher;Computer+Vision+%C2%B7+Medical+Imaging;Natural+Language+Processing+%C2%B7+Defense+ML" alt="role-typing"/>
 
 </div>
 
 
-> Computer Science & Engineering graduate building interpretable AI systems at the intersection of deep learning, computer vision, and medical imaging. Research experience spans signal classification at **DRDO** and low-resource NLP corpus development at **IIIT Hyderabad**. Work covers the full deep learning lifecycle — architecture design through production deployment — with emphasis on clinical explainability and real-world operational grounding.
+> Computer Science &amp; Engineering graduate building interpretable AI systems at the intersection of deep learning, computer vision, and medical imaging. Research experience spans signal classification at **DRDO** and low-resource NLP corpus development at **IIIT Hyderabad**. Work covers the full deep learning lifecycle — architecture design through production deployment — with emphasis on clinical explainability and real-world operational grounding.
 
 
 <div align="center">
 
-<img src="./assets/neural-grid.svg" width="100%" alt=""/>
-
-</div>
-
-
-<div align="center">
-
-<img src="./assets/divider-2.svg" width="100%" alt=""/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 </div>
 
@@ -63,7 +54,7 @@
 
 <div align="center">
 
-<img src="./assets/divider-3.svg" width="100%" alt=""/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 </div>
 
@@ -160,7 +151,7 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 <div align="center">
 
-<img src="./assets/divider-4.svg" width="100%" alt=""/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 </div>
 
@@ -183,7 +174,7 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 <div align="center">
 
-**Brain Tumor Detection & Segmentation** &nbsp;·&nbsp; <sub>Medical Imaging · 3D Deep Learning · Explainable AI</sub>
+**Brain Tumor Detection &amp; Segmentation** &nbsp;·&nbsp; <sub>Medical Imaging · 3D Deep Learning · Explainable AI</sub>
 
 </div>
 
@@ -324,7 +315,7 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 
 <div align="center">
 
-<img src="./assets/divider-5.svg" width="100%" alt=""/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 </div>
 
@@ -344,80 +335,14 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 
 <div align="center">
 
-<img src="./assets/stack-diagram.svg" width="100%" alt="Tech Stack — AI Ecosystem"/>
+<img src="./assets/skills.svg" width="100%" alt="Tech Stack — AI Ecosystem"/>
 
 </div>
 
 
 <div align="center">
-<table>
-<tr>
-<td align="center" width="25%">
 
-**Core Language**
-
-Python 3.11+
-
-</td>
-<td align="center" width="25%">
-
-**Deep Learning**
-
-PyTorch · TensorFlow · MONAI
-
-</td>
-<td align="center" width="25%">
-
-**Computer Vision**
-
-OpenCV · Grad-CAM++ · PIL
-
-</td>
-<td align="center" width="25%">
-
-**NLP**
-
-HuggingFace · spaCy · NLTK
-
-</td>
-</tr>
-<tr>
-<td align="center">
-
-**ML**
-
-Scikit-learn · XGBoost · SVM
-
-</td>
-<td align="center">
-
-**Data**
-
-NumPy · Pandas · Matplotlib
-
-</td>
-<td align="center">
-
-**Deployment**
-
-FastAPI · Streamlit · Docker
-
-</td>
-<td align="center">
-
-**Stack**
-
-Next.js · Linux · Git · Vercel
-
-</td>
-</tr>
-</table>
-</div>
-
-
-<div align="center">
-
-<img src="./assets/divider-6.svg" width="100%" alt=""/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 </div>
 
@@ -440,21 +365,14 @@ Next.js · Linux · Git · Vercel
 <code>vishnu@research:~$</code>
 
 
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=14&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=580&height=30&lines=%3E+Explainable+AI+for+clinical+medical+imaging;%3E+3D+multi-modal+segmentation+pipelines;%3E+Instruction-tuned+LLM+domain+adaptation;%3E+Reproducible+MLOps+%2B+experiment+tracking;%3E+Foundation+models+for+medical+vision" alt="currently-exploring"/>
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=14&duration=2800&pause=900&color=4F8FFF&center=true&vCenter=true&width=580&height=30&lines=%3E+Explainable+AI+for+clinical+medical+imaging;%3E+3D+multi-modal+segmentation+pipelines;%3E+Instruction-tuned+LLM+domain+adaptation;%3E+Reproducible+MLOps+%2B+experiment+tracking;%3E+Foundation+models+for+medical+vision" alt="currently-exploring"/>
 
 </div>
 
 
 <div align="center">
 
-<img src="./assets/background.svg" width="100%" alt=""/>
-
-</div>
-
-
-<div align="center">
-
-<img src="./assets/divider-7.svg" width="100%" alt=""/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 </div>
 

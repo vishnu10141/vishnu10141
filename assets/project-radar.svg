@@ -1,167 +1,162 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260">
   <defs>
     <linearGradient id="pr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08111F"/>
-      <stop offset="100%" stop-color="#020617"/>
+      <stop offset="0%" stop-color="#0A1120"/>
+      <stop offset="100%" stop-color="#050A12"/>
     </linearGradient>
-    <linearGradient id="pr-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1E3A5F"/>
-      <stop offset="100%" stop-color="#0F172A"/>
+    <linearGradient id="pr-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F8FFF"/>
+      <stop offset="100%" stop-color="#8A5DFF"/>
     </linearGradient>
-    <linearGradient id="pr-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0C2A3F"/>
-      <stop offset="100%" stop-color="#0F172A"/>
+    <linearGradient id="pr-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.018"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
     <filter id="pr-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <pattern id="pr-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.6" fill="#1E293B" opacity="0.5"/>
-    </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="260" fill="url(#pr-bg)" rx="8"/>
-  <rect width="900" height="260" fill="url(#pr-dots)" opacity="0.6" rx="8"/>
-  <rect width="900" height="260" fill="none" stroke="#1E3A5F" stroke-width="1" rx="8" opacity="0.6"/>
+  <!-- Card background -->
+  <rect width="900" height="260" rx="8" fill="url(#pr-bg)"/>
+  <rect width="900" height="260" rx="8" fill="url(#pr-shimmer)">
+    <animateTransform attributeName="transform" type="translate" values="-900,0;900,0;-900,0" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="900" height="260" rx="8" fill="none" stroke="#1A2540" stroke-width="1"/>
+  <rect x="1" y="1" width="160" height="1.5" rx="1" fill="url(#pr-accent)" opacity="0.8"/>
 
-  <!-- ============ LEFT COLUMN: Radar Visual (x=40, width=220) ============ -->
-  <text x="40" y="30" fill="#38BDF8" font-family="monospace" font-size="9" letter-spacing="3" opacity="0.8">SIGNAL DISPLAY</text>
+  <!-- ── HEADER ── -->
+  <text x="40" y="28" fill="#3D4F70" font-family="monospace" font-size="9" letter-spacing="3">FEATURED PROJECT — 02</text>
+  <text x="40" y="54" fill="#F0F4FF" font-family="'SF Pro Display',-apple-system,Inter,sans-serif" font-size="18" font-weight="600">Radar False Target Detection</text>
 
-  <!-- Radar at center of left column: cx=150 -->
-  <g transform="translate(150, 148)">
-    <circle cx="0" cy="0" r="95" fill="#0A1628" stroke="#1E3A5F" stroke-width="1" opacity="0.8"/>
-    <circle cx="0" cy="0" r="72" fill="none" stroke="#1E293B" stroke-width="0.6" opacity="0.7"/>
-    <circle cx="0" cy="0" r="50" fill="none" stroke="#1E293B" stroke-width="0.6" opacity="0.7"/>
-    <circle cx="0" cy="0" r="28" fill="none" stroke="#1E293B" stroke-width="0.6" opacity="0.7"/>
-    <line x1="-95" y1="0" x2="95" y2="0" stroke="#1E293B" stroke-width="0.5" opacity="0.6"/>
-    <line x1="0" y1="-95" x2="0" y2="95" stroke="#1E293B" stroke-width="0.5" opacity="0.6"/>
-    <line x1="-67" y1="-67" x2="67" y2="67" stroke="#1E293B" stroke-width="0.3" opacity="0.4"/>
-    <line x1="67" y1="-67" x2="-67" y2="67" stroke="#1E293B" stroke-width="0.3" opacity="0.4"/>
-    <!-- Sweep -->
-    <path d="M 0 0 L 95 0 A 95 95 0 0 0 67.2 -67.2 Z" fill="#38BDF8" opacity="0.04">
+  <!-- Domain tags -->
+  <rect x="40" y="63" width="70" height="18" rx="3" fill="#050A12" stroke="#4F8FFF" stroke-width="0.7"/>
+  <text x="75" y="76" fill="#4F8FFF" font-family="monospace" font-size="7.5" text-anchor="middle">Defense ML</text>
+  <rect x="118" y="63" width="100" height="18" rx="3" fill="#050A12" stroke="#4F8FFF" stroke-width="0.7"/>
+  <text x="168" y="76" fill="#4F8FFF" font-family="monospace" font-size="7.5" text-anchor="middle">Signal Intelligence</text>
+  <rect x="226" y="63" width="114" height="18" rx="3" fill="#050A12" stroke="#8A5DFF" stroke-width="0.7"/>
+  <text x="283" y="76" fill="#8A5DFF" font-family="monospace" font-size="7.5" text-anchor="middle">Ensemble Classifiers</text>
+
+  <!-- ── HEADER DIVIDER ── -->
+  <line x1="40" y1="96" x2="860" y2="96" stroke="#1A2540" stroke-width="0.8" opacity="0.8"/>
+
+  <!-- ── COLUMN DIVIDERS ── -->
+  <line x1="274" y1="104" x2="274" y2="252" stroke="#1A2540" stroke-width="0.7" opacity="0.5"/>
+  <line x1="574" y1="104" x2="574" y2="252" stroke="#1A2540" stroke-width="0.7" opacity="0.5"/>
+
+  <!-- ═══ LEFT COLUMN: SIGNAL DISPLAY (x=40 to x=264) ═══ -->
+  <text x="40" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">SIGNAL DISPLAY</text>
+
+  <!-- Radar display centered at (157, 185) r=70 -->
+  <g transform="translate(157,185)">
+    <!-- Background -->
+    <circle r="70" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+    <!-- Range rings -->
+    <circle r="52" fill="none" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
+    <circle r="35" fill="none" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
+    <circle r="18" fill="none" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
+    <!-- Cross hairs -->
+    <line x1="-70" y1="0" x2="70" y2="0" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
+    <line x1="0" y1="-70" x2="0" y2="70" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
+    <!-- Sweep line -->
+    <g>
       <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
-    </path>
-    <line x1="0" y1="0" x2="95" y2="0" stroke="#38BDF8" stroke-width="1.5" opacity="0.6">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
-    </line>
-    <!-- True targets (blue) -->
-    <circle cx="48" cy="-32" r="3.5" fill="#3B82F6" opacity="0.9" filter="url(#pr-glow)">
-      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="-58" cy="26" r="3" fill="#3B82F6" opacity="0.8" filter="url(#pr-glow)">
+      <line x1="0" y1="0" x2="70" y2="0" stroke="#00E6FF" stroke-width="1" opacity="0.6"/>
+      <!-- Sweep fade wedge (simulated) -->
+      <line x1="0" y1="0" x2="65" y2="-15" stroke="#00E6FF" stroke-width="0.5" opacity="0.15"/>
+      <line x1="0" y1="0" x2="55" y2="-25" stroke="#00E6FF" stroke-width="0.3" opacity="0.07"/>
+    </g>
+    <!-- True target dots -->
+    <circle cx="38" cy="-28" r="3" fill="#4F8FFF" opacity="0.8">
       <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="22" cy="64" r="2.5" fill="#3B82F6" opacity="0.85" filter="url(#pr-glow)">
-      <animate attributeName="opacity" values="0.85;0.3;0.85" dur="3s" repeatCount="indefinite"/>
+    <circle cx="-22" cy="44" r="3" fill="#4F8FFF" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.2s" repeatCount="indefinite"/>
     </circle>
-    <!-- False targets (dim) -->
-    <circle cx="-32" cy="-58" r="3" fill="#38BDF8" opacity="0.35">
-      <animate attributeName="opacity" values="0.35;0.1;0.35" dur="1.8s" repeatCount="indefinite"/>
+    <circle cx="55" cy="20" r="2.5" fill="#4F8FFF" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="68" cy="42" r="2.5" fill="#38BDF8" opacity="0.25">
-      <animate attributeName="opacity" values="0.25;0.05;0.25" dur="2.2s" repeatCount="indefinite"/>
-    </circle>
-    <!-- X cross for false targets -->
-    <g transform="translate(-32, -58)" opacity="0.4">
-      <line x1="-4" y1="-4" x2="4" y2="4" stroke="#38BDF8" stroke-width="0.8"/>
-      <line x1="4" y1="-4" x2="-4" y2="4" stroke="#38BDF8" stroke-width="0.8"/>
+    <!-- False target X marks -->
+    <g opacity="0.35" stroke="#00E6FF" stroke-width="1">
+      <line x1="-48" y1="-18" x2="-42" y2="-12"/>
+      <line x1="-42" y1="-18" x2="-48" y2="-12"/>
+      <line x1="20" y1="52" x2="26" y2="58"/>
+      <line x1="26" y1="52" x2="20" y2="58"/>
     </g>
-    <g transform="translate(68, 42)" opacity="0.3">
-      <line x1="-4" y1="-4" x2="4" y2="4" stroke="#38BDF8" stroke-width="0.8"/>
-      <line x1="4" y1="-4" x2="-4" y2="4" stroke="#38BDF8" stroke-width="0.8"/>
-    </g>
-    <circle cx="0" cy="0" r="3" fill="#38BDF8" opacity="0.8"/>
-    <circle cx="0" cy="0" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+    <!-- Center dot -->
+    <circle r="2" fill="#F0F4FF" opacity="0.9"/>
   </g>
 
-  <!-- Legend below radar -->
-  <circle cx="48" cy="246" r="4" fill="#3B82F6" opacity="0.9"/>
-  <text x="58" y="250" fill="#60A5FA" font-family="monospace" font-size="7.5">True Target</text>
-  <circle cx="136" cy="246" r="4" fill="#38BDF8" opacity="0.35"/>
-  <text x="146" y="250" fill="#38BDF8" font-family="monospace" font-size="7.5" opacity="0.7">False ECM</text>
+  <!-- ═══ CENTER COLUMN: ML PIPELINE (x=284 to x=564) ═══ -->
+  <text x="294" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">ML PIPELINE</text>
 
-  <!-- ============ VERTICAL DIVIDER ============ -->
-  <line x1="260" y1="20" x2="260" y2="255" stroke="#1E3A5F" stroke-width="0.8" opacity="0.5"/>
+  <!-- 4 vertical pipeline boxes centered at x=419 w=200 -->
+  <!-- Box 1 -->
+  <rect x="319" y="118" width="200" height="30" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <text x="419" y="137" fill="#F0F4FF" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">Radar Signal Data</text>
+  <!-- Arrow down -->
+  <line x1="419" y1="148" x2="419" y2="156" stroke="#1A2540" stroke-width="0.8" stroke-dasharray="2 3"/>
+  <polygon points="415,154 419,162 423,154" fill="#1A2540" opacity="0.6"/>
 
-  <!-- ============ CENTER COLUMN: Pipeline (x=274, width=286) ============ -->
-  <!-- Pipeline center at x=274+143=417 -->
-  <text x="274" y="30" fill="#38BDF8" font-family="monospace" font-size="9" letter-spacing="3" opacity="0.8">ML PIPELINE</text>
+  <!-- Box 2 -->
+  <rect x="319" y="162" width="200" height="38" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <text x="419" y="178" fill="#F0F4FF" font-family="monospace" font-size="8" text-anchor="middle">Signal Processing</text>
+  <text x="419" y="192" fill="#7B8DB0" font-family="monospace" font-size="7" text-anchor="middle">Feature Engineering</text>
+  <!-- Arrow down -->
+  <line x1="419" y1="200" x2="419" y2="208" stroke="#1A2540" stroke-width="0.8" stroke-dasharray="2 3"/>
+  <polygon points="415,206 419,214 423,206" fill="#1A2540" opacity="0.6"/>
 
-  <!-- Pipeline boxes stacked vertically, centered at x=417 -->
-  <!-- Box width=200, so x=274+43=317 -->
-  <rect x="317" y="44" width="200" height="36" rx="4" fill="url(#pr-blue)" stroke="#3B82F6" stroke-width="0.8" opacity="0.9"/>
-  <text x="417" y="66" fill="#60A5FA" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">Radar Signal Data</text>
+  <!-- Box 3: Highlighted -->
+  <rect x="319" y="214" width="200" height="38" rx="4" fill="#0A1120" stroke="#4F8FFF" stroke-width="1.2"/>
+  <text x="419" y="230" fill="#4F8FFF" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">XGBoost · RF · SVM</text>
+  <text x="419" y="244" fill="#4F8FFF" font-family="monospace" font-size="7" text-anchor="middle">Ensemble Classifiers</text>
 
-  <line x1="417" y1="80" x2="417" y2="94" stroke="#3B82F6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2">
-    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1s" repeatCount="indefinite"/>
-  </line>
-  <polygon points="414,94 417,100 420,94" fill="#3B82F6" opacity="0.7"/>
+  <!-- Output label -->
+  <text x="419" y="258" fill="#7B8DB0" font-family="monospace" font-size="7" text-anchor="middle">→ Binary Classification Output</text>
 
-  <rect x="317" y="102" width="200" height="36" rx="4" fill="url(#pr-blue)" stroke="#38BDF8" stroke-width="0.8" opacity="0.9"/>
-  <text x="417" y="120" fill="#7DD3FC" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">Signal Processing</text>
-  <text x="417" y="130" fill="#0C4A6E" font-family="monospace" font-size="7" text-anchor="middle">Feature Engineering</text>
+  <!-- ═══ RIGHT COLUMN: RESULTS (x=584 to x=860) ═══ -->
+  <text x="594" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">RESULTS</text>
 
-  <line x1="417" y1="138" x2="417" y2="152" stroke="#38BDF8" stroke-width="1" opacity="0.5" stroke-dasharray="3 2">
-    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1.2s" repeatCount="indefinite"/>
-  </line>
-  <polygon points="414,152 417,158 420,152" fill="#38BDF8" opacity="0.7"/>
-
-  <rect x="297" y="160" width="240" height="46" rx="4" fill="url(#pr-cyan)" stroke="#38BDF8" stroke-width="1" filter="url(#pr-glow)" opacity="0.95"/>
-  <text x="417" y="181" fill="#7DD3FC" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle">XGBoost · RF · SVM</text>
-  <text x="417" y="196" fill="#0C4A6E" font-family="monospace" font-size="7.5" text-anchor="middle">Ensemble Classifiers</text>
-
-  <line x1="417" y1="206" x2="417" y2="218" stroke="#38BDF8" stroke-width="1" opacity="0.5" stroke-dasharray="3 2">
-    <animate attributeName="stroke-dashoffset" values="0;-5" dur="1s" repeatCount="indefinite"/>
-  </line>
-  <polygon points="414,218 417,224 420,218" fill="#38BDF8" opacity="0.7"/>
-
-  <rect x="317" y="226" width="200" height="26" rx="4" fill="url(#pr-blue)" stroke="#3B82F6" stroke-width="0.8" opacity="0.85"/>
-  <text x="417" y="242" fill="#60A5FA" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">Binary Classification Output</text>
-
-  <!-- ============ VERTICAL DIVIDER ============ -->
-  <line x1="560" y1="20" x2="560" y2="255" stroke="#1E3A5F" stroke-width="0.8" opacity="0.5"/>
-
-  <!-- ============ RIGHT COLUMN: Metrics (x=574, width=286) ============ -->
-  <text x="574" y="30" fill="#38BDF8" font-family="monospace" font-size="9" letter-spacing="3" opacity="0.8">RESULTS</text>
-
-  <!-- Bar: Accuracy -->
-  <text x="574" y="55" fill="#64748B" font-family="monospace" font-size="8" opacity="0.8">Accuracy</text>
-  <rect x="574" y="62" width="286" height="9" rx="4.5" fill="#0F172A"/>
-  <rect x="574" y="62" width="257" height="9" rx="4.5" fill="#3B82F6" opacity="0.75">
-    <animate attributeName="width" values="0;257" dur="2s" fill="freeze"/>
+  <!-- Accuracy -->
+  <text x="594" y="132" fill="#7B8DB0" font-family="monospace" font-size="7.5">Accuracy</text>
+  <rect x="648" y="125" width="186" height="8" rx="4" fill="#050A12"/>
+  <rect x="648" y="125" width="167" height="8" rx="4" fill="#4F8FFF" opacity="0.65">
+    <animate attributeName="width" values="0;167" dur="1.8s" fill="freeze"/>
   </rect>
-  <text x="860" y="71" fill="#60A5FA" font-family="monospace" font-size="8" text-anchor="end">90%</text>
+  <text x="840" y="132" fill="#4F8FFF" font-family="monospace" font-size="7.5">90%</text>
 
-  <!-- Bar: Precision -->
-  <text x="574" y="94" fill="#64748B" font-family="monospace" font-size="8" opacity="0.8">Precision</text>
-  <rect x="574" y="101" width="286" height="9" rx="4.5" fill="#0F172A"/>
-  <rect x="574" y="101" width="243" height="9" rx="4.5" fill="#8B5CF6" opacity="0.75">
-    <animate attributeName="width" values="0;243" dur="2s" begin="0.3s" fill="freeze"/>
+  <!-- Precision -->
+  <text x="594" y="158" fill="#7B8DB0" font-family="monospace" font-size="7.5">Precision</text>
+  <rect x="648" y="151" width="186" height="8" rx="4" fill="#050A12"/>
+  <rect x="648" y="151" width="158" height="8" rx="4" fill="#8A5DFF" opacity="0.6">
+    <animate attributeName="width" values="0;158" dur="1.8s" begin="0.2s" fill="freeze"/>
   </rect>
-  <text x="860" y="110" fill="#A78BFA" font-family="monospace" font-size="8" text-anchor="end">85%</text>
+  <text x="840" y="158" fill="#8A5DFF" font-family="monospace" font-size="7.5">85%</text>
 
-  <!-- Bar: Recall -->
-  <text x="574" y="133" fill="#64748B" font-family="monospace" font-size="8" opacity="0.8">Recall</text>
-  <rect x="574" y="140" width="286" height="9" rx="4.5" fill="#0F172A"/>
-  <rect x="574" y="140" width="229" height="9" rx="4.5" fill="#38BDF8" opacity="0.75">
-    <animate attributeName="width" values="0;229" dur="2s" begin="0.6s" fill="freeze"/>
+  <!-- Recall -->
+  <text x="594" y="184" fill="#7B8DB0" font-family="monospace" font-size="7.5">Recall</text>
+  <rect x="648" y="177" width="186" height="8" rx="4" fill="#050A12"/>
+  <rect x="648" y="177" width="149" height="8" rx="4" fill="#00E6FF" opacity="0.5">
+    <animate attributeName="width" values="0;149" dur="1.8s" begin="0.4s" fill="freeze"/>
   </rect>
-  <text x="860" y="149" fill="#7DD3FC" font-family="monospace" font-size="8" text-anchor="end">80%</text>
+  <text x="840" y="184" fill="#00E6FF" font-family="monospace" font-size="7.5">80%</text>
 
-  <!-- Bar: F1-Score -->
-  <text x="574" y="172" fill="#64748B" font-family="monospace" font-size="8" opacity="0.8">F1-Score</text>
-  <rect x="574" y="179" width="286" height="9" rx="4.5" fill="#0F172A"/>
-  <rect x="574" y="179" width="234" height="9" rx="4.5" fill="#60A5FA" opacity="0.75">
-    <animate attributeName="width" values="0;234" dur="2s" begin="0.9s" fill="freeze"/>
+  <!-- F1-Score -->
+  <text x="594" y="210" fill="#7B8DB0" font-family="monospace" font-size="7.5">F1-Score</text>
+  <rect x="648" y="203" width="186" height="8" rx="4" fill="#050A12"/>
+  <rect x="648" y="203" width="153" height="8" rx="4" fill="#4F8FFF" opacity="0.6">
+    <animate attributeName="width" values="0;153" dur="1.8s" begin="0.6s" fill="freeze"/>
   </rect>
-  <text x="860" y="188" fill="#60A5FA" font-family="monospace" font-size="8" text-anchor="end">82%</text>
+  <text x="840" y="210" fill="#4F8FFF" font-family="monospace" font-size="7.5">82%</text>
 
-  <!-- Tags at bottom of right column -->
-  <line x1="574" y1="210" x2="860" y2="210" stroke="#1E3A5F" stroke-width="0.6" opacity="0.4"/>
-  <text x="574" y="224" fill="#38BDF8" font-family="monospace" font-size="8.5" opacity="0.7">XGBoost</text>
-  <text x="643" y="224" fill="#38BDF8" font-family="monospace" font-size="8.5" opacity="0.7">Random Forest</text>
-  <text x="574" y="239" fill="#38BDF8" font-family="monospace" font-size="8.5" opacity="0.7">SVM</text>
-  <text x="617" y="239" fill="#38BDF8" font-family="monospace" font-size="8.5" opacity="0.7">Signal Processing</text>
+  <!-- ── TECH TAGS ── -->
+  <line x1="40" y1="244" x2="860" y2="244" stroke="#1A2540" stroke-width="0.5" opacity="0.4"/>
+  <text x="40" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">XGBoost</text>
+  <text x="116" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">Random Forest</text>
+  <text x="246" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">SVM</text>
+  <text x="300" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">Signal Processing</text>
+  <text x="456" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">Scikit-learn</text>
+  <text x="560" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">NumPy</text>
 </svg>
