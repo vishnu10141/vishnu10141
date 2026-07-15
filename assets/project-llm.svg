@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260">
+  <defs>
+    <linearGradient id="llm-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1120"/><stop offset="100%" stop-color="#050A12"/>
+    </linearGradient>
+    <linearGradient id="llm-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8A5DFF"/><stop offset="100%" stop-color="#4F8FFF"/>
+    </linearGradient>
+    <linearGradient id="llm-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.018"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="llm-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="llm-glow-s"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="900" height="260" rx="8" fill="url(#llm-bg)"/>
+  <rect width="900" height="260" rx="8" fill="url(#llm-shimmer)">
+    <animateTransform attributeName="transform" type="translate" values="-900,0;900,0;-900,0" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="900" height="260" rx="8" fill="none" stroke="#1A2540" stroke-width="1"/>
+  <rect x="1" y="1" width="0" height="1.5" rx="1" fill="url(#llm-accent)">
+    <animate attributeName="width" values="0;350" dur="1.2s" fill="freeze"/>
+  </rect>
+
+  <!-- HEADER -->
+  <text x="40" y="28" fill="#3D4F70" font-family="monospace" font-size="9" letter-spacing="3">FEATURED PROJECT — 03</text>
+  <text x="40" y="54" fill="#F0F4FF" font-family="'SF Pro Display',-apple-system,Inter,sans-serif" font-size="18" font-weight="600">Telugu LLM — Chandamama Kathalu</text>
+
+  <!-- Tags -->
+  <rect x="40" y="63" width="38" height="18" rx="3" fill="#050A12" stroke="#8A5DFF" stroke-width="0.7"/>
+  <text x="59" y="76" fill="#8A5DFF" font-family="monospace" font-size="7.5" text-anchor="middle">NLP</text>
+  <rect x="86" y="63" width="36" height="18" rx="3" fill="#050A12" stroke="#8A5DFF" stroke-width="0.7"/>
+  <text x="104" y="76" fill="#8A5DFF" font-family="monospace" font-size="7.5" text-anchor="middle">LLM</text>
+  <rect x="130" y="63" width="78" height="18" rx="3" fill="#050A12" stroke="#8A5DFF" stroke-width="0.7"/>
+  <text x="169" y="76" fill="#8A5DFF" font-family="monospace" font-size="7.5" text-anchor="middle">Telugu Language</text>
+  <rect x="216" y="63" width="84" height="18" rx="3" fill="#050A12" stroke="#4F8FFF" stroke-width="0.7"/>
+  <text x="258" y="76" fill="#4F8FFF" font-family="monospace" font-size="7.5" text-anchor="middle">Language Modeling</text>
+
+  <line x1="40" y1="96" x2="860" y2="96" stroke="#1A2540" stroke-width="0.8" opacity="0.8"/>
+
+  <!-- PIPELINE with sequential lighting -->
+  <text x="40" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">PIPELINE</text>
+
+  <!-- BOX 1: Data Collection -->
+  <rect x="40" y="120" width="140" height="44" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="40" y="120" width="140" height="44" rx="4" fill="none" stroke="#8A5DFF" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0.8;0" dur="6s" begin="0s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
+  <text x="110" y="138" fill="#F0F4FF" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle">Data Collection</text>
+  <text x="110" y="152" fill="#7B8DB0" font-family="monospace" font-size="6.5" text-anchor="middle">Chandamama Kathalu</text>
+  <circle r="2" fill="#8A5DFF" filter="url(#llm-glow-s)">
+    <animateMotion dur="6s" begin="0.8s" repeatCount="indefinite" path="M110,142 L191,142"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="6s" begin="0.8s" repeatCount="indefinite" keyTimes="0;0;0.04;0.14;0.2"/>
+  </circle>
+  <line x1="180" y1="142" x2="188" y2="142" stroke="#1A2540" stroke-width="0.8"/>
+  <polygon points="188,139 194,142 188,145" fill="#1A2540" opacity="0.7"/>
+
+  <!-- BOX 2: Preprocessing -->
+  <rect x="194" y="120" width="140" height="44" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="194" y="120" width="140" height="44" rx="4" fill="none" stroke="#8A5DFF" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0.8;0" dur="6s" begin="1.2s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
+  <text x="264" y="138" fill="#F0F4FF" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle">Preprocessing</text>
+  <text x="264" y="152" fill="#7B8DB0" font-family="monospace" font-size="6.5" text-anchor="middle">Cleaning · Normalization</text>
+  <circle r="2" fill="#8A5DFF" filter="url(#llm-glow-s)">
+    <animateMotion dur="6s" begin="2.0s" repeatCount="indefinite" path="M264,142 L345,142"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="6s" begin="2.0s" repeatCount="indefinite" keyTimes="0;0;0.04;0.14;0.2"/>
+  </circle>
+  <line x1="334" y1="142" x2="342" y2="142" stroke="#1A2540" stroke-width="0.8"/>
+  <polygon points="342,139 348,142 342,145" fill="#1A2540" opacity="0.7"/>
+
+  <!-- BOX 3: Tokenization HIGHLIGHT -->
+  <rect x="348" y="116" width="140" height="52" rx="4" fill="#0A1120" stroke="#8A5DFF" stroke-width="1.2"/>
+  <rect x="348" y="116" width="140" height="52" rx="4" fill="#8A5DFF" opacity="0.03">
+    <animate attributeName="opacity" values="0.03;0.08;0.03" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="348" y="116" width="140" height="52" rx="4" fill="none" stroke="#8A5DFF" stroke-width="1.8" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" dur="6s" begin="2.4s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
+  <text x="418" y="135" fill="#8A5DFF" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle">Tokenization</text>
+  <text x="418" y="148" fill="#8A5DFF" font-family="monospace" font-size="6.5" text-anchor="middle" opacity="0.75">Custom Telugu</text>
+  <text x="418" y="160" fill="#8A5DFF" font-family="monospace" font-size="6.5" text-anchor="middle" opacity="0.55">Vocabulary</text>
+  <circle r="2" fill="#4F8FFF" filter="url(#llm-glow-s)">
+    <animateMotion dur="6s" begin="3.2s" repeatCount="indefinite" path="M418,142 L499,142"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="6s" begin="3.2s" repeatCount="indefinite" keyTimes="0;0;0.04;0.14;0.2"/>
+  </circle>
+  <line x1="488" y1="142" x2="496" y2="142" stroke="#1A2540" stroke-width="0.8"/>
+  <polygon points="496,139 502,142 496,145" fill="#1A2540" opacity="0.7"/>
+
+  <!-- BOX 4: Model Training -->
+  <rect x="502" y="120" width="140" height="44" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="502" y="120" width="140" height="44" rx="4" fill="none" stroke="#4F8FFF" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0.8;0" dur="6s" begin="3.6s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
+  <text x="572" y="138" fill="#F0F4FF" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle">Model Training</text>
+  <text x="572" y="152" fill="#7B8DB0" font-family="monospace" font-size="6.5" text-anchor="middle">Language Model</text>
+  <circle r="2" fill="#00E6FF" filter="url(#llm-glow-s)">
+    <animateMotion dur="6s" begin="4.4s" repeatCount="indefinite" path="M572,142 L653,142"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="6s" begin="4.4s" repeatCount="indefinite" keyTimes="0;0;0.04;0.14;0.2"/>
+  </circle>
+  <line x1="642" y1="142" x2="650" y2="142" stroke="#1A2540" stroke-width="0.8"/>
+  <polygon points="650,139 656,142 650,145" fill="#1A2540" opacity="0.7"/>
+
+  <!-- BOX 5: Inference (cyan) -->
+  <rect x="656" y="120" width="140" height="44" rx="4" fill="#0A1120" stroke="#00E6FF" stroke-width="0.9"/>
+  <rect x="656" y="120" width="140" height="44" rx="4" fill="none" stroke="#00E6FF" stroke-width="1.5" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" dur="6s" begin="4.8s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
+  <text x="726" y="138" fill="#00E6FF" font-family="monospace" font-size="7.5" font-weight="600" text-anchor="middle" opacity="0.85">Inference</text>
+  <text x="726" y="152" fill="#00E6FF" font-family="monospace" font-size="6.5" text-anchor="middle" opacity="0.6">Telugu Text Gen</text>
+
+  <!-- ── TEXT GENERATION SIMULATION (right side) ── -->
+  <line x1="40" y1="178" x2="860" y2="178" stroke="#1A2540" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- Left info -->
+  <rect x="40" y="186" width="3" height="44" rx="1.5" fill="url(#llm-accent)" opacity="0.6"/>
+  <text x="52" y="201" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="1">ABOUT</text>
+  <text x="52" y="216" fill="#7B8DB0" font-family="monospace" font-size="8.5">Language model on Chandamama Kathalu,</text>
+  <text x="52" y="230" fill="#7B8DB0" font-family="monospace" font-size="8.5">a classic Telugu children's stories corpus.</text>
+
+  <!-- Telugu text generation effect (right side) -->
+  <rect x="490" y="184" width="366" height="56" rx="4" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="490" y="184" width="2" height="56" rx="1" fill="url(#llm-accent)" opacity="0.5"/>
+  <text x="504" y="198" fill="#3D4F70" font-family="monospace" font-size="7" letter-spacing="1">MODEL OUTPUT</text>
+
+  <!-- Simulated Telugu tokens appearing one by one (using opacity stagger) -->
+  <text x="504" y="215" fill="#8A5DFF" font-family="monospace" font-size="10" opacity="0">చందమామ
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.0s" fill="freeze"/>
+  </text>
+  <text x="580" y="215" fill="#8A5DFF" font-family="monospace" font-size="10" opacity="0">కథలు
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.8s" fill="freeze"/>
+  </text>
+  <text x="636" y="215" fill="#7B8DB0" font-family="monospace" font-size="10" opacity="0">లో...
+    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.6s" fill="freeze"/>
+  </text>
+
+  <!-- Blinking cursor -->
+  <rect x="686" y="205" width="1.5" height="13" rx="0.5" fill="#8A5DFF">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Second line resets and replays -->
+  <text x="504" y="232" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0">ఒకప్పుడు ఒక అందమైన గ్రామంలో...
+    <animate attributeName="opacity" values="0;0;1;1;0" dur="10s" begin="3.5s" repeatCount="indefinite" keyTimes="0;0;0.3;0.8;1"/>
+  </text>
+
+  <!-- Tech tags -->
+  <line x1="40" y1="244" x2="860" y2="244" stroke="#1A2540" stroke-width="0.5" opacity="0.4"/>
+  <text x="40" y="256" fill="#8A5DFF" font-family="monospace" font-size="8.5" opacity="0.7">Python</text>
+  <text x="100" y="256" fill="#8A5DFF" font-family="monospace" font-size="8.5" opacity="0.7">HuggingFace</text>
+  <text x="210" y="256" fill="#8A5DFF" font-family="monospace" font-size="8.5" opacity="0.7">PyTorch</text>
+  <text x="292" y="256" fill="#8A5DFF" font-family="monospace" font-size="8.5" opacity="0.7">Transformers</text>
+  <text x="412" y="256" fill="#8A5DFF" font-family="monospace" font-size="8.5" opacity="0.7">Telugu NLP</text>
+  <text x="516" y="256" fill="#8A5DFF" font-family="monospace" font-size="8.5" opacity="0.7">Tokenization</text>
+</svg>

@@ -86,7 +86,7 @@
   <!-- Role badge left accent bar (violet) -->
   <rect x="126" y="87" width="2.5" height="20" rx="1.2" fill="url(#iiit-role-grad)"/>
   <!-- Role text -->
-  <text x="136" y="101" fill="#8A5DFF" font-size="8.5" font-family="monospace">NLP Research Intern</text>
+  <text x="136" y="101" fill="#8A5DFF" font-size="8.5" font-family="monospace">NLP Intern</text>
 
   <!-- Year badge -->
   <rect x="814" y="28" width="48" height="20" rx="3" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
@@ -104,7 +104,7 @@
   <text x="50" y="173" fill="#7B8DB0" font-size="8" font-family="monospace">→ Tokenization → Telugu Corpus</text>
 
   <!-- Research output block (right, instead of accuracy bars) -->
-  <text x="480" y="134" fill="#3D4F70" font-size="7.5" font-family="monospace" letter-spacing="0.5">RESEARCH OUTPUT</text>
+  <text x="480" y="134" fill="#3D4F70" font-size="7.5" font-family="monospace" letter-spacing="0.5">WORK OUTPUT</text>
   <rect x="480" y="138" width="2" height="40" rx="1" fill="#8A5DFF" opacity="0.6"/>
   <text x="490" y="151" fill="#7B8DB0" font-size="8.5" font-family="monospace">Structured Telugu NLP dataset</text>
   <text x="490" y="165" fill="#7B8DB0" font-size="8.5" font-family="monospace">Manual linguistic annotation pipeline</text>

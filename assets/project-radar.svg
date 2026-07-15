@@ -1,37 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260">
   <defs>
     <linearGradient id="pr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A1120"/>
-      <stop offset="100%" stop-color="#050A12"/>
+      <stop offset="0%" stop-color="#0A1120"/><stop offset="100%" stop-color="#050A12"/>
     </linearGradient>
     <linearGradient id="pr-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4F8FFF"/>
-      <stop offset="100%" stop-color="#8A5DFF"/>
+      <stop offset="0%" stop-color="#4F8FFF"/><stop offset="100%" stop-color="#8A5DFF"/>
     </linearGradient>
     <linearGradient id="pr-shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.018"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
-    <filter id="pr-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="1.5" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <!-- Radar sweep gradient -->
+    <radialGradient id="pr-sweep-fade" cx="0%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#00E6FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00E6FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pr-glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="pr-glow-s"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
-  <!-- Card background -->
   <rect width="900" height="260" rx="8" fill="url(#pr-bg)"/>
   <rect width="900" height="260" rx="8" fill="url(#pr-shimmer)">
     <animateTransform attributeName="transform" type="translate" values="-900,0;900,0;-900,0" dur="8s" repeatCount="indefinite"/>
   </rect>
   <rect width="900" height="260" rx="8" fill="none" stroke="#1A2540" stroke-width="1"/>
-  <rect x="1" y="1" width="160" height="1.5" rx="1" fill="url(#pr-accent)" opacity="0.8"/>
+  <rect x="1" y="1" width="0" height="1.5" rx="1" fill="url(#pr-accent)">
+    <animate attributeName="width" values="0;350" dur="1.2s" fill="freeze"/>
+  </rect>
 
-  <!-- ── HEADER ── -->
+  <!-- HEADER -->
   <text x="40" y="28" fill="#3D4F70" font-family="monospace" font-size="9" letter-spacing="3">FEATURED PROJECT — 02</text>
   <text x="40" y="54" fill="#F0F4FF" font-family="'SF Pro Display',-apple-system,Inter,sans-serif" font-size="18" font-weight="600">Radar False Target Detection</text>
 
-  <!-- Domain tags -->
+  <!-- Tags -->
   <rect x="40" y="63" width="70" height="18" rx="3" fill="#050A12" stroke="#4F8FFF" stroke-width="0.7"/>
   <text x="75" y="76" fill="#4F8FFF" font-family="monospace" font-size="7.5" text-anchor="middle">Defense ML</text>
   <rect x="118" y="63" width="100" height="18" rx="3" fill="#050A12" stroke="#4F8FFF" stroke-width="0.7"/>
@@ -39,119 +41,160 @@
   <rect x="226" y="63" width="114" height="18" rx="3" fill="#050A12" stroke="#8A5DFF" stroke-width="0.7"/>
   <text x="283" y="76" fill="#8A5DFF" font-family="monospace" font-size="7.5" text-anchor="middle">Ensemble Classifiers</text>
 
-  <!-- ── HEADER DIVIDER ── -->
   <line x1="40" y1="96" x2="860" y2="96" stroke="#1A2540" stroke-width="0.8" opacity="0.8"/>
 
-  <!-- ── COLUMN DIVIDERS ── -->
+  <!-- COLUMN DIVIDERS -->
   <line x1="274" y1="104" x2="274" y2="252" stroke="#1A2540" stroke-width="0.7" opacity="0.5"/>
   <line x1="574" y1="104" x2="574" y2="252" stroke="#1A2540" stroke-width="0.7" opacity="0.5"/>
 
-  <!-- ═══ LEFT COLUMN: SIGNAL DISPLAY (x=40 to x=264) ═══ -->
-  <text x="40" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">SIGNAL DISPLAY</text>
+  <!-- ═══ LEFT: SIGNAL DISPLAY ═══ -->
+  <text x="50" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">SIGNAL DISPLAY</text>
 
-  <!-- Radar display centered at (157, 185) r=70 -->
+  <!-- Radar at (157,185) r=70 -->
   <g transform="translate(157,185)">
-    <!-- Background -->
     <circle r="70" fill="#050A12" stroke="#1A2540" stroke-width="0.8"/>
-    <!-- Range rings -->
     <circle r="52" fill="none" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
     <circle r="35" fill="none" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
     <circle r="18" fill="none" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
-    <!-- Cross hairs -->
     <line x1="-70" y1="0" x2="70" y2="0" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
     <line x1="0" y1="-70" x2="0" y2="70" stroke="#1A2540" stroke-width="0.4" opacity="0.5"/>
-    <!-- Sweep line -->
+    <line x1="-49.5" y1="-49.5" x2="49.5" y2="49.5" stroke="#1A2540" stroke-width="0.3" opacity="0.25"/>
+    <line x1="49.5" y1="-49.5" x2="-49.5" y2="49.5" stroke="#1A2540" stroke-width="0.3" opacity="0.25"/>
+
+    <!-- Sweep group -->
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="70" y2="0" stroke="#00E6FF" stroke-width="1" opacity="0.6"/>
-      <!-- Sweep fade wedge (simulated) -->
-      <line x1="0" y1="0" x2="65" y2="-15" stroke="#00E6FF" stroke-width="0.5" opacity="0.15"/>
-      <line x1="0" y1="0" x2="55" y2="-25" stroke="#00E6FF" stroke-width="0.3" opacity="0.07"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3.5s" repeatCount="indefinite"/>
+      <!-- Sweep wedge (fan) -->
+      <path d="M0,0 L70,0 A70,70 0 0,0 60.6,-35 Z" fill="#00E6FF" opacity="0.06"/>
+      <path d="M0,0 L60.6,-35 A70,70 0 0,0 35,-60.6 Z" fill="#00E6FF" opacity="0.03"/>
+      <!-- Sweep line -->
+      <line x1="0" y1="0" x2="70" y2="0" stroke="#00E6FF" stroke-width="1.2" opacity="0.7" filter="url(#pr-glow-s)"/>
     </g>
-    <!-- True target dots -->
-    <circle cx="38" cy="-28" r="3" fill="#4F8FFF" opacity="0.8">
-      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+
+    <!-- True target dots with ping animation -->
+    <circle cx="38" cy="-28" r="3" fill="#4F8FFF" filter="url(#pr-glow-s)">
+      <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="-22" cy="44" r="3" fill="#4F8FFF" opacity="0.7">
-      <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.2s" repeatCount="indefinite"/>
+    <!-- Ping ring for first target -->
+    <circle cx="38" cy="-28" r="3" fill="none" stroke="#4F8FFF" stroke-width="1">
+      <animate attributeName="r" values="3;10;3" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="2.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="55" cy="20" r="2.5" fill="#4F8FFF" opacity="0.6">
+
+    <circle cx="-22" cy="44" r="3" fill="#4F8FFF" filter="url(#pr-glow-s)">
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="55" cy="20" r="2.5" fill="#4F8FFF" filter="url(#pr-glow-s)">
       <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <!-- False target X marks -->
-    <g opacity="0.35" stroke="#00E6FF" stroke-width="1">
-      <line x1="-48" y1="-18" x2="-42" y2="-12"/>
-      <line x1="-42" y1="-18" x2="-48" y2="-12"/>
-      <line x1="20" y1="52" x2="26" y2="58"/>
-      <line x1="26" y1="52" x2="20" y2="58"/>
+
+    <!-- False target X marks (flashing) -->
+    <g stroke="#00E6FF" stroke-width="1.2">
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0.4;0.4;0" dur="4s" begin="1s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.6"/>
+        <line x1="-51" y1="-21" x2="-45" y2="-15"/>
+        <line x1="-45" y1="-21" x2="-51" y2="-15"/>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0.4;0.4;0" dur="4s" begin="2.5s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.6"/>
+        <line x1="18" y1="50" x2="24" y2="56"/>
+        <line x1="24" y1="50" x2="18" y2="56"/>
+      </g>
     </g>
     <!-- Center dot -->
-    <circle r="2" fill="#F0F4FF" opacity="0.9"/>
+    <circle r="2.5" fill="#F0F4FF" opacity="0.9" filter="url(#pr-glow-s)"/>
+    <!-- Center pulse ring -->
+    <circle r="2.5" fill="none" stroke="#00E6FF" stroke-width="0.8">
+      <animate attributeName="r" values="2.5;15;2.5" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <!-- ═══ CENTER COLUMN: ML PIPELINE (x=284 to x=564) ═══ -->
+  <!-- ═══ CENTER: ML PIPELINE (vertical, sequential lighting) ═══ -->
   <text x="294" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">ML PIPELINE</text>
 
-  <!-- 4 vertical pipeline boxes centered at x=419 w=200 -->
   <!-- Box 1 -->
   <rect x="319" y="118" width="200" height="30" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="319" y="118" width="200" height="30" rx="4" fill="none" stroke="#4F8FFF" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0.8;0" dur="6s" begin="0s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
   <text x="419" y="137" fill="#F0F4FF" font-family="monospace" font-size="8.5" font-weight="600" text-anchor="middle">Radar Signal Data</text>
-  <!-- Arrow down -->
-  <line x1="419" y1="148" x2="419" y2="156" stroke="#1A2540" stroke-width="0.8" stroke-dasharray="2 3"/>
-  <polygon points="415,154 419,162 423,154" fill="#1A2540" opacity="0.6"/>
+
+  <!-- Particle down from box 1 to 2 -->
+  <circle r="1.8" fill="#4F8FFF" filter="url(#pr-glow-s)">
+    <animateMotion dur="6s" begin="1.0s" repeatCount="indefinite" path="M419,148 L419,160"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="6s" begin="1.0s" repeatCount="indefinite" keyTimes="0;0;0.04;0.14;0.2"/>
+  </circle>
+
+  <!-- Arrow down 1 -->
+  <line x1="419" y1="148" x2="419" y2="157" stroke="#1A2540" stroke-width="0.8" stroke-dasharray="2 3"/>
+  <polygon points="415,155 419,163 423,155" fill="#1A2540" opacity="0.6"/>
 
   <!-- Box 2 -->
-  <rect x="319" y="162" width="200" height="38" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
-  <text x="419" y="178" fill="#F0F4FF" font-family="monospace" font-size="8" text-anchor="middle">Signal Processing</text>
-  <text x="419" y="192" fill="#7B8DB0" font-family="monospace" font-size="7" text-anchor="middle">Feature Engineering</text>
-  <!-- Arrow down -->
-  <line x1="419" y1="200" x2="419" y2="208" stroke="#1A2540" stroke-width="0.8" stroke-dasharray="2 3"/>
-  <polygon points="415,206 419,214 423,206" fill="#1A2540" opacity="0.6"/>
+  <rect x="319" y="163" width="200" height="38" rx="4" fill="#0A1120" stroke="#1A2540" stroke-width="0.8"/>
+  <rect x="319" y="163" width="200" height="38" rx="4" fill="none" stroke="#4F8FFF" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0.8;0.8;0" dur="6s" begin="2s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
+  <text x="419" y="179" fill="#F0F4FF" font-family="monospace" font-size="8" text-anchor="middle">Signal Processing</text>
+  <text x="419" y="193" fill="#7B8DB0" font-family="monospace" font-size="7" text-anchor="middle">Feature Engineering</text>
 
-  <!-- Box 3: Highlighted -->
-  <rect x="319" y="214" width="200" height="38" rx="4" fill="#0A1120" stroke="#4F8FFF" stroke-width="1.2"/>
-  <text x="419" y="230" fill="#4F8FFF" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">XGBoost · RF · SVM</text>
+  <circle r="1.8" fill="#4F8FFF" filter="url(#pr-glow-s)">
+    <animateMotion dur="6s" begin="3.0s" repeatCount="indefinite" path="M419,201 L419,213"/>
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="6s" begin="3.0s" repeatCount="indefinite" keyTimes="0;0;0.04;0.14;0.2"/>
+  </circle>
+
+  <!-- Arrow down 2 -->
+  <line x1="419" y1="201" x2="419" y2="210" stroke="#1A2540" stroke-width="0.8" stroke-dasharray="2 3"/>
+  <polygon points="415,208 419,216 423,208" fill="#1A2540" opacity="0.6"/>
+
+  <!-- Box 3 (highlighted) -->
+  <rect x="319" y="216" width="200" height="36" rx="4" fill="#0A1120" stroke="#4F8FFF" stroke-width="1.2"/>
+  <rect x="319" y="216" width="200" height="36" rx="4" fill="#4F8FFF" opacity="0.03">
+    <animate attributeName="opacity" values="0.03;0.08;0.03" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="319" y="216" width="200" height="36" rx="4" fill="none" stroke="#4F8FFF" stroke-width="1.8" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" dur="6s" begin="4s" repeatCount="indefinite" keyTimes="0;0.05;0.2;0.3"/>
+  </rect>
+  <text x="419" y="231" fill="#4F8FFF" font-family="monospace" font-size="8" font-weight="600" text-anchor="middle">XGBoost · RF · SVM</text>
   <text x="419" y="244" fill="#4F8FFF" font-family="monospace" font-size="7" text-anchor="middle">Ensemble Classifiers</text>
-
-  <!-- Output label -->
   <text x="419" y="258" fill="#7B8DB0" font-family="monospace" font-size="7" text-anchor="middle">→ Binary Classification Output</text>
 
-  <!-- ═══ RIGHT COLUMN: RESULTS (x=584 to x=860) ═══ -->
+  <!-- ═══ RIGHT: RESULTS with animated bars ═══ -->
   <text x="594" y="112" fill="#3D4F70" font-family="monospace" font-size="7.5" letter-spacing="2">RESULTS</text>
 
   <!-- Accuracy -->
   <text x="594" y="132" fill="#7B8DB0" font-family="monospace" font-size="7.5">Accuracy</text>
-  <rect x="648" y="125" width="186" height="8" rx="4" fill="#050A12"/>
-  <rect x="648" y="125" width="167" height="8" rx="4" fill="#4F8FFF" opacity="0.65">
-    <animate attributeName="width" values="0;167" dur="1.8s" fill="freeze"/>
+  <rect x="648" y="124" width="188" height="9" rx="4" fill="#050A12"/>
+  <rect x="648" y="124" width="169" height="9" rx="4" fill="#4F8FFF" opacity="0.65">
+    <animate attributeName="width" values="0;169" dur="1.8s" fill="freeze"/>
   </rect>
-  <text x="840" y="132" fill="#4F8FFF" font-family="monospace" font-size="7.5">90%</text>
+  <text x="842" y="132" fill="#4F8FFF" font-family="monospace" font-size="7.5" font-weight="600">90%</text>
 
   <!-- Precision -->
-  <text x="594" y="158" fill="#7B8DB0" font-family="monospace" font-size="7.5">Precision</text>
-  <rect x="648" y="151" width="186" height="8" rx="4" fill="#050A12"/>
-  <rect x="648" y="151" width="158" height="8" rx="4" fill="#8A5DFF" opacity="0.6">
-    <animate attributeName="width" values="0;158" dur="1.8s" begin="0.2s" fill="freeze"/>
+  <text x="594" y="160" fill="#7B8DB0" font-family="monospace" font-size="7.5">Precision</text>
+  <rect x="648" y="152" width="188" height="9" rx="4" fill="#050A12"/>
+  <rect x="648" y="152" width="159" height="9" rx="4" fill="#8A5DFF" opacity="0.6">
+    <animate attributeName="width" values="0;159" dur="1.8s" begin="0.2s" fill="freeze"/>
   </rect>
-  <text x="840" y="158" fill="#8A5DFF" font-family="monospace" font-size="7.5">85%</text>
+  <text x="842" y="160" fill="#8A5DFF" font-family="monospace" font-size="7.5" font-weight="600">85%</text>
 
   <!-- Recall -->
-  <text x="594" y="184" fill="#7B8DB0" font-family="monospace" font-size="7.5">Recall</text>
-  <rect x="648" y="177" width="186" height="8" rx="4" fill="#050A12"/>
-  <rect x="648" y="177" width="149" height="8" rx="4" fill="#00E6FF" opacity="0.5">
-    <animate attributeName="width" values="0;149" dur="1.8s" begin="0.4s" fill="freeze"/>
+  <text x="594" y="188" fill="#7B8DB0" font-family="monospace" font-size="7.5">Recall</text>
+  <rect x="648" y="180" width="188" height="9" rx="4" fill="#050A12"/>
+  <rect x="648" y="180" width="150" height="9" rx="4" fill="#00E6FF" opacity="0.5">
+    <animate attributeName="width" values="0;150" dur="1.8s" begin="0.4s" fill="freeze"/>
   </rect>
-  <text x="840" y="184" fill="#00E6FF" font-family="monospace" font-size="7.5">80%</text>
+  <text x="842" y="188" fill="#00E6FF" font-family="monospace" font-size="7.5" font-weight="600">80%</text>
 
-  <!-- F1-Score -->
-  <text x="594" y="210" fill="#7B8DB0" font-family="monospace" font-size="7.5">F1-Score</text>
-  <rect x="648" y="203" width="186" height="8" rx="4" fill="#050A12"/>
-  <rect x="648" y="203" width="153" height="8" rx="4" fill="#4F8FFF" opacity="0.6">
-    <animate attributeName="width" values="0;153" dur="1.8s" begin="0.6s" fill="freeze"/>
+  <!-- F1 -->
+  <text x="594" y="216" fill="#7B8DB0" font-family="monospace" font-size="7.5">F1-Score</text>
+  <rect x="648" y="208" width="188" height="9" rx="4" fill="#050A12"/>
+  <rect x="648" y="208" width="154" height="9" rx="4" fill="#4F8FFF" opacity="0.55">
+    <animate attributeName="width" values="0;154" dur="1.8s" begin="0.6s" fill="freeze"/>
   </rect>
-  <text x="840" y="210" fill="#4F8FFF" font-family="monospace" font-size="7.5">82%</text>
+  <text x="842" y="216" fill="#4F8FFF" font-family="monospace" font-size="7.5" font-weight="600">82%</text>
 
-  <!-- ── TECH TAGS ── -->
+  <!-- Tech tags -->
   <line x1="40" y1="244" x2="860" y2="244" stroke="#1A2540" stroke-width="0.5" opacity="0.4"/>
   <text x="40" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">XGBoost</text>
   <text x="116" y="256" fill="#4F8FFF" font-family="monospace" font-size="8.5" opacity="0.7">Random Forest</text>

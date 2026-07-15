@@ -10,7 +10,7 @@
   <rect width="900" height="260" fill="#050A12"/>
 
   <!-- Section label -->
-  <text x="40" y="24" fill="#3D4F70" font-size="9" font-family="monospace" letter-spacing="4" opacity="0.7">RESEARCH TIMELINE</text>
+  <text x="40" y="24" fill="#3D4F70" font-size="9" font-family="monospace" letter-spacing="4" opacity="0.7">CAREER TIMELINE</text>
 
   <!-- Vertical connector line -->
   <line x1="200" y1="34" x2="200" y2="240" stroke="#1A2540" stroke-width="1" opacity="0.7"/>
@@ -29,7 +29,7 @@
   <!-- Role badge background -->
   <rect x="228" y="50" width="130" height="16" rx="3" fill="#0A1120" stroke="#1A2540" stroke-width="0.7"/>
   <!-- Role text -->
-  <text x="234" y="62" fill="#8A5DFF" font-size="8" font-family="monospace">NLP Research Intern</text>
+  <text x="234" y="62" fill="#8A5DFF" font-size="8" font-family="monospace">NLP Intern</text>
   <!-- Description -->
   <text x="228" y="76" fill="#7B8DB0" font-size="9" font-family="monospace">Low-resource Telugu NLP · Corpus Construction</text>
 
@@ -47,13 +47,13 @@
   <!-- Role badge background -->
   <rect x="228" y="116" width="186" height="16" rx="3" fill="#0A1120" stroke="#1A2540" stroke-width="0.7"/>
   <!-- Role text -->
-  <text x="234" y="128" fill="#4F8FFF" font-size="8" font-family="monospace">Machine Learning Research Intern</text>
+  <text x="234" y="128" fill="#4F8FFF" font-size="8" font-family="monospace">ML Intern</text>
   <!-- Description -->
   <text x="228" y="142" fill="#7B8DB0" font-size="9" font-family="monospace">Radar Signal Classification · Ensemble Methods</text>
 
   <!-- ===== EVENT 3 — 2024, CS&E Graduate ===== -->
   <!-- Year label -->
-  <text x="180" y="184" fill="#3D4F70" font-size="10" font-family="monospace" text-anchor="end" letter-spacing="1">2024</text>
+  <text x="180" y="184" fill="#3D4F70" font-size="10" font-family="monospace" text-anchor="end" letter-spacing="1">2026</text>
   <!-- Outer node -->
   <circle cx="200" cy="180" r="4" fill="#050A12" stroke="#1A2540" stroke-width="1.5"/>
   <!-- Inner node -->

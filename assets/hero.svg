@@ -90,7 +90,7 @@
   <rect x="40" y="184" width="3" height="26" rx="1.5" fill="url(#h-role-bar)"/>
 
   <!-- Role text -->
-  <text x="52" y="200" fill="#4F8FFF" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="14" font-weight="500" letter-spacing="0.3">AI Engineer · ML Researcher</text>
+  <text x="52" y="200" fill="#4F8FFF" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="14" font-weight="500" letter-spacing="0.3">ML Engineer · AI Developer</text>
 
   <!-- Description line 1 -->
   <text x="40" y="226" fill="#7B8DB0" font-family="'SF Pro Display', -apple-system, Inter, sans-serif" font-size="12.5" letter-spacing="0.2">Deep learning systems from architecture design to</text>

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Vishnu Nimmakayala — AI Engineer"/>
+<img src="./assets/hero.svg" width="100%" alt="Vishnu Nimmakayala — ML Engineer"/>
 
 </div>
 
@@ -16,20 +16,14 @@
 </div>
 
 
-<!--
-================================================================
-  ABOUT
-================================================================
--->
-
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=11&duration=3000&pause=800&color=4F8FFF&center=true&vCenter=true&width=500&height=22&lines=AI+Engineer+%C2%B7+Machine+Learning+Researcher;Computer+Vision+%C2%B7+Medical+Imaging;Natural+Language+Processing+%C2%B7+Defense+ML" alt="role-typing"/>
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=11&duration=3000&pause=800&color=4F8FFF&center=true&vCenter=true&width=500&height=22&lines=ML+Engineer+%C2%B7+AI+Developer;Computer+Vision+%C2%B7+Medical+Imaging;NLP+%C2%B7+Deep+Learning+%C2%B7+Defense+ML" alt="role-typing"/>
 
 </div>
 
 
-> Computer Science &amp; Engineering graduate building interpretable AI systems at the intersection of deep learning, computer vision, and medical imaging. Research experience spans signal classification at **DRDO** and low-resource NLP corpus development at **IIIT Hyderabad**. Work covers the full deep learning lifecycle — architecture design through production deployment — with emphasis on clinical explainability and real-world operational grounding.
+> CS&amp;E graduate (2026) working on machine learning and applied AI. Interned at **DRDO** on radar signal classification and at **IIIT Hyderabad** on Telugu NLP corpus development. Building projects across computer vision, NLP, and deep learning — from training to deployment.
 
 
 <div align="center">
@@ -47,7 +41,7 @@
 
 <div align="center">
 
-<img src="./assets/timeline.svg" width="100%" alt="Research Timeline"/>
+<img src="./assets/timeline.svg" width="100%" alt="Career Timeline"/>
 
 </div>
 
@@ -61,24 +55,24 @@
 
 <!--
 ================================================================
-  EXPERIENCE
+  INTERNSHIPS
 ================================================================
 -->
 
 <div align="center">
 
-<sub><b>RESEARCH EXPERIENCE</b></sub>
+<sub><b>INTERNSHIPS</b></sub>
 
 </div>
 
 
 <details>
-<summary><img src="./assets/experience-drdo.svg" width="100%" alt="DRDO — Machine Learning Research Intern"/></summary>
+<summary><img src="./assets/experience-drdo.svg" width="100%" alt="DRDO — ML Intern"/></summary>
 
 
 <div align="center">
 
-**Machine Learning Research Intern — DRDO, Hyderabad** &nbsp;`2023`
+**ML Intern — DRDO, Hyderabad** &nbsp;`2023`
 
 </div>
 
@@ -94,7 +88,7 @@ Operational radar systems generate false detections due to electronic countermea
 - Trained and evaluated ensemble classifiers — XGBoost, Random Forest, SVM — on labeled defense-grade datasets
 - Iteratively improved model generalization through cross-validation and threshold tuning
 
-**Impact**
+**Outcome**
 
 - Achieved high-precision binary classification of radar targets vs. false ECM-induced detections
 - Delivered a reproducible ML pipeline suitable for integration into signal processing workflows
@@ -111,14 +105,12 @@ Operational radar systems generate false detections due to electronic countermea
 
 
 <details>
-<summary><img src="./assets/experience-iiit.svg" width="100%" alt="IIIT Hyderabad — NLP Research Intern"/></summary>
+<summary><img src="./assets/experience-iiit.svg" width="100%" alt="IIIT Hyderabad — NLP Intern"/></summary>
 
 
 <div align="center">
 
-
-**NLP Research Intern — IIIT Hyderabad** &nbsp;`2022`
-
+**NLP Intern — IIIT Hyderabad** &nbsp;`2022`
 
 </div>
 
@@ -131,13 +123,13 @@ South Indian languages like Telugu are critically under-resourced in NLP. The ab
 
 - Contributed to structured Telugu NLP dataset design and curation for low-resource language modelling
 - Performed manual linguistic annotation across morphological, syntactic, and semantic dimensions
-- Worked under research supervision to ensure annotation consistency and inter-annotator agreement
+- Worked under supervision to ensure annotation consistency and inter-annotator agreement
 - Helped build corpus pipelines for text normalization, tokenization, and structured data storage
 
-**Impact**
+**Outcome**
 
-- Produced annotated linguistic data contributing to Telugu language model research infrastructure
-- Corpus resources directly support downstream NLP tasks: POS tagging, NER, parsing, and text classification
+- Produced annotated linguistic data contributing to Telugu language model infrastructure
+- Corpus resources support downstream NLP tasks: POS tagging, NER, parsing, and text classification
 
 
 <div align="center">
@@ -209,7 +201,7 @@ A 3D Residual Attention U-Net trained on the BraTS 2020 benchmark dataset for mu
 **Outcome**
 
 - Strong Dice scores across tumor sub-regions on BraTS 2020 validation split
-- Clinically-oriented explainability layer enabling radiologist trust and verification
+- Explainability layer enabling verification of model predictions
 - End-to-end deployable system from raw MRI DICOM to annotated segmentation output
 
 
@@ -247,7 +239,7 @@ Modern radar systems face sophisticated electronic countermeasures that inject s
 
 **Solution**
 
-An ML classification pipeline that ingests raw radar return data, applies targeted feature engineering at the signal processing level, and deploys an ensemble of classifiers (XGBoost, Random Forest, SVM) to distinguish genuine targets from ECM-induced false detections with high precision and interpretable confidence scores.
+An ML classification pipeline that ingests raw radar return data, applies targeted feature engineering at the signal processing level, and deploys an ensemble of classifiers (XGBoost, Random Forest, SVM) to distinguish genuine targets from ECM-induced false detections.
 
 **Pipeline**
 
@@ -274,7 +266,7 @@ An ML classification pipeline that ingests raw radar return data, applies target
 
 <div align="center">
 
-**AI Portfolio Website** &nbsp;·&nbsp; <sub>Next.js · Vercel · Full-Stack</sub>
+**Telugu LLM — Chandamama Kathalu** &nbsp;·&nbsp; <sub>NLP · LLM · Telugu Language</sub>
 
 </div>
 
@@ -283,30 +275,29 @@ An ML classification pipeline that ingests raw radar return data, applies target
 
 <div align="center">
 
-<a href="https://vishnu-ai-portfolio-864n.vercel.app"><img src="./assets/project-portfolio.svg" width="100%" alt="Portfolio Website — Architecture"/></a>
+<img src="./assets/project-llm.svg" width="100%" alt="Telugu LLM — Chandamama Kathalu"/>
 
 </div>
 
 
 **Overview**
 
-A fully responsive personal portfolio designed for clarity, speed, and professional presentation. Built with Next.js App Router, deployed on Vercel's global edge network. Showcases research work, featured projects, and technical background with smooth animations and dark-mode-first design.
+Building a language model trained on Chandamama Kathalu, a classic Telugu children's stories corpus. The project focuses on low-resource language modeling for Telugu — a language with limited NLP tooling — using a domain-specific text corpus.
 
-**Architecture**
+**Pipeline**
 
-`Next.js 14 (App Router)` → `Vercel Edge Deploy` → `Global CDN` → `User`
+`Data Collection` → `Text Preprocessing` → `Custom Tokenization` → `Model Training` → `Telugu Text Generation`
 
-**Features**
+**Approach**
 
-- Responsive layout across mobile, tablet, and desktop viewports
-- Dark mode native design with animated transitions
-- Optimized Core Web Vitals — LCP, FID, CLS targets achieved
-- Project showcase with dynamic routing and rich media support
+- Curated and preprocessed Chandamama Kathalu stories as the training corpus
+- Built a custom Telugu tokenizer suited to the script and morphology
+- Trained a language model for text generation and story completion
 
 
 <div align="center">
 
-`Next.js` &nbsp; `JavaScript` &nbsp; `CSS` &nbsp; `Vercel` &nbsp; `React`
+`Python` &nbsp; `HuggingFace` &nbsp; `PyTorch` &nbsp; `Transformers` &nbsp; `Telugu NLP` &nbsp; `Tokenization`
 
 </div>
 
@@ -336,36 +327,6 @@ A fully responsive personal portfolio designed for clarity, speed, and professio
 <div align="center">
 
 <img src="./assets/skills.svg" width="100%" alt="Tech Stack — AI Ecosystem"/>
-
-</div>
-
-
-<div align="center">
-
-<img src="./assets/divider.svg" width="100%" alt=""/>
-
-</div>
-
-
-<!--
-================================================================
-  CURRENTLY EXPLORING
-================================================================
--->
-
-<div align="center">
-
-<sub><b>CURRENTLY EXPLORING</b></sub>
-
-</div>
-
-
-<div align="center">
-
-<code>vishnu@research:~$</code>
-
-
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=400&size=14&duration=2800&pause=900&color=4F8FFF&center=true&vCenter=true&width=580&height=30&lines=%3E+Explainable+AI+for+clinical+medical+imaging;%3E+3D+multi-modal+segmentation+pipelines;%3E+Instruction-tuned+LLM+domain+adaptation;%3E+Reproducible+MLOps+%2B+experiment+tracking;%3E+Foundation+models+for+medical+vision" alt="currently-exploring"/>
 
 </div>
 
