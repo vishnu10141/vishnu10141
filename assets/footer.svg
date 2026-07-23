@@ -1,32 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 70" width="900" height="70">
   <defs>
-    <linearGradient id="ft-top-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="ft-border" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1A2540" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#1A2540" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#1A2540" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#1A2540" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#1A2540" stop-opacity="0"/>
     </linearGradient>
+    <filter id="ft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-
-  <!-- Background -->
   <rect width="900" height="70" fill="#050A12"/>
-
-  <!-- Top border line -->
-  <rect x="40" y="0" width="820" height="0.8" fill="url(#ft-top-grad)"/>
-
-  <!-- Left: Name -->
-  <text x="40" y="42" fill="#3D4F70" font-family="monospace" font-size="10" letter-spacing="2" opacity="0.6">V.NIMMAKAYALA</text>
-
-  <!-- Left: Sub -->
-  <text x="40" y="58" fill="#3D4F70" font-family="monospace" font-size="9" opacity="0.4">Applied ML Engineer</text>
-
-  <!-- Center decoration dots -->
-  <circle cx="450" cy="35" r="1.5" fill="#1A2540" opacity="0.5"/>
-  <circle cx="450" cy="42" r="1.5" fill="#1A2540" opacity="0.5"/>
-  <circle cx="450" cy="49" r="1.5" fill="#1A2540" opacity="0.5"/>
-
-  <!-- Right: Credit -->
-  <text x="860" y="36" text-anchor="end" fill="#3D4F70" font-family="monospace" font-size="9" opacity="0.5">2025 · Built with GitHub Markdown &amp; SVG</text>
-
-  <!-- Right: Location -->
-  <text x="860" y="52" text-anchor="end" fill="#3D4F70" font-family="monospace" font-size="9" opacity="0.4">Hyderabad, India</text>
+  <!-- Top border -->
+  <rect x="40" y="0" width="820" height="0.8" fill="url(#ft-border)"/>
+  <!-- Left text -->
+  <text x="40" y="34" fill="#3D4F70" font-family="monospace" font-size="10" letter-spacing="2" opacity="0.6">V.NIMMAKAYALA</text>
+  <text x="40" y="50" fill="#3D4F70" font-family="monospace" font-size="9" opacity="0.4">ML Engineer · AI Developer</text>
+  <!-- Center dots with subtle pulse -->
+  <circle cx="448" cy="30" r="1.5" fill="#4F8FFF" opacity="0.3" filter="url(#ft-glow)">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="38" r="1.5" fill="#8A5DFF" opacity="0.25"/>
+  <circle cx="452" cy="46" r="1.5" fill="#00E6FF" opacity="0.2"/>
+  <!-- Right text -->
+  <text x="860" y="34" text-anchor="end" fill="#3D4F70" font-family="monospace" font-size="9" opacity="0.5">2025 · GitHub Markdown &amp; SVG</text>
+  <text x="860" y="50" text-anchor="end" fill="#3D4F70" font-family="monospace" font-size="9" opacity="0.4">Hyderabad, India</text>
 </svg>

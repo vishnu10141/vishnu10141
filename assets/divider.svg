@@ -1,27 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 40" width="900" height="40">
   <defs>
-    <linearGradient id="div-lg-left" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="dv-left" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1A2540" stop-opacity="0"/>
       <stop offset="100%" stop-color="#1A2540" stop-opacity="0.7"/>
     </linearGradient>
-    <linearGradient id="div-lg-right" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="dv-right" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1A2540" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="#1A2540" stop-opacity="0"/>
     </linearGradient>
+    <filter id="dv-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-
-  <!-- Background -->
   <rect width="900" height="40" fill="#050A12"/>
-
   <!-- Left line -->
-  <line x1="40" y1="20" x2="422" y2="20" stroke="url(#div-lg-left)" stroke-width="0.8"/>
-
+  <line x1="40" y1="20" x2="422" y2="20" stroke="url(#dv-left)" stroke-width="0.8"/>
   <!-- Right line -->
-  <line x1="478" y1="20" x2="860" y2="20" stroke="url(#div-lg-right)" stroke-width="0.8"/>
-
+  <line x1="478" y1="20" x2="860" y2="20" stroke="url(#dv-right)" stroke-width="0.8"/>
   <!-- Center diamond -->
-  <polygon points="450,15 457,20 450,25 443,20" fill="none" stroke="#4F8FFF" stroke-width="0.8" opacity="0.6"/>
-
-  <!-- Center dot -->
-  <circle cx="450" cy="20" r="1.8" fill="#4F8FFF" opacity="0.5"/>
+  <polygon points="450,15 457,20 450,25 443,20" fill="none" stroke="#4F8FFF" stroke-width="0.8" opacity="0.5"/>
+  <!-- Center dot (pulsing glow) -->
+  <circle cx="450" cy="20" r="2" fill="#4F8FFF" opacity="0.55" filter="url(#dv-glow)">
+    <animate attributeName="opacity" values="0.55;0.25;0.55" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Traveling signal left-to-right -->
+  <circle r="1.5" fill="#4F8FFF" filter="url(#dv-glow)">
+    <animateMotion dur="4s" begin="0s" repeatCount="indefinite" path="M40,20 L860,20"/>
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="4s" repeatCount="indefinite" keyTimes="0;0.05;0.95;1"/>
+  </circle>
 </svg>
